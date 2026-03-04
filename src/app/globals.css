@@ -7,7 +7,7 @@
 :root {
   --background: #ffffff;
   --foreground: #1a2e44;
-  --cyan: #00d4b8;
+  --cyan: #00a894;
   --purple: #8b5cf6;
   --navy: #1a2e44;
 }
@@ -125,8 +125,20 @@ body {
   text-shadow: 0 0 40px rgba(0, 212, 184, 0.3);
 }
 
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Focus states */
 *:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px #00d4b8, 0 0 0 4px white;
+  box-shadow: 0 0 0 2px #00a894, 0 0 0 4px white;
 }

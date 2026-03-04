@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLang } from "@/lib/i18n";
 
 interface ReportCardProps {
   title: string;
@@ -29,6 +30,7 @@ export function ReportCard({
   className,
   delay = 0,
 }: ReportCardProps) {
+  const { lang } = useLang();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -77,7 +79,7 @@ export function ReportCard({
           )}
 
           <div className="flex items-center text-cyan font-medium mt-4">
-            <span>Leer reporte</span>
+            <span>{lang === "es" ? "Leer reporte" : "Read report"}</span>
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </div>
         </div>

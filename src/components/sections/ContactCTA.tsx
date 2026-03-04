@@ -17,8 +17,13 @@ export function ContactCTA() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    const subject = encodeURIComponent(
+      lang === "es" ? `Contacto de ${formData.name}` : `Contact from ${formData.name}`
+    );
+    const body = encodeURIComponent(
+      `${formData.message}\n\n---\n${lang === "es" ? "De" : "From"}: ${formData.name}\nEmail: ${formData.email}`
+    );
+    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
   };
 
   const content = {

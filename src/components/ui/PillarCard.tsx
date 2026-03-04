@@ -24,9 +24,11 @@ export function PillarCard({
   defaultOpen = false,
 }: PillarCardProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
-  const IconComponent = LucideIcons[icon] as React.ComponentType<{
-    className?: string;
-  }>;
+  const RawIcon = LucideIcons[icon];
+  const IconComponent =
+    RawIcon && typeof RawIcon === "function"
+      ? (RawIcon as React.ComponentType<{ className?: string }>)
+      : null;
 
   return (
     <motion.div

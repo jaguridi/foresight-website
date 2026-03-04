@@ -8,3 +8,4 @@ export { PillarCard } from "./PillarCard";
 export { ClientLogo } from "./ClientLogo";
 export { BarChart } from "./BarChart";
 export { ServiceCard } from "./ServiceCard";
+export { ScrollToTop } from "./ScrollToTop";

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar, Footer } from "@/components/layout";
+import { ScrollToTop } from "@/components/ui";
 import { I18nProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
@@ -24,6 +25,10 @@ export const metadata: Metadata = {
     "estrategia IA",
   ],
   authors: [{ name: "Foresight" }],
+  metadataBase: new URL("https://foresight.cl"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Foresight | Consultoría en Inteligencia Artificial",
     description:
@@ -32,12 +37,21 @@ export const metadata: Metadata = {
     siteName: "Foresight",
     locale: "es_CL",
     type: "website",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Foresight - Consultoría Estratégica en Inteligencia Artificial",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Foresight | Consultoría en Inteligencia Artificial",
     description:
       "Acompañamos a organizaciones públicas y privadas en su adopción estratégica de inteligencia artificial en América Latina.",
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,
@@ -52,11 +66,37 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Foresight",
+              url: "https://foresight.cl",
+              logo: "https://foresight.cl/images/logos/logo-original.png",
+              description:
+                "Consultoría estratégica en inteligencia artificial para organizaciones públicas y privadas en América Latina",
+              email: "consultoria@foresight.cl",
+              sameAs: [
+                "https://www.linkedin.com/company/foresightcl",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Santiago",
+                addressCountry: "CL",
+              },
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col">
         <I18nProvider>
           <Navbar />
           <main className="flex-grow">{children}</main>
           <Footer />
+          <ScrollToTop />
         </I18nProvider>
       </body>
     </html>

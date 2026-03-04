@@ -15,19 +15,17 @@ export default function ContactPage() {
     organization: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: "", email: "", organization: "", message: "" });
+    const subject = encodeURIComponent(
+      lang === "es"
+        ? `Contacto de ${formData.name}${formData.organization ? ` (${formData.organization})` : ""}`
+        : `Contact from ${formData.name}${formData.organization ? ` (${formData.organization})` : ""}`
+    );
+    const body = encodeURIComponent(
+      `${formData.message}\n\n---\n${lang === "es" ? "De" : "From"}: ${formData.name}\nEmail: ${formData.email}${formData.organization ? `\n${lang === "es" ? "Organización" : "Organization"}: ${formData.organization}` : ""}`
+    );
+    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
   };
 
   const content = {
@@ -39,8 +37,6 @@ export default function ContactPage() {
       organizationPlaceholder: "Tu organización",
       messagePlaceholder: "Cuéntanos sobre tu proyecto o consulta",
       submit: "Enviar mensaje",
-      submitting: "Enviando...",
-      submitted: "¡Mensaje enviado! Te contactaremos pronto.",
       directContact: "Contacto directo",
       location: "Santiago, Chile",
     },
@@ -52,8 +48,6 @@ export default function ContactPage() {
       organizationPlaceholder: "Your organization",
       messagePlaceholder: "Tell us about your project or inquiry",
       submit: "Send message",
-      submitting: "Sending...",
-      submitted: "Message sent! We'll contact you soon.",
       directContact: "Direct contact",
       location: "Santiago, Chile",
     },
@@ -93,14 +87,6 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              {isSubmitted ? (
-                <div className="bg-cyan/10 rounded-2xl p-8 text-center">
-                  <div className="w-16 h-16 bg-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Send className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-navy font-medium">{c.submitted}</p>
-                </div>
-              ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <input
@@ -112,6 +98,7 @@ export default function ContactPage() {
                       }
                       className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:border-cyan focus:ring-2 focus:ring-cyan/20 outline-none transition-all text-lg"
                       required
+                      minLength={2}
                     />
                   </div>
                   <div>
@@ -150,6 +137,7 @@ export default function ContactPage() {
                       rows={6}
                       className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:border-cyan focus:ring-2 focus:ring-cyan/20 outline-none transition-all text-lg resize-none"
                       required
+                      minLength={10}
                     />
                   </div>
                   <GradientButton
@@ -157,11 +145,10 @@ export default function ContactPage() {
                     className="w-full"
                     size="lg"
                   >
-                    {isSubmitting ? c.submitting : c.submit}
+                    {c.submit}
                     <Send className="w-5 h-5 ml-2" />
                   </GradientButton>
                 </form>
-              )}
             </motion.div>
 
             {/* Contact Info */}

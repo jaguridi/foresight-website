@@ -24,7 +24,7 @@ const config: Config = {
           950: "#102a43",
         },
         cyan: {
-          DEFAULT: "#00d4b8",
+          DEFAULT: "#00a894",
           50: "#ecfdf8",
           100: "#d1faf0",
           200: "#a7f3e1",
