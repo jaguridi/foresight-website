@@ -1,4 +1,10 @@
-<svg width="120" height="48" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="120" height="48" fill="none"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#64748b" font-family="Inter, sans-serif" font-size="14" font-weight="600">CENIA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" width="160" height="60">
+  <circle cx="24" cy="30" r="16" fill="none" stroke="#1A2E44" stroke-width="2.5"/>
+  <circle cx="24" cy="30" r="6" fill="#00B4D8"/>
+  <circle cx="24" cy="14" r="2.5" fill="#1A2E44"/>
+  <circle cx="24" cy="46" r="2.5" fill="#1A2E44"/>
+  <circle cx="8" cy="30" r="2.5" fill="#1A2E44"/>
+  <circle cx="40" cy="30" r="2.5" fill="#1A2E44"/>
+  <text x="50" y="26" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="22" fill="#1A2E44" letter-spacing="3">CENIA</text>
+  <text x="50" y="42" font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="7.5" fill="#64748b">Centro Nacional de IA</text>
 </svg>

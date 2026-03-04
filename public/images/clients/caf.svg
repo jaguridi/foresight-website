@@ -1,3 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 48" width="120" height="48">
-  <text x="60" y="28" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#64748b" text-anchor="middle">CAF</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" width="180" height="60">
+  <rect x="8" y="10" width="48" height="40" rx="4" fill="#006341"/>
+  <text x="13" y="38" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" letter-spacing="3">CAF</text>
+  <text x="64" y="26" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="9" fill="#006341">banco de desarrollo</text>
+  <text x="64" y="38" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="9" fill="#006341">de América Latina</text>
+  <text x="64" y="50" font-family="Arial, Helvetica, sans-serif" font-weight="500" font-size="9" fill="#006341">y el Caribe</text>
 </svg>
