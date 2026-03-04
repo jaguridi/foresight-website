@@ -4,12 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
 import { siteConfig, navigation, footerContent } from "@/data/content";
+import { asset } from "@/lib/utils";
+import { useLang } from "@/lib/i18n";
 
-interface FooterProps {
-  lang?: "es" | "en";
-}
-
-export function Footer({ lang = "es" }: FooterProps) {
+export function Footer() {
+  const { lang } = useLang();
   const content = footerContent[lang];
   const navItems = navigation[lang];
   const currentYear = new Date().getFullYear();
@@ -21,7 +20,7 @@ export function Footer({ lang = "es" }: FooterProps) {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <Image
-              src="/images/logos/logo-white.png"
+              src={asset("/images/logos/logo-white.png")}
               alt="Foresight"
               width={150}
               height={40}

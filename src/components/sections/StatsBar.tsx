@@ -2,12 +2,10 @@
 
 import { motion } from "framer-motion";
 import { stats } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
-interface StatsBarProps {
-  lang?: "es" | "en";
-}
-
-export function StatsBar({ lang = "es" }: StatsBarProps) {
+export function StatsBar() {
+  const { lang } = useLang();
   return (
     <section className="bg-navy py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -2,12 +2,10 @@
 
 import { SectionHeading, ReportCard } from "@/components/ui";
 import { reports } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
-interface FeaturedReportsProps {
-  lang?: "es" | "en";
-}
-
-export function FeaturedReports({ lang = "es" }: FeaturedReportsProps) {
+export function FeaturedReports() {
+  const { lang } = useLang();
   return (
     <section className="section-padding">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

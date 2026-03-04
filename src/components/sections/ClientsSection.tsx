@@ -3,12 +3,10 @@
 import { motion } from "framer-motion";
 import { SectionHeading, ClientLogo } from "@/components/ui";
 import { clients } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
-interface ClientsSectionProps {
-  lang?: "es" | "en";
-}
-
-export function ClientsSection({ lang = "es" }: ClientsSectionProps) {
+export function ClientsSection() {
+  const { lang } = useLang();
   return (
     <section className="section-padding">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

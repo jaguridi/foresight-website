@@ -3,18 +3,18 @@
 import { SectionHeading, ProjectCard, GradientButton } from "@/components/ui";
 import { projects } from "@/data/content";
 import { ArrowRight } from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
 interface ProjectsGridProps {
-  lang?: "es" | "en";
   limit?: number;
   showViewAll?: boolean;
 }
 
 export function ProjectsGrid({
-  lang = "es",
   limit = 6,
   showViewAll = true,
 }: ProjectsGridProps) {
+  const { lang } = useLang();
   const displayProjects = projects.slice(0, limit);
 
   return (
@@ -49,7 +49,6 @@ export function ProjectsGrid({
                   : undefined
               }
               delay={index * 0.1}
-              lang={lang}
             />
           ))}
         </div>

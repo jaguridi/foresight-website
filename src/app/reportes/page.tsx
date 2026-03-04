@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import { ReportCard } from "@/components/ui";
 import { reports } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
 export default function ReportsPage() {
-  const lang = "es";
+  const { lang } = useLang();
 
   return (
     <div className="pt-20">

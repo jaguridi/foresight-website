@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLang } from "@/lib/i18n";
 
 interface ProjectCardProps {
   id: string;
@@ -19,7 +20,6 @@ interface ProjectCardProps {
   };
   className?: string;
   delay?: number;
-  lang?: string;
 }
 
 export function ProjectCard({
@@ -33,8 +33,8 @@ export function ProjectCard({
   featuredStat,
   className,
   delay = 0,
-  lang = "es",
 }: ProjectCardProps) {
+  const { lang } = useLang();
   const yearDisplay = yearEnd ? `${year}–${yearEnd}` : String(year);
   const href = `/proyectos/${id}`;
 

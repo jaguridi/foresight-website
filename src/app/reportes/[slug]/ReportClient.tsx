@@ -12,9 +12,10 @@ import {
 } from "@/components/ui";
 import { reports } from "@/data/content";
 import * as LucideIcons from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
 export default function ReportClient({ slug }: { slug: string }) {
-  const lang = "es";
+  const { lang } = useLang();
 
   const report = reports.find((r) => r.slug === slug);
 

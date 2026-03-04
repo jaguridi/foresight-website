@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Foresight",
   url: "https://foresight.cl",
   email: "consultoria@foresight.cl",
-  description: "Consultora de políticas y gobernanza de IA en América Latina",
+  description: "Consultoría estratégica en inteligencia artificial para organizaciones públicas y privadas en América Latina",
   linkedIn: "https://www.linkedin.com/company/foresightcl",
 };
 
@@ -25,15 +25,15 @@ export const navigation = {
 
 export const heroContent = {
   es: {
-    headline: "Construimos el futuro de la gobernanza de IA en América Latina",
+    headline: "Aceleramos la adopción de IA en América Latina",
     subtext:
-      "Asesoramos a gobiernos y organizaciones en políticas de inteligencia artificial, transformación digital e innovación tecnológica",
+      "Acompañamos a organizaciones públicas y privadas en su transformación con inteligencia artificial — desde la estrategia hasta la implementación",
     cta: "Conoce nuestros proyectos",
   },
   en: {
-    headline: "Building the Future of AI Governance in Latin America",
+    headline: "Accelerating AI Adoption in Latin America",
     subtext:
-      "We advise governments and organizations on artificial intelligence policy, digital transformation and technological innovation",
+      "We guide public and private organizations through their AI transformation — from strategy to implementation",
     cta: "Explore our projects",
   },
 };
@@ -47,41 +47,53 @@ export const stats = [
 export const services = {
   es: [
     {
-      title: "Evaluaciones de Ecosistemas de IA",
+      title: "Estrategia e Implementación de IA",
       description:
-        "Diagnósticos integrales de preparación en IA: metodología RAM UNESCO, Índice Latinoamericano de IA, índices municipales y evaluaciones sectoriales",
+        "Diseñamos hojas de ruta para integrar inteligencia artificial en organizaciones públicas y privadas, desde el diagnóstico de madurez hasta la adopción operativa",
+      icon: "Rocket",
+    },
+    {
+      title: "Evaluaciones y Diagnósticos",
+      description:
+        "Diagnósticos integrales de preparación en IA: metodología RAM UNESCO, Índice Latinoamericano de IA, evaluaciones sectoriales y análisis de madurez organizacional",
       icon: "BarChart3",
     },
     {
-      title: "Adopción Responsable de IA",
+      title: "Transformación Organizacional",
       description:
-        "Acompañamiento a organizaciones en la implementación ética y efectiva de inteligencia artificial",
-      icon: "Shield",
+        "Acompañamos a empresas y entidades públicas en su transformación digital con IA, incluyendo gestión del cambio, capacitación y gobernanza interna",
+      icon: "Building2",
     },
     {
       title: "Investigación y Reportes",
       description:
-        "Estudios de impacto económico, análisis regulatorio y reportes estratégicos sobre IA en la región",
+        "Estudios de impacto económico, análisis de mercado y reportes estratégicos sobre adopción de IA en la región",
       icon: "FileSearch",
     },
   ],
   en: [
     {
-      title: "AI Ecosystem Assessments",
+      title: "AI Strategy & Implementation",
       description:
-        "Comprehensive AI readiness diagnostics: UNESCO RAM methodology, Latin American AI Index, municipal indices and sector evaluations",
+        "We design roadmaps to integrate artificial intelligence into public and private organizations, from maturity assessments to operational adoption",
+      icon: "Rocket",
+    },
+    {
+      title: "Assessments & Diagnostics",
+      description:
+        "Comprehensive AI readiness diagnostics: UNESCO RAM methodology, Latin American AI Index, sector evaluations and organizational maturity analysis",
       icon: "BarChart3",
     },
     {
-      title: "Responsible AI Adoption",
+      title: "Organizational Transformation",
       description:
-        "Supporting organizations in the ethical and effective implementation of artificial intelligence",
-      icon: "Shield",
+        "We guide companies and public entities through their digital transformation with AI, including change management, training and internal governance",
+      icon: "Building2",
     },
     {
       title: "Research & Reports",
       description:
-        "Economic impact studies, regulatory analysis and strategic reports on AI in the region",
+        "Economic impact studies, market analysis and strategic reports on AI adoption in the region",
       icon: "FileSearch",
     },
   ],
@@ -731,14 +743,14 @@ export const team = [
 
 export const footerContent = {
   es: {
-    description: "Consultora especializada en políticas y gobernanza de inteligencia artificial en América Latina.",
+    description: "Consultoría estratégica en inteligencia artificial. Acompañamos a organizaciones públicas y privadas en su adopción de IA en América Latina.",
     links: "Enlaces",
     contact: "Contacto",
     followUs: "Síguenos",
     rights: "Todos los derechos reservados.",
   },
   en: {
-    description: "Consultancy specialized in AI policy and governance in Latin America.",
+    description: "Strategic AI consultancy. We guide public and private organizations through AI adoption in Latin America.",
     links: "Links",
     contact: "Contact",
     followUs: "Follow us",

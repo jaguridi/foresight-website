@@ -4,12 +4,10 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { GradientButton } from "@/components/ui";
 import { heroContent } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
-interface HeroProps {
-  lang?: "es" | "en";
-}
-
-export function Hero({ lang = "es" }: HeroProps) {
+export function Hero() {
+  const { lang } = useLang();
   const content = heroContent[lang];
 
   return (

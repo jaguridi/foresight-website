@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import { TeamCard } from "@/components/ui";
 import { team } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
 export default function TeamPage() {
-  const lang = "es";
+  const { lang } = useLang();
 
   return (
     <div className="pt-20">

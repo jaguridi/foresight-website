@@ -1,26 +1,33 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar, Footer } from "@/components/layout";
+import { I18nProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: "Foresight | Consultora de Políticas y Gobernanza de IA",
+  title: "Foresight | Consultoría en Inteligencia Artificial",
   description:
-    "Asesoramos a gobiernos y organizaciones en políticas de inteligencia artificial, transformación digital e innovación tecnológica en América Latina.",
+    "Acompañamos a organizaciones públicas y privadas en su adopción estratégica de inteligencia artificial — desde la estrategia hasta la implementación en América Latina.",
   keywords: [
-    "AI policy",
-    "governance",
+    "AI consulting",
+    "AI adoption",
+    "AI strategy",
+    "AI implementation",
     "artificial intelligence",
+    "digital transformation",
     "Latin America",
-    "consulting",
+    "AI governance",
+    "organizational transformation",
     "UNESCO RAM",
-    "políticas de IA",
-    "gobernanza",
+    "consultoría IA",
+    "adopción de IA",
+    "transformación digital",
+    "estrategia IA",
   ],
   authors: [{ name: "Foresight" }],
   openGraph: {
-    title: "Foresight | Consultora de Políticas y Gobernanza de IA",
+    title: "Foresight | Consultoría en Inteligencia Artificial",
     description:
-      "Asesoramos a gobiernos y organizaciones en políticas de inteligencia artificial en América Latina.",
+      "Acompañamos a organizaciones públicas y privadas en su adopción estratégica de inteligencia artificial en América Latina.",
     url: "https://foresight.cl",
     siteName: "Foresight",
     locale: "es_CL",
@@ -28,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Foresight | Consultora de Políticas y Gobernanza de IA",
+    title: "Foresight | Consultoría en Inteligencia Artificial",
     description:
-      "Asesoramos a gobiernos y organizaciones en políticas de inteligencia artificial en América Latina.",
+      "Acompañamos a organizaciones públicas y privadas en su adopción estratégica de inteligencia artificial en América Latina.",
   },
   robots: {
     index: true,
@@ -46,9 +53,11 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <I18nProvider>
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </I18nProvider>
       </body>
     </html>
   );

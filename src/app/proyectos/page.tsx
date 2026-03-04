@@ -4,9 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ProjectCard } from "@/components/ui";
 import { projects } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
 export default function ProjectsPage() {
-  const lang = "es";
+  const { lang } = useLang();
   const [filters, setFilters] = useState({
     type: "all",
     region: "all",
@@ -253,7 +254,6 @@ export default function ProjectsPage() {
                       : undefined
                   }
                   delay={index * 0.05}
-                  lang={lang}
                 />
               ))}
             </div>

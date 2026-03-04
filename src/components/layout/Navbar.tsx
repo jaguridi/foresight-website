@@ -6,18 +6,15 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/data/content";
-import { cn } from "@/lib/utils";
+import { cn, asset } from "@/lib/utils";
+import { useLang } from "@/lib/i18n";
 
-interface NavbarProps {
-  lang?: "es" | "en";
-}
-
-export function Navbar({ lang = "es" }: NavbarProps) {
+export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState<"es" | "en">(lang);
+  const { lang, setLang } = useLang();
 
-  const navItems = navigation[currentLang];
+  const navItems = navigation[lang];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +39,7 @@ export function Navbar({ lang = "es" }: NavbarProps) {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/logos/logo-original.png"
+              src={asset("/images/logos/logo-original.png")}
               alt="Foresight"
               width={150}
               height={40}
@@ -69,10 +66,10 @@ export function Navbar({ lang = "es" }: NavbarProps) {
             {/* Language Toggle */}
             <div className="flex items-center bg-slate-100 rounded-full p-1">
               <button
-                onClick={() => setCurrentLang("es")}
+                onClick={() => setLang("es")}
                 className={cn(
                   "px-3 py-1.5 rounded-full text-sm font-medium transition-all",
-                  currentLang === "es"
+                  lang === "es"
                     ? "bg-white text-navy shadow-sm"
                     : "text-slate-500 hover:text-navy"
                 )}
@@ -80,10 +77,10 @@ export function Navbar({ lang = "es" }: NavbarProps) {
                 ES
               </button>
               <button
-                onClick={() => setCurrentLang("en")}
+                onClick={() => setLang("en")}
                 className={cn(
                   "px-3 py-1.5 rounded-full text-sm font-medium transition-all",
-                  currentLang === "en"
+                  lang === "en"
                     ? "bg-white text-navy shadow-sm"
                     : "text-slate-500 hover:text-navy"
                 )}

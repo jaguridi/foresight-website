@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 import { Send, Mail, Linkedin, MapPin } from "lucide-react";
 import { GradientButton } from "@/components/ui";
 import { siteConfig } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
 export default function ContactPage() {
-  const lang = "es";
+  const { lang } = useLang();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +33,7 @@ export default function ContactPage() {
   const content = {
     es: {
       title: "Contacto",
-      subtitle: "¿Tienes un proyecto en mente? Conversemos",
+      subtitle: "¿Quieres integrar IA en tu organización? Conversemos",
       namePlaceholder: "Tu nombre",
       emailPlaceholder: "Tu email",
       organizationPlaceholder: "Tu organización",
@@ -45,7 +46,7 @@ export default function ContactPage() {
     },
     en: {
       title: "Contact",
-      subtitle: "Have a project in mind? Let's talk",
+      subtitle: "Want to integrate AI into your organization? Let's talk",
       namePlaceholder: "Your name",
       emailPlaceholder: "Your email",
       organizationPlaceholder: "Your organization",

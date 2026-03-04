@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { cn, asset } from "@/lib/utils";
 
 interface ClientLogoProps {
   name: string;
@@ -25,7 +25,7 @@ export function ClientLogo({ name, logo, className, delay = 0 }: ClientLogoProps
     >
       {logo ? (
         <Image
-          src={logo}
+          src={asset(logo)}
           alt={name}
           width={120}
           height={48}

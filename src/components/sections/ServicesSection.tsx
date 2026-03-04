@@ -2,12 +2,10 @@
 
 import { SectionHeading, ServiceCard } from "@/components/ui";
 import { services } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
-interface ServicesSectionProps {
-  lang?: "es" | "en";
-}
-
-export function ServicesSection({ lang = "es" }: ServicesSectionProps) {
+export function ServicesSection() {
+  const { lang } = useLang();
   const servicesList = services[lang];
 
   return (
@@ -17,12 +15,12 @@ export function ServicesSection({ lang = "es" }: ServicesSectionProps) {
           title={lang === "es" ? "Nuestros Servicios" : "Our Services"}
           subtitle={
             lang === "es"
-              ? "Soluciones integrales para la transformación digital y gobernanza de IA"
-              : "Comprehensive solutions for digital transformation and AI governance"
+              ? "Soluciones integrales para la adopción y transformación con inteligencia artificial"
+              : "End-to-end solutions for AI adoption and organizational transformation"
           }
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {servicesList.map((service, index) => (
             <ServiceCard
               key={service.title}

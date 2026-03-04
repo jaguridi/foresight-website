@@ -5,12 +5,10 @@ import { motion } from "framer-motion";
 import { Send, Mail } from "lucide-react";
 import { GradientButton } from "@/components/ui";
 import { siteConfig } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
-interface ContactCTAProps {
-  lang?: "es" | "en";
-}
-
-export function ContactCTA({ lang = "es" }: ContactCTAProps) {
+export function ContactCTA() {
+  const { lang } = useLang();
   const [formData, setFormData] = useState({
     name: "",
     email: "",

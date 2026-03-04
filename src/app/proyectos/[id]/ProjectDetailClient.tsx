@@ -13,9 +13,10 @@ import {
 import Link from "next/link";
 import { GradientButton } from "@/components/ui";
 import { projects, reports } from "@/data/content";
+import { useLang } from "@/lib/i18n";
 
 export default function ProjectDetailClient({ id }: { id: string }) {
-  const lang = "es";
+  const { lang } = useLang();
 
   const project = projects.find((p) => p.id === id);
 
