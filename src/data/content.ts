@@ -11,6 +11,7 @@ export const navigation = {
     { name: "Inicio", href: "/" },
     { name: "Proyectos", href: "/proyectos" },
     { name: "Reportes", href: "/reportes" },
+    { name: "Noticias", href: "/noticias" },
     { name: "Equipo", href: "/equipo" },
     { name: "Contacto", href: "/contacto" },
   ],
@@ -18,6 +19,7 @@ export const navigation = {
     { name: "Home", href: "/" },
     { name: "Projects", href: "/proyectos" },
     { name: "Reports", href: "/reportes" },
+    { name: "News", href: "/noticias" },
     { name: "Team", href: "/equipo" },
     { name: "Contact", href: "/contacto" },
   ],
@@ -41,7 +43,6 @@ export const heroContent = {
 export const stats = [
   { value: "7+", label: { es: "Países", en: "Countries" } },
   { value: "20+", label: { es: "Proyectos", en: "Projects" } },
-  { value: "6000+", label: { es: "Participantes", en: "Participants" } },
 ];
 
 export const services = {
@@ -101,17 +102,17 @@ export const services = {
 
 export const clients = [
   { name: "UNESCO", logo: "/images/clients/unesco.svg" },
-  { name: "Google", logo: "/images/clients/google.svg" },
-  { name: "BID", logo: "/images/clients/bid.svg" },
-  { name: "CENIA", logo: "/images/clients/cenia.svg" },
-  { name: "Ministerio de Ciencia", logo: "/images/clients/minciencia.svg" },
-  { name: "CAF", logo: "/images/clients/caf.svg" },
-  { name: "Ministerio de Economía", logo: "/images/clients/mineconomia.svg" },
-  { name: "CChC", logo: "/images/clients/cchc.svg" },
-  { name: "UNAB", logo: "/images/clients/unab.svg" },
-  { name: "Municipalidad de Las Condes", logo: "/images/clients/lascondes.svg" },
-  { name: "Conecta Logística", logo: "/images/clients/conecta.svg" },
-  { name: "Centro de Innovación UC", logo: "/images/clients/innovacionuc.svg" },
+  { name: "Google", logo: "/images/clients/Google_2015_logo.svg.png" },
+  { name: "BID", logo: "/images/clients/960px-Logo_BID_Español.png" },
+  { name: "CENIA", logo: "/images/clients/CENIA.png" },
+  { name: "Ministerio de Ciencia", logo: "/images/clients/Logo_del_Ministerio_de_Ciencia,_Tecnología,_Conocimiento_y_Innovación_de_Chile.png" },
+  { name: "CAF", logo: "/images/clients/Logotipo_CAF_-_Banco_de_Desarrollo_de_América_Latina_y_el_Caribe.png" },
+  { name: "Ministerio de Economía", logo: "/images/clients/Ministerioeconomia.png" },
+  { name: "CChC", logo: "/images/clients/ccchc.png" },
+  { name: "UNAB", logo: "/images/clients/Logo-unab.svg.png" },
+  { name: "Municipalidad de Las Condes", logo: "/images/clients/las-condes.jpg" },
+  { name: "Conecta Logística", logo: "/images/clients/conecta.webp" },
+  { name: "Centro de Innovación UC", logo: "/images/clients/centroinnovacion.png" },
 ];
 
 export const projects = [
@@ -692,7 +693,7 @@ export const team = [
       es: "Candidato a Ph.D. en Information Science (Cornell). Creador de la Política Nacional de IA de Chile. Miembro de UNESCO AI Ethics Experts Without Borders. Ex líder de la unidad FAST en el Ministerio de Economía.",
       en: "Ph.D. candidate in Information Science (Cornell). Creator of Chile's National AI Policy. Member of UNESCO AI Ethics Experts Without Borders. Former leader of the FAST unit at the Ministry of Economy.",
     },
-    image: "/images/team/jose-guridi.jpg",
+    image: "/images/team/jose-guridi.png",
     linkedin: "https://www.linkedin.com/in/jaguridi/",
   },
   {
@@ -740,6 +741,95 @@ export const team = [
     linkedin: "https://www.linkedin.com/in/prabba/",
   },
 ];
+
+export const contactContent = {
+  es: {
+    title: "Contacto",
+    subtitle: "¿Quieres integrar IA en tu organización? Conversemos",
+    nameLabel: "Tu nombre",
+    emailLabel: "Tu email",
+    organizationLabel: "Tu organización",
+    messageLabel: "Cuéntanos sobre tu proyecto o consulta",
+    submit: "Enviar mensaje",
+    directContact: "Contacto directo",
+    locationLabel: "Ubicación",
+    location: "Santiago, Chile",
+  },
+  en: {
+    title: "Contact",
+    subtitle: "Want to integrate AI into your organization? Let's talk",
+    nameLabel: "Your name",
+    emailLabel: "Your email",
+    organizationLabel: "Your organization",
+    messageLabel: "Tell us about your project or inquiry",
+    submit: "Send message",
+    directContact: "Direct contact",
+    locationLabel: "Location",
+    location: "Santiago, Chile",
+  },
+};
+
+export const newsItems = [
+  {
+    id: "ilia-2024",
+    title: {
+      es: "Publicación del Índice Latinoamericano de Inteligencia Artificial 2024",
+      en: "Publication of the Latin American Artificial Intelligence Index 2024",
+    },
+    summary: {
+      es: "Se lanzó la tercera edición del ILIA, el estudio más completo sobre el estado de la IA en América Latina, cubriendo 12 países con más de 200 indicadores.",
+      en: "The third edition of ILIA was launched, the most comprehensive study on the state of AI in Latin America, covering 12 countries with over 200 indicators.",
+    },
+    date: "2024-11-15",
+    category: "publicacion" as const,
+  },
+  {
+    id: "unesco-ram-5-paises",
+    title: {
+      es: "Alianza con UNESCO para evaluar preparación en IA en 5 países",
+      en: "Partnership with UNESCO to assess AI readiness in 5 countries",
+    },
+    summary: {
+      es: "Foresight fue seleccionado por UNESCO para aplicar la metodología RAM (Readiness Assessment Methodology) en Uruguay, Costa Rica, Panamá, República Dominicana y Trinidad y Tobago.",
+      en: "Foresight was selected by UNESCO to apply the RAM (Readiness Assessment Methodology) in Uruguay, Costa Rica, Panama, Dominican Republic and Trinidad and Tobago.",
+    },
+    date: "2024-09-01",
+    category: "alianza" as const,
+  },
+  {
+    id: "politica-ia-lascondes",
+    title: {
+      es: "Primera Política Municipal de IA en Chile",
+      en: "First Municipal AI Policy in Chile",
+    },
+    summary: {
+      es: "En colaboración con CENIA, desarrollamos la primera política municipal de inteligencia artificial del país para la Municipalidad de Las Condes, incluyendo un proceso de participación ciudadana.",
+      en: "In collaboration with CENIA, we developed the country's first municipal artificial intelligence policy for the Municipality of Las Condes, including a citizen participation process.",
+    },
+    date: "2024-06-20",
+    category: "logro" as const,
+  },
+  {
+    id: "google-impacto-ia",
+    title: {
+      es: "Estudio de impacto económico de la IA con Google",
+      en: "AI Economic Impact Study with Google",
+    },
+    summary: {
+      es: "Realizamos un estudio pionero sobre el impacto económico de la inteligencia artificial en Chile, estimando que la IA podría contribuir entre un 10,9% y un 20% adicional al PIB.",
+      en: "We conducted a pioneering study on the economic impact of artificial intelligence in Chile, estimating that AI could contribute an additional 10.9% to 20% to GDP.",
+    },
+    date: "2024-03-10",
+    category: "publicacion" as const,
+  },
+];
+
+export const newsCategoryLabels = {
+  publicacion: { es: "Publicación", en: "Publication" },
+  logro: { es: "Logro", en: "Achievement" },
+  evento: { es: "Evento", en: "Event" },
+  alianza: { es: "Alianza", en: "Partnership" },
+};
 
 export const footerContent = {
   es: {

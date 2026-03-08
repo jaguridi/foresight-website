@@ -16,6 +16,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://foresight.cl/equipo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/noticias</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/contacto</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://foresight.cl/reportes/ai-sprinters-chile</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
@@ -26,13 +41,123 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://foresight.cl/equipo</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://foresight.cl/proyectos/ram-el-salvador</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://foresight.cl/contacto</loc>
+    <loc>https://foresight.cl/proyectos/ram-honduras</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ram-guatemala</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ai-sprinters</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ram-camboya</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/marcos-regulatorios-ia-lac</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/politica-municipal-ia-lascondes</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/indice-idi-logistica</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/prospeccion-regulacion-ia</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/sandboxes-ia-chile</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/levantamiento-proyectos-ia-chile</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ram-republica-dominicana</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ram-cuba</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/actualizacion-politica-ia-chile</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ram-chile</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/innovacion-construccion</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/voz-nuevos-votantes</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/indice-municipal-ia</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/sesgos-ia-apec</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ilia-2023</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/equidad-genero-movilidad</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/participacion-ciudadana-lac</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/climate-tech-lac</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/analisis-participacion-unab</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

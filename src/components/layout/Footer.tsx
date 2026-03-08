@@ -20,11 +20,11 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <Image
-              src={asset("/images/logos/logo-white.png")}
+              src={asset("/images/logos/logo-original.png")}
               alt="Foresight"
-              width={150}
-              height={40}
-              className="h-10 w-auto mb-4"
+              width={240}
+              height={96}
+              className="h-12 w-auto mb-4 invert grayscale mix-blend-screen"
             />
             <p className="text-slate-300 max-w-md leading-relaxed">
               {content.description}

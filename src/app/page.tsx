@@ -2,11 +2,11 @@
 
 import {
   Hero,
-  StatsBar,
   ServicesSection,
   FeaturedReports,
   ProjectsGrid,
   ClientsSection,
+  NewsHighlights,
   TeamPreview,
   ContactCTA,
 } from "@/components/sections";
@@ -15,9 +15,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <StatsBar />
       <ServicesSection />
       <FeaturedReports />
+      <NewsHighlights />
       <ProjectsGrid />
       <ClientsSection />
       <TeamPreview />

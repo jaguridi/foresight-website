@@ -21,6 +21,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     const saved = localStorage.getItem("lang") as Lang | null;
     if (saved === "es" || saved === "en") {
       setLangState(saved);
+      document.documentElement.lang = saved;
     }
   }, []);
 

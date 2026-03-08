@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Mail, Linkedin, MapPin } from "lucide-react";
 import { GradientButton } from "@/components/ui";
-import { siteConfig } from "@/data/content";
+import { siteConfig, contactContent } from "@/data/content";
 import { useLang } from "@/lib/i18n";
 
 export default function ContactPage() {
@@ -28,32 +28,7 @@ export default function ContactPage() {
     window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
   };
 
-  const content = {
-    es: {
-      title: "Contacto",
-      subtitle: "¿Quieres integrar IA en tu organización? Conversemos",
-      namePlaceholder: "Tu nombre",
-      emailPlaceholder: "Tu email",
-      organizationPlaceholder: "Tu organización",
-      messagePlaceholder: "Cuéntanos sobre tu proyecto o consulta",
-      submit: "Enviar mensaje",
-      directContact: "Contacto directo",
-      location: "Santiago, Chile",
-    },
-    en: {
-      title: "Contact",
-      subtitle: "Want to integrate AI into your organization? Let's talk",
-      namePlaceholder: "Your name",
-      emailPlaceholder: "Your email",
-      organizationPlaceholder: "Your organization",
-      messagePlaceholder: "Tell us about your project or inquiry",
-      submit: "Send message",
-      directContact: "Direct contact",
-      location: "Santiago, Chile",
-    },
-  };
-
-  const c = content[lang];
+  const c = contactContent[lang];
 
   return (
     <div className="pt-20">
@@ -89,9 +64,13 @@ export default function ContactPage() {
             >
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
+                    <label htmlFor="contact-name" className="sr-only">
+                      {c.nameLabel}
+                    </label>
                     <input
+                      id="contact-name"
                       type="text"
-                      placeholder={c.namePlaceholder}
+                      placeholder={c.nameLabel}
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
@@ -102,9 +81,13 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
+                    <label htmlFor="contact-email" className="sr-only">
+                      {c.emailLabel}
+                    </label>
                     <input
+                      id="contact-email"
                       type="email"
-                      placeholder={c.emailPlaceholder}
+                      placeholder={c.emailLabel}
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
@@ -114,9 +97,13 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
+                    <label htmlFor="contact-org" className="sr-only">
+                      {c.organizationLabel}
+                    </label>
                     <input
+                      id="contact-org"
                       type="text"
-                      placeholder={c.organizationPlaceholder}
+                      placeholder={c.organizationLabel}
                       value={formData.organization}
                       onChange={(e) =>
                         setFormData({
@@ -128,8 +115,12 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
+                    <label htmlFor="contact-message" className="sr-only">
+                      {c.messageLabel}
+                    </label>
                     <textarea
-                      placeholder={c.messagePlaceholder}
+                      id="contact-message"
+                      placeholder={c.messageLabel}
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
@@ -205,7 +196,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-medium text-navy">
-                      {lang === "es" ? "Ubicación" : "Location"}
+                      {c.locationLabel}
                     </div>
                     <div className="text-slate-500">{c.location}</div>
                   </div>

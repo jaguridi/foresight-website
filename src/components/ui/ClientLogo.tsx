@@ -19,7 +19,7 @@ export function ClientLogo({ name, logo, className, delay = 0 }: ClientLogoProps
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
       className={cn(
-        "flex items-center justify-center p-6 rounded-xl bg-white border border-slate-200 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300",
+        "flex items-center justify-center p-6 rounded-xl bg-white border border-slate-200 hover:shadow-md transition-all duration-300",
         className
       )}
     >
@@ -27,9 +27,9 @@ export function ClientLogo({ name, logo, className, delay = 0 }: ClientLogoProps
         <Image
           src={asset(logo)}
           alt={name}
-          width={120}
-          height={48}
-          className="h-12 w-auto object-contain"
+          width={160}
+          height={64}
+          className="h-16 w-auto object-contain max-w-full"
         />
       ) : (
         <span className="text-lg font-semibold text-slate-400">{name}</span>

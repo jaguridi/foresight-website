@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navigation } from "@/data/content";
@@ -13,8 +14,14 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { lang, setLang } = useLang();
+  const pathname = usePathname();
 
   const navItems = navigation[lang];
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +38,7 @@ export function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
           ? "bg-white/90 backdrop-blur-lg shadow-sm"
-          : "bg-transparent"
+          : "bg-transparent mix-blend-multiply"
       )}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,9 +48,9 @@ export function Navbar() {
             <Image
               src={asset("/images/logos/logo-original.png")}
               alt="Foresight"
-              width={150}
-              height={40}
-              className="h-10 w-auto"
+              width={240}
+              height={96}
+              className="h-12 sm:h-14 w-auto mix-blend-multiply"
               priority
             />
           </Link>
@@ -54,9 +61,17 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-navy hover:text-cyan transition-colors font-medium"
+                className={cn(
+                  "transition-colors font-medium relative py-1",
+                  isActive(item.href)
+                    ? "text-cyan"
+                    : "text-navy hover:text-cyan"
+                )}
               >
                 {item.name}
+                {isActive(item.href) && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-cyan rounded-full" />
+                )}
               </Link>
             ))}
           </div>
@@ -132,7 +147,12 @@ export function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-3 rounded-lg text-navy hover:bg-slate-100 font-medium transition-colors"
+                    className={cn(
+                      "block px-4 py-3 rounded-lg font-medium transition-colors",
+                      isActive(item.href)
+                        ? "text-cyan bg-cyan/5"
+                        : "text-navy hover:bg-slate-100"
+                    )}
                   >
                     {item.name}
                   </Link>

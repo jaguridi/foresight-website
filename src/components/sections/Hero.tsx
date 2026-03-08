@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { GradientButton } from "@/components/ui";
 import { heroContent } from "@/data/content";
@@ -9,6 +9,7 @@ import { useLang } from "@/lib/i18n";
 export function Hero() {
   const { lang } = useLang();
   const content = heroContent[lang];
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -16,9 +17,9 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-subtle hero-pattern" />
 
       {/* Animated background shapes */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
         <motion.div
-          animate={{
+          animate={prefersReducedMotion ? {} : {
             x: [0, 30, 0],
             y: [0, -20, 0],
           }}
@@ -30,7 +31,7 @@ export function Hero() {
           className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-br from-cyan/10 to-transparent rounded-full blur-3xl"
         />
         <motion.div
-          animate={{
+          animate={prefersReducedMotion ? {} : {
             x: [0, -20, 0],
             y: [0, 30, 0],
           }}
@@ -46,7 +47,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -56,7 +57,7 @@ export function Hero() {
         </motion.div>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed"
@@ -65,7 +66,7 @@ export function Hero() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
@@ -82,9 +83,10 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        aria-hidden="true"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={prefersReducedMotion ? {} : { y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="w-6 h-10 border-2 border-slate-300 rounded-full flex items-start justify-center p-2"
         >

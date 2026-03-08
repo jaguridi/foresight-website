@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
+import { Inter, Righteous } from "next/font/google";
 import "./globals.css";
 import { Navbar, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ui";
 import { I18nProvider } from "@/lib/i18n";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const righteous = Righteous({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-righteous",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Foresight | Consultoría en Inteligencia Artificial",
@@ -65,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className={`scroll-smooth ${inter.variable} ${righteous.variable}`}>
       <head>
         <script
           type="application/ld+json"

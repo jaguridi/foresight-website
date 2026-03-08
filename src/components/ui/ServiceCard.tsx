@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import * as LucideIcons from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ServiceIcon } from "./ServiceIcon";
 
 interface ServiceCardProps {
   title: string;
   description: string;
-  icon: keyof typeof LucideIcons;
+  icon: string;
   className?: string;
   delay?: number;
 }
@@ -19,12 +19,6 @@ export function ServiceCard({
   className,
   delay = 0,
 }: ServiceCardProps) {
-  const RawIcon = LucideIcons[icon];
-  const IconComponent =
-    RawIcon && typeof RawIcon === "function"
-      ? (RawIcon as React.ComponentType<{ className?: string }>)
-      : null;
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -37,8 +31,8 @@ export function ServiceCard({
       )}
     >
       {/* Icon */}
-      <div className="w-14 h-14 rounded-xl bg-gradient-brand flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-        {IconComponent && <IconComponent className="w-7 h-7 text-white" />}
+      <div className="w-16 h-16 rounded-2xl bg-gradient-brand flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <ServiceIcon icon={icon} className="w-10 h-10" />
       </div>
 
       {/* Content */}

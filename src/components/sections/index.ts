@@ -5,4 +5,5 @@ export { FeaturedReports } from "./FeaturedReports";
 export { ProjectsGrid } from "./ProjectsGrid";
 export { ClientsSection } from "./ClientsSection";
 export { TeamPreview } from "./TeamPreview";
+export { NewsHighlights } from "./NewsHighlights";
 export { ContactCTA } from "./ContactCTA";

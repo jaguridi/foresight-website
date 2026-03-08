@@ -63,8 +63,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Righteous", "Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-righteous)", "var(--font-inter)", "system-ui", "sans-serif"],
       },
       backgroundImage: {
         "gradient-brand": "linear-gradient(135deg, #00d4b8, #6366f1, #8b5cf6)",

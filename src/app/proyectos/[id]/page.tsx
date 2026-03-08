@@ -1,8 +1,27 @@
+import type { Metadata } from "next";
 import { projects } from "@/data/content";
 import ProjectDetailClient from "./ProjectDetailClient";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ id: p.id }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const project = projects.find((p) => p.id === id);
+  if (!project) return {};
+  return {
+    title: `${project.title.es} | Foresight`,
+    description: project.description.es,
+    openGraph: {
+      title: `${project.title.es} | Foresight`,
+      description: project.description.es,
+    },
+  };
 }
 
 export default async function ProjectDetailPage({
