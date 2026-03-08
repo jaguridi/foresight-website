@@ -11,9 +11,11 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { GradientButton } from "@/components/ui";
-import { projects, reports } from "@/data/content";
+import { projects, reports, clients } from "@/data/content";
 import { useLang } from "@/lib/i18n";
+import { asset } from "@/lib/utils";
 
 export default function ProjectDetailClient({ id }: { id: string }) {
   const { lang } = useLang();
@@ -69,6 +71,9 @@ export default function ProjectDetailClient({ id }: { id: string }) {
     "reportSlug" in project
       ? reports.find((r) => r.slug === (project as { reportSlug?: string }).reportSlug)
       : undefined;
+
+  // Find client logo
+  const clientLogo = clients.find((c) => c.name === project.client)?.logo;
 
   // Find related projects (same client or same type, excluding current)
   const relatedProjects = projects
@@ -139,6 +144,20 @@ export default function ProjectDetailClient({ id }: { id: string }) {
 
             {/* Sidebar Info Card */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 space-y-5">
+              {clientLogo && (
+                <div className="flex justify-center pb-5 border-b border-white/20">
+                  <div className="bg-white rounded-xl p-3">
+                    <Image
+                      src={asset(clientLogo)}
+                      alt={project.client}
+                      width={120}
+                      height={48}
+                      className="h-10 w-auto object-contain"
+                    />
+                  </div>
+                </div>
+              )}
+
               {project.featuredStat && (
                 <div className="text-center pb-5 border-b border-white/20">
                   <div className="text-5xl font-bold text-white mb-1">

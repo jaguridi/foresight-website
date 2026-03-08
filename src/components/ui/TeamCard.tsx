@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Linkedin } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn, asset } from "@/lib/utils";
 
 interface TeamCardProps {
   name: string;
@@ -39,7 +39,7 @@ export function TeamCard({
       <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-brand">
         {image ? (
           <Image
-            src={image}
+            src={asset(image)}
             alt={name}
             fill
             className="object-cover"
