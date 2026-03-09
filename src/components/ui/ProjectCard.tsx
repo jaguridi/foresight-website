@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn, asset } from "@/lib/utils";
 import { useLang } from "@/lib/i18n";
 
 interface ProjectCardProps {
@@ -18,6 +19,7 @@ interface ProjectCardProps {
     value: string;
     label: string;
   };
+  clientLogo?: string;
   className?: string;
   delay?: number;
 }
@@ -31,6 +33,7 @@ export function ProjectCard({
   yearEnd,
   status,
   featuredStat,
+  clientLogo,
   className,
   delay = 0,
 }: ProjectCardProps) {
@@ -67,9 +70,19 @@ export function ProjectCard({
         )}
       >
         <div className="flex items-center justify-between mb-4">
-          <span className="text-sm font-medium text-cyan bg-cyan/10 px-3 py-1 rounded-full">
-            {client}
-          </span>
+          {clientLogo ? (
+            <Image
+              src={asset(clientLogo)}
+              alt={client}
+              width={80}
+              height={28}
+              className="h-7 w-auto object-contain"
+            />
+          ) : (
+            <span className="text-sm font-medium text-cyan bg-cyan/10 px-3 py-1 rounded-full">
+              {client}
+            </span>
+          )}
           <span className="text-sm text-slate-400">{yearDisplay}</span>
         </div>
 

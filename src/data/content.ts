@@ -27,18 +27,24 @@ export const navigation = {
 
 export const heroContent = {
   es: {
-    headline: "Aceleramos la adopción de IA en América Latina",
+    headline: "Diseñamos la estrategia de IA para gobiernos y empresas líderes en América Latina",
     subtext:
-      "Acompañamos a organizaciones públicas y privadas en su transformación con inteligencia artificial — desde la estrategia hasta la implementación",
+      "De la política nacional de IA de Chile a estudios de impacto para Google — ayudamos a las organizaciones más ambiciosas a tomar decisiones informadas sobre inteligencia artificial",
     cta: "Conoce nuestros proyectos",
   },
   en: {
-    headline: "Accelerating AI Adoption in Latin America",
+    headline: "We Design AI Strategy for Leading Governments and Companies in Latin America",
     subtext:
-      "We guide public and private organizations through their AI transformation — from strategy to implementation",
+      "From Chile's national AI policy to impact studies for Google — we help the most ambitious organizations make informed decisions about artificial intelligence",
     cta: "Explore our projects",
   },
 };
+
+export const heroStats = [
+  { value: "10+", label: { es: "Países asesorados", en: "Countries advised" } },
+  { value: "20+", label: { es: "Proyectos entregados", en: "Projects delivered" } },
+  { value: "6", label: { es: "Socios especialistas", en: "Specialist partners" } },
+];
 
 export const stats = [
   { value: "7+", label: { es: "Países", en: "Countries" } },
@@ -50,25 +56,25 @@ export const services = {
     {
       title: "Estrategia e Implementación de IA",
       description:
-        "Diseñamos hojas de ruta para integrar inteligencia artificial en organizaciones públicas y privadas, desde el diagnóstico de madurez hasta la adopción operativa",
+        "Tu organización obtiene una hoja de ruta concreta con prioridades claras, plazos definidos y casos de uso validados para adoptar IA — no un documento genérico, sino un plan ejecutable",
       icon: "Rocket",
     },
     {
       title: "Evaluaciones y Diagnósticos",
       description:
-        "Diagnósticos integrales de preparación en IA: metodología RAM UNESCO, Índice Latinoamericano de IA, evaluaciones sectoriales y análisis de madurez organizacional",
+        "Sabrás exactamente dónde está tu país u organización en su preparación para la IA, con brechas identificadas y recomendaciones priorizadas. Usamos la metodología RAM de UNESCO y el ILIA",
       icon: "BarChart3",
     },
     {
       title: "Transformación Organizacional",
       description:
-        "Acompañamos a empresas y entidades públicas en su transformación digital con IA, incluyendo gestión del cambio, capacitación y gobernanza interna",
+        "Tu equipo adquiere las capacidades para adoptar IA de forma sostenible: desde la gobernanza interna hasta la capacitación práctica para que los cambios perduren",
       icon: "Building2",
     },
     {
       title: "Investigación y Reportes",
       description:
-        "Estudios de impacto económico, análisis de mercado y reportes estratégicos sobre adopción de IA en la región",
+        "Obtienes evidencia rigurosa para tomar decisiones estratégicas: estudios de impacto económico, análisis sectoriales y reportes que posicionan tu visión en la conversación pública",
       icon: "FileSearch",
     },
   ],
@@ -76,25 +82,25 @@ export const services = {
     {
       title: "AI Strategy & Implementation",
       description:
-        "We design roadmaps to integrate artificial intelligence into public and private organizations, from maturity assessments to operational adoption",
+        "Your organization gets a concrete roadmap with clear priorities, defined timelines and validated use cases to adopt AI — not a generic document, but an executable plan",
       icon: "Rocket",
     },
     {
       title: "Assessments & Diagnostics",
       description:
-        "Comprehensive AI readiness diagnostics: UNESCO RAM methodology, Latin American AI Index, sector evaluations and organizational maturity analysis",
+        "You'll know exactly where your country or organization stands in AI readiness, with identified gaps and prioritized recommendations. We use UNESCO's RAM methodology and ILIA",
       icon: "BarChart3",
     },
     {
       title: "Organizational Transformation",
       description:
-        "We guide companies and public entities through their digital transformation with AI, including change management, training and internal governance",
+        "Your team acquires the capabilities to adopt AI sustainably: from internal governance to hands-on training so that changes last",
       icon: "Building2",
     },
     {
       title: "Research & Reports",
       description:
-        "Economic impact studies, market analysis and strategic reports on AI adoption in the region",
+        "You get rigorous evidence for strategic decision-making: economic impact studies, sector analyses and reports that position your vision in the public conversation",
       icon: "FileSearch",
     },
   ],
@@ -115,6 +121,21 @@ export const clients = [
   { name: "Centro de Innovación UC", logo: "/images/clients/centroinnovacion.png" },
 ];
 
+export const clientLogos: Record<string, string> = {
+  UNESCO: "/images/clients/unesco.svg",
+  Google: "/images/clients/google.svg",
+  CENIA: "/images/clients/cenia.svg",
+  "Municipalidad de Las Condes": "/images/clients/lascondes.svg",
+  "Conecta Logística": "/images/clients/conecta.svg",
+  "Centro de Innovación UC": "/images/clients/innovacionuc.svg",
+  BID: "/images/clients/bid.svg",
+  "Ministerio de Ciencia": "/images/clients/minciencia.svg",
+  CChC: "/images/clients/cchc.svg",
+  UNAB: "/images/clients/unab.svg",
+  "Ministerio de Economía": "/images/clients/mineconomia.svg",
+  CAF: "/images/clients/caf.svg",
+};
+
 export const projects = [
   // ── 2025–2026 | En desarrollo ──────────────────────────────────
   {
@@ -124,8 +145,8 @@ export const projects = [
       en: "RAM Implementation El Salvador",
     },
     description: {
-      es: "Aplicación de la metodología RAM desarrollada por UNESCO en El Salvador para apoyar el desarrollo de sus políticas de inteligencia artificial.",
-      en: "Application of UNESCO's RAM methodology in El Salvador to support the development of its artificial intelligence policies.",
+      es: "Diagnóstico integral de las capacidades y desafíos de El Salvador para la adopción de IA, aplicando la metodología RAM de UNESCO. Los resultados orientan el diseño de las primeras políticas nacionales de inteligencia artificial del país.",
+      en: "Comprehensive assessment of El Salvador's capabilities and challenges for AI adoption, applying UNESCO's RAM methodology. The results guide the design of the country's first national artificial intelligence policies.",
     },
     client: "UNESCO",
     year: 2025,
@@ -141,8 +162,8 @@ export const projects = [
       en: "RAM Implementation Honduras",
     },
     description: {
-      es: "Aplicación de la metodología RAM desarrollada por UNESCO en Honduras para apoyar el desarrollo de sus políticas de inteligencia artificial.",
-      en: "Application of UNESCO's RAM methodology in Honduras to support the development of its artificial intelligence policies.",
+      es: "Evaluación del ecosistema de IA en Honduras mediante la metodología RAM de UNESCO, identificando brechas institucionales y oportunidades. Las recomendaciones alimentan el diseño de la hoja de ruta nacional en inteligencia artificial.",
+      en: "Assessment of Honduras' AI ecosystem using UNESCO's RAM methodology, identifying institutional gaps and opportunities. The recommendations inform the design of the national artificial intelligence roadmap.",
     },
     client: "UNESCO",
     year: 2025,
@@ -158,8 +179,8 @@ export const projects = [
       en: "RAM Implementation Guatemala",
     },
     description: {
-      es: "Aplicación de la metodología RAM desarrollada por UNESCO en Guatemala para apoyar el desarrollo de sus políticas de inteligencia artificial.",
-      en: "Application of UNESCO's RAM methodology in Guatemala to support the development of its artificial intelligence policies.",
+      es: "Aplicación de la metodología RAM de UNESCO en Guatemala para mapear capacidades tecnológicas, talento y gobernanza de IA. El diagnóstico sienta las bases para la formulación de políticas públicas de inteligencia artificial en el país.",
+      en: "Application of UNESCO's RAM methodology in Guatemala to map technological capabilities, talent, and AI governance. The assessment lays the groundwork for formulating public artificial intelligence policies in the country.",
     },
     client: "UNESCO",
     year: 2025,
@@ -175,8 +196,8 @@ export const projects = [
       en: "AI Sprinters: AI Impact in Hispanic America",
     },
     description: {
-      es: "Estudio encargado por Google que analiza 10 países de Hispanoamérica para estimar el potencial impacto de la IA y generar recomendaciones de política pública.",
-      en: "Google-commissioned study analyzing 10 Hispanic American countries to estimate AI's potential impact and generate public policy recommendations.",
+      es: "Estudio regional encargado por Google que cuantifica el impacto potencial de la IA en 10 economías hispanoamericanas. Entrega un conjunto de recomendaciones de política pública para maximizar los beneficios de la adopción tecnológica en la región.",
+      en: "Regional study commissioned by Google quantifying AI's potential impact across 10 Hispanic American economies. Delivers a set of public policy recommendations to maximize the benefits of technology adoption in the region.",
     },
     client: "Google",
     year: 2024,
@@ -194,8 +215,8 @@ export const projects = [
       en: "RAM Implementation Cambodia",
     },
     description: {
-      es: "Aplicación de la metodología RAM de UNESCO en Camboya para apoyar el desarrollo de su primera Estrategia Nacional de Inteligencia Artificial.",
-      en: "Application of UNESCO's RAM methodology in Cambodia to support the development of its first National Artificial Intelligence Strategy.",
+      es: "Primera aplicación de la metodología RAM de UNESCO en el sudeste asiático, evaluando la preparación de Camboya para la adopción de IA. Los hallazgos contribuyeron directamente al diseño de la primera Estrategia Nacional de Inteligencia Artificial del país.",
+      en: "First application of UNESCO's RAM methodology in Southeast Asia, assessing Cambodia's readiness for AI adoption. The findings directly contributed to the design of the country's first National Artificial Intelligence Strategy.",
     },
     client: "UNESCO",
     year: 2024,
@@ -213,8 +234,8 @@ export const projects = [
       en: "Comparative Analysis of AI Regulatory Frameworks in LAC",
     },
     description: {
-      es: "Análisis comparativo y recomendaciones del estado de legislación en IA en América Latina y el Caribe, considerando su impacto potencial en el desarrollo de sistemas de IA.",
-      en: "Comparative analysis and recommendations on the state of AI legislation in Latin America and the Caribbean, considering its potential impact on AI systems development.",
+      es: "Mapeo y análisis comparativo de la legislación de IA en más de 12 países de América Latina y el Caribe. Generamos recomendaciones concretas para armonizar marcos regulatorios y fomentar la innovación responsable en la región.",
+      en: "Mapping and comparative analysis of AI legislation across 12+ Latin American and Caribbean countries. We delivered concrete recommendations to harmonize regulatory frameworks and foster responsible innovation in the region.",
     },
     client: "CENIA",
     year: 2024,
@@ -230,8 +251,8 @@ export const projects = [
       en: "Municipal Artificial Intelligence Policy",
     },
     description: {
-      es: "Desarrollo de proceso de participación ciudadana y elaboración de Política Municipal de IA para la Municipalidad de Las Condes, en colaboración con CENIA.",
-      en: "Development of citizen participation process and drafting of Municipal AI Policy for Las Condes Municipality, in collaboration with CENIA.",
+      es: "Diseño y facilitación de un proceso de participación ciudadana que culminó en la primera Política Municipal de IA en Chile. Elaborada en colaboración con CENIA, establece lineamientos para el uso responsable de IA en la gestión municipal.",
+      en: "Design and facilitation of a citizen participation process that culminated in Chile's first Municipal AI Policy. Developed in collaboration with CENIA, it establishes guidelines for the responsible use of AI in municipal governance.",
     },
     client: "Municipalidad de Las Condes",
     year: 2024,
@@ -246,8 +267,8 @@ export const projects = [
       en: "Logistics Research, Development & Innovation Index",
     },
     description: {
-      es: "Diseño y medición de índice de I+D+i del sector logístico, con revisión y validación de comité académico.",
-      en: "Design and measurement of the logistics sector R&D&I index, with review and validation by an academic committee.",
+      es: "Creación del primer índice de I+D+i del sector logístico chileno, con metodología validada por un comité académico. Permite al sector medir su madurez en innovación y priorizar inversiones estratégicas.",
+      en: "Creation of the first R&D&I index for Chile's logistics sector, with methodology validated by an academic committee. Enables the sector to measure its innovation maturity and prioritize strategic investments.",
     },
     client: "Conecta Logística",
     year: 2024,
@@ -262,8 +283,8 @@ export const projects = [
       en: "AI Regulation Foresight",
     },
     description: {
-      es: "Diseño e implementación de grupos focales participativos para ejercicios de prospección y construcción de escenarios sobre regulación de IA.",
-      en: "Design and implementation of participatory focus groups for foresight exercises and scenario building on AI regulation.",
+      es: "Facilitación de grupos focales participativos para construir escenarios prospectivos sobre regulación de IA en Chile. Los resultados orientan la toma de decisiones frente a un entorno regulatorio en rápida evolución.",
+      en: "Facilitation of participatory focus groups to build foresight scenarios on AI regulation in Chile. The results guide decision-making in a rapidly evolving regulatory environment.",
     },
     client: "Centro de Innovación UC",
     year: 2024,
@@ -279,8 +300,8 @@ export const projects = [
       en: "AI Regulatory Sandboxes: Cases & Recommendations for Chile",
     },
     description: {
-      es: "Levantamiento de casos de sandboxes regulatorios de IA a nivel internacional y recomendaciones para la implementación de la agenda nacional.",
-      en: "International survey of AI regulatory sandbox cases and recommendations for implementing Chile's national agenda.",
+      es: "Investigación de experiencias internacionales de sandboxes regulatorios de IA y desarrollo de recomendaciones adaptadas a Chile. Entregamos una hoja de ruta para la implementación de entornos de prueba que aceleren la innovación con supervisión regulatoria.",
+      en: "Research of international AI regulatory sandbox experiences and development of recommendations tailored to Chile. We delivered a roadmap for implementing testing environments that accelerate innovation with regulatory oversight.",
     },
     client: "BID",
     year: 2024,
@@ -295,8 +316,8 @@ export const projects = [
       en: "Mapping of AI Projects in Chile",
     },
     description: {
-      es: "Recopilación de información sobre proyectos de investigación en IA para proporcionar una visión estratégica de las capacidades y oportunidades del país.",
-      en: "Compilation of information on AI research projects to provide a strategic overview of the country's capabilities and opportunities.",
+      es: "Mapeo exhaustivo de los proyectos de investigación en IA del país, identificando capacidades, brechas y oportunidades de colaboración. El resultado entrega una visión estratégica para orientar la inversión pública en I+D de inteligencia artificial.",
+      en: "Comprehensive mapping of the country's AI research projects, identifying capabilities, gaps, and collaboration opportunities. The result provides a strategic vision to guide public investment in artificial intelligence R&D.",
     },
     client: "BID",
     year: 2024,
@@ -312,8 +333,8 @@ export const projects = [
       en: "RAM Implementation Dominican Republic",
     },
     description: {
-      es: "Primer país de Centroamérica y el Caribe en aplicar la metodología RAM, profundizando en desafíos y oportunidades con recomendaciones incorporadas en su Estrategia Nacional de IA.",
-      en: "First country in Central America and the Caribbean to apply the RAM methodology, analyzing challenges and opportunities with recommendations incorporated into its National AI Strategy.",
+      es: "Lideramos la primera implementación de la metodología RAM en Centroamérica y el Caribe, evaluando desafíos y oportunidades para la adopción de IA. Las recomendaciones fueron incorporadas directamente en la Estrategia Nacional de Inteligencia Artificial del país.",
+      en: "We led the first RAM methodology implementation in Central America and the Caribbean, assessing challenges and opportunities for AI adoption. The recommendations were directly incorporated into the country's National Artificial Intelligence Strategy.",
     },
     client: "UNESCO",
     year: 2023,
@@ -330,8 +351,8 @@ export const projects = [
       en: "RAM Implementation Cuba",
     },
     description: {
-      es: "Profundización en desafíos y oportunidades de la adopción de IA, con un conjunto de recomendaciones para la política nacional de inteligencia artificial.",
-      en: "In-depth analysis of AI adoption challenges and opportunities, with a set of recommendations for the national artificial intelligence policy.",
+      es: "Evaluación de los desafíos y oportunidades de Cuba para la adopción de IA mediante la metodología RAM de UNESCO. Entregamos recomendaciones concretas que alimentan la formulación de la política nacional de inteligencia artificial.",
+      en: "Assessment of Cuba's challenges and opportunities for AI adoption using UNESCO's RAM methodology. We delivered concrete recommendations that inform the formulation of the national artificial intelligence policy.",
     },
     client: "UNESCO",
     year: 2023,
@@ -349,8 +370,8 @@ export const projects = [
       en: "Chile's AI Policy Update",
     },
     description: {
-      es: "Apoyo en la revisión de la política y plan de acción de 2021, generando una propuesta actualizada basada en las recomendaciones de la RAM UNESCO.",
-      en: "Support in reviewing the 2021 policy and action plan, generating an updated proposal based on UNESCO RAM recommendations.",
+      es: "Revisión integral de la Política Nacional de IA de Chile y su plan de acción, generando una propuesta actualizada alineada con las recomendaciones de la RAM UNESCO. El resultado informó la nueva versión de la política publicada por el Ministerio de Ciencia.",
+      en: "Comprehensive review of Chile's National AI Policy and its action plan, generating an updated proposal aligned with UNESCO RAM recommendations. The result informed the new policy version published by the Ministry of Science.",
     },
     client: "Ministerio de Ciencia",
     year: 2023,
@@ -366,8 +387,8 @@ export const projects = [
       en: "RAM Implementation Chile",
     },
     description: {
-      es: "Evaluación de la preparación del país para la adopción ética de la IA, destacando cambios institucionales y regulatorios necesarios, con más de 300 participantes.",
-      en: "Assessment of the country's readiness for ethical AI adoption, highlighting necessary institutional and regulatory changes, with over 300 participants.",
+      es: "Evaluación de la preparación de Chile para la adopción ética de IA, convocando a más de 300 actores del ecosistema. Identificamos los cambios institucionales y regulatorios necesarios para una gobernanza de IA responsable.",
+      en: "Assessment of Chile's readiness for ethical AI adoption, convening over 300 ecosystem stakeholders. We identified the institutional and regulatory changes needed for responsible AI governance.",
     },
     client: "Ministerio de Ciencia",
     year: 2023,
@@ -384,8 +405,8 @@ export const projects = [
       en: "Innovation Practices Analysis in Construction",
     },
     description: {
-      es: "Evaluación de prácticas de innovación del sector de la construcción para elaborar indicadores y recomendaciones.",
-      en: "Evaluation of innovation practices in the construction sector to develop indicators and recommendations.",
+      es: "Diagnóstico de las prácticas de innovación del sector de la construcción, desarrollando indicadores medibles y recomendaciones accionables. El estudio permite a las empresas del rubro compararse y priorizar sus esfuerzos de innovación.",
+      en: "Assessment of innovation practices in the construction sector, developing measurable indicators and actionable recommendations. The study enables companies in the industry to benchmark themselves and prioritize their innovation efforts.",
     },
     client: "CChC",
     year: 2023,
@@ -400,8 +421,8 @@ export const projects = [
       en: "The Voice of New Voters",
     },
     description: {
-      es: "Metodología usando procesamiento de lenguaje natural para el análisis de deliberaciones y entrevistas a nuevos votantes en el segundo proceso constitucional.",
-      en: "Methodology using natural language processing for analyzing deliberations and interviews with new voters in the second constitutional process.",
+      es: "Desarrollo de metodología de procesamiento de lenguaje natural para analizar las deliberaciones de nuevos votantes en el proceso constitucional. Transformamos grandes volúmenes de conversaciones en hallazgos accionables sobre preferencias ciudadanas.",
+      en: "Development of natural language processing methodology to analyze new voters' deliberations in the constitutional process. We transformed large volumes of conversations into actionable insights on citizen preferences.",
     },
     client: "UNAB",
     year: 2023,
@@ -417,8 +438,8 @@ export const projects = [
       en: "Municipal Artificial Intelligence Index",
     },
     description: {
-      es: "Primer instrumento para medir la preparación de los municipios en impulsar e implementar sistemas de IA, identificando brechas y oportunidades.",
-      en: "First instrument to measure municipal readiness to promote and implement AI systems, identifying gaps and opportunities.",
+      es: "Diseñamos el primer instrumento para medir la preparación de los municipios chilenos para adoptar IA, identificando brechas y oportunidades concretas. Una herramienta pionera que permite priorizar inversiones en transformación digital local.",
+      en: "We designed the first instrument to measure Chilean municipalities' readiness to adopt AI, identifying concrete gaps and opportunities. A pioneering tool that enables prioritizing investments in local digital transformation.",
     },
     client: "Municipalidad de Las Condes",
     year: 2023,
@@ -433,8 +454,8 @@ export const projects = [
       en: "Study on Harmful Biases in AI Systems",
     },
     description: {
-      es: "Estudio encargado por APEC sobre sesgos peligrosos en sistemas de inteligencia artificial, en colaboración con CENIA.",
-      en: "APEC-commissioned study on dangerous biases in artificial intelligence systems, in collaboration with CENIA.",
+      es: "Investigación para APEC sobre sesgos dañinos en sistemas de inteligencia artificial, desarrollada en colaboración con CENIA. El estudio identifica riesgos concretos y propone marcos de mitigación aplicables a las economías del Asia-Pacífico.",
+      en: "Research for APEC on harmful biases in artificial intelligence systems, developed in collaboration with CENIA. The study identifies concrete risks and proposes mitigation frameworks applicable to Asia-Pacific economies.",
     },
     client: "Ministerio de Economía",
     year: 2023,
@@ -450,8 +471,8 @@ export const projects = [
       en: "Latin American Artificial Intelligence Index 2023",
     },
     description: {
-      es: "Diseño de metodología y levantamiento de datos para el primer Índice Latinoamericano de IA, incluyendo encuesta para futuros levantamientos con apoyo de CAF y UNESCO.",
-      en: "Methodology design and data collection for the first Latin American AI Index, including surveys for future editions with CAF and UNESCO support.",
+      es: "Diseñamos la metodología y lideramos el levantamiento de datos del primer Índice Latinoamericano de IA, con apoyo de CAF y UNESCO. Un instrumento de referencia regional que permite comparar el avance de los países en adopción y gobernanza de IA.",
+      en: "We designed the methodology and led the data collection for the first Latin American AI Index, with CAF and UNESCO support. A regional benchmark instrument that enables comparing countries' progress in AI adoption and governance.",
     },
     client: "CENIA",
     year: 2023,
@@ -468,8 +489,8 @@ export const projects = [
       en: "Participatory Workshop on Gender Equity and Mobility",
     },
     description: {
-      es: "Apoyo en diseño de metodología de discusión y análisis automatizado con algoritmos de IA de jornada deliberativa sobre equidad de género y movilidad.",
-      en: "Support in designing discussion methodology and automated AI analysis of deliberative workshop on gender equity and mobility.",
+      es: "Diseño de metodología deliberativa y análisis automatizado con IA de una jornada participativa sobre equidad de género y movilidad. Convertimos las opiniones de los participantes en hallazgos estructurados para informar políticas de transporte inclusivo.",
+      en: "Design of deliberative methodology and automated AI analysis of a participatory workshop on gender equity and mobility. We transformed participant opinions into structured findings to inform inclusive transportation policies.",
     },
     client: "UNAB",
     year: 2023,
@@ -486,8 +507,8 @@ export const projects = [
       en: "Citizen Participation Support in LAC",
     },
     description: {
-      es: "Diseño e implementación de procesos de participación ciudadana para la creación de la Estrategia Nacional de IA de República Dominicana y la actualización de la de Uruguay.",
-      en: "Design and implementation of citizen participation processes for the creation of the Dominican Republic's National AI Strategy and Uruguay's strategy update.",
+      es: "Diseñamos y facilitamos los procesos de participación ciudadana para la creación de la Estrategia Nacional de IA de República Dominicana y la actualización de la de Uruguay. Cientos de actores aportaron a políticas que reflejan las necesidades reales de cada país.",
+      en: "We designed and facilitated citizen participation processes for the creation of the Dominican Republic's National AI Strategy and Uruguay's strategy update. Hundreds of stakeholders contributed to policies that reflect each country's real needs.",
     },
     client: "CAF",
     year: 2022,
@@ -505,8 +526,8 @@ export const projects = [
       en: "Climate Tech Startups Analysis in LAC",
     },
     description: {
-      es: "Desarrollo conceptual de Climate Tech y benchmark del estado de la industria y emprendimiento en la región de América Latina y el Caribe.",
-      en: "Conceptual development of Climate Tech and benchmark of the industry and entrepreneurship landscape in Latin America and the Caribbean.",
+      es: "Definición del marco conceptual de Climate Tech para América Latina y benchmark del ecosistema de emprendimiento en la región. Entregamos al BID un diagnóstico que identifica oportunidades de inversión y brechas del ecosistema climático regional.",
+      en: "Definition of the Climate Tech conceptual framework for Latin America and benchmark of the regional entrepreneurship ecosystem. We delivered to the IDB an assessment identifying investment opportunities and gaps in the regional climate ecosystem.",
     },
     client: "BID",
     year: 2022,
@@ -521,8 +542,8 @@ export const projects = [
       en: "Automated Participation Analysis",
     },
     description: {
-      es: "Diseño de metodología y análisis automatizado con algoritmos de IA de sesiones de participación, entregando panel de visualizaciones comparativas.",
-      en: "Methodology design and automated AI analysis of participation sessions, delivering a comparative visualization dashboard.",
+      es: "Desarrollo de metodología y análisis automatizado con IA de sesiones de participación ciudadana, entregando un panel de visualizaciones comparativas. Permitimos a los investigadores procesar grandes volúmenes de deliberaciones en tiempo real.",
+      en: "Development of methodology and automated AI analysis of citizen participation sessions, delivering a comparative visualization dashboard. We enabled researchers to process large volumes of deliberations in real time.",
     },
     client: "UNAB",
     year: 2022,
@@ -677,10 +698,10 @@ export const team = [
   {
     id: "julio-pertuze",
     name: "Julio Pertuzé",
-    role: { es: "Socio", en: "Partner" },
+    role: { es: "", en: "" },
     bio: {
-      es: "Ph.D. en Engineering Systems (MIT). Profesor en la Escuela de Ingeniería de la PUC Chile. Ex Subsecretario de Economía y Pequeñas Empresas. Especialista en estrategias de desarrollo público y privado.",
-      en: "Ph.D. in Engineering Systems (MIT). Professor at PUC Chile's School of Engineering. Former Undersecretary of Economy and Small Businesses. Specialist in public and private development strategies.",
+      es: "Ph.D. en Engineering Systems (MIT) y Profesor en la Escuela de Ingeniería de la PUC Chile. Como Subsecretario de Economía, impulsó la agenda de transformación digital y apoyo a pymes del país. Especialista en diseño de estrategias de desarrollo tecnológico para el sector público y privado.",
+      en: "Ph.D. in Engineering Systems (MIT) and Professor at PUC Chile's School of Engineering. As Undersecretary of Economy, he drove the digital transformation agenda and SME support nationwide. Specialist in designing technology development strategies for the public and private sectors.",
     },
     image: "/images/team/julio-pertuze.jpg",
     linkedin: "https://www.linkedin.com/in/julio-pertuzé-1458124/",
@@ -688,10 +709,10 @@ export const team = [
   {
     id: "jose-guridi",
     name: "José A. Guridi",
-    role: { es: "Socio", en: "Partner" },
+    role: { es: "", en: "" },
     bio: {
-      es: "Candidato a Ph.D. en Information Science (Cornell). Creador de la Política Nacional de IA de Chile. Miembro de UNESCO AI Ethics Experts Without Borders. Ex líder de la unidad FAST en el Ministerio de Economía.",
-      en: "Ph.D. candidate in Information Science (Cornell). Creator of Chile's National AI Policy. Member of UNESCO AI Ethics Experts Without Borders. Former leader of the FAST unit at the Ministry of Economy.",
+      es: "Candidato a Ph.D. en Information Science (Cornell) y miembro de UNESCO AI Ethics Experts Without Borders. Lideró la creación de la Política Nacional de IA de Chile y la unidad FAST del Ministerio de Economía. Especialista en política pública de inteligencia artificial y gobernanza tecnológica.",
+      en: "Ph.D. candidate in Information Science (Cornell) and member of UNESCO AI Ethics Experts Without Borders. Led the creation of Chile's National AI Policy and the FAST unit at the Ministry of Economy. Specialist in artificial intelligence public policy and technology governance.",
     },
     image: "/images/team/jose-guridi.png",
     linkedin: "https://www.linkedin.com/in/jaguridi/",
@@ -699,10 +720,10 @@ export const team = [
   {
     id: "sandra-peralta",
     name: "Sandra Peralta",
-    role: { es: "Socia", en: "Partner" },
+    role: { es: "", en: "" },
     bio: {
-      es: "Ingeniera Comercial con mención en Economía (Universidad de Chile). Economista senior en la Comisión Nacional de Evaluación y Productividad. Experiencia en regulación de telecomunicaciones y evaluación de políticas públicas.",
-      en: "Commercial Engineer with Economics focus (University of Chile). Senior economist at the National Commission of Evaluation and Productivity. Experience in telecommunications regulation and public policy evaluation.",
+      es: "Ingeniera Comercial con mención en Economía (Universidad de Chile). Ex Jefa de Estudios del Ministerio de Economía y economista senior en la Comisión Nacional de Evaluación y Productividad. Especialista en análisis regulatorio, telecomunicaciones y evaluación de políticas públicas.",
+      en: "Commercial Engineer with Economics focus (University of Chile). Former Head of Studies at the Ministry of Economy and senior economist at the National Commission of Evaluation and Productivity. Specialist in regulatory analysis, telecommunications, and public policy evaluation.",
     },
     image: "/images/team/sandra-peralta.jpg",
     linkedin: "https://www.linkedin.com/in/sandra-peralta-alvarez-23580a252/",
@@ -710,10 +731,10 @@ export const team = [
   {
     id: "sebastian-adasme",
     name: "Sebastián Adasme",
-    role: { es: "Socio", en: "Partner" },
+    role: { es: "", en: "" },
     bio: {
-      es: "Cientista social con especialización en Economía y Ciencia Política (PUC Chile). Asesor de la Presidencia y del Ministerio de Economía. Especialista en economía digital y política tecnológica multilateral.",
-      en: "Social scientist specializing in Economics and Political Science (PUC Chile). Advisor to the Presidency and Ministry of Economy. Specialist in digital economy and multilateral technology policy.",
+      es: "Cientista social con especialización en Economía y Ciencia Política (PUC Chile). Asesoró directamente a la Presidencia y al Ministerio de Economía en la agenda de transformación digital. Especialista en economía digital y negociación de política tecnológica multilateral.",
+      en: "Social scientist specializing in Economics and Political Science (PUC Chile). Directly advised the Presidency and the Ministry of Economy on the digital transformation agenda. Specialist in digital economy and multilateral technology policy negotiation.",
     },
     image: "/images/team/sebastian-adasme.jpg",
     linkedin: "https://www.linkedin.com/in/sebastián-adasme-toro-18465b201/",
@@ -721,10 +742,10 @@ export const team = [
   {
     id: "pilar-trivelli",
     name: "Pilar Trivelli",
-    role: { es: "Socia", en: "Partner" },
+    role: { es: "", en: "" },
     bio: {
-      es: "Abogada (Universidad de Chile), M.Sc. en Food Studies (NYU). Ex asesora senior de INAPI y directora de SERCOTEC e INNOVA. Lideró programas de recuperación de pymes durante la pandemia.",
-      en: "Lawyer (University of Chile), M.Sc. in Food Studies (NYU). Former senior advisor at INAPI and board director at SERCOTEC and INNOVA. Led SME recovery programs during the pandemic.",
+      es: "Abogada (Universidad de Chile) con M.Sc. en Food Studies (NYU). Ex Jefa de la División de Empresas de Menor Tamaño del Ministerio de Economía y asesora senior de INAPI. Especialista en propiedad intelectual, innovación y marcos regulatorios para pymes.",
+      en: "Lawyer (University of Chile) with M.Sc. in Food Studies (NYU). Former Head of the Small Business Division at the Ministry of Economy and senior advisor at INAPI. Specialist in intellectual property, innovation, and regulatory frameworks for SMEs.",
     },
     image: "/images/team/pilar-trivelli.jpg",
     linkedin: "https://www.linkedin.com/in/pilar-trivelli-98823b69/",
@@ -732,10 +753,10 @@ export const team = [
   {
     id: "nicole-rabba",
     name: "Nicole Rabba",
-    role: { es: "Socia", en: "Partner" },
+    role: { es: "", en: "" },
     bio: {
-      es: "Economista (Universidad de Chile). Ex analista financiera en Fundación País Digital y asesora en la unidad FAST. Investigadora asistente en el Centro de Innovación y Economía Circular.",
-      en: "Economist (University of Chile). Former financial analyst at País Digital Foundation and advisor at the FAST unit. Assistant researcher at the Innovation and Circular Economy Center.",
+      es: "Economista (Universidad de Chile). Trabajó en la unidad FAST del Ministerio de Economía y en Fundación País Digital, contribuyendo a la agenda de transformación digital del país. Especialista en análisis económico, innovación y economía circular.",
+      en: "Economist (University of Chile). Worked at the FAST unit of the Ministry of Economy and at País Digital Foundation, contributing to the country's digital transformation agenda. Specialist in economic analysis, innovation, and circular economy.",
     },
     image: "/images/team/nicole-rabba.jpg",
     linkedin: "https://www.linkedin.com/in/prabba/",
@@ -771,30 +792,43 @@ export const contactContent = {
 
 export const newsItems = [
   {
-    id: "ilia-2024",
+    id: "ram-centroamerica-2025",
     title: {
-      es: "Publicación del Índice Latinoamericano de Inteligencia Artificial 2024",
-      en: "Publication of the Latin American Artificial Intelligence Index 2024",
+      es: "Inicio de evaluaciones RAM en El Salvador, Honduras y Guatemala",
+      en: "Launch of RAM assessments in El Salvador, Honduras and Guatemala",
     },
     summary: {
-      es: "Se lanzó la tercera edición del ILIA, el estudio más completo sobre el estado de la IA en América Latina, cubriendo 12 países con más de 200 indicadores.",
-      en: "The third edition of ILIA was launched, the most comprehensive study on the state of AI in Latin America, covering 12 countries with over 200 indicators.",
+      es: "Foresight inicia la implementación de la metodología RAM de UNESCO en tres nuevos países de Centroamérica, expandiendo nuestro trabajo a 10+ países evaluados.",
+      en: "Foresight launches the implementation of UNESCO's RAM methodology in three new Central American countries, expanding our work to 10+ countries assessed.",
     },
-    date: "2024-11-15",
+    date: "2025-09-15",
+    category: "alianza" as const,
+  },
+  {
+    id: "ai-sprinters-mexico-2025",
+    title: {
+      es: "Lanzamiento del reporte AI Sprinters México",
+      en: "Launch of AI Sprinters Mexico report",
+    },
+    summary: {
+      es: "Publicamos junto a Google el estudio de impacto económico de la IA en México, estimando un potencial de crecimiento de USD $55–103 mil millones anuales.",
+      en: "We published with Google the AI economic impact study for Mexico, estimating a growth potential of USD $55–103 billion annually.",
+    },
+    date: "2025-06-01",
     category: "publicacion" as const,
   },
   {
-    id: "unesco-ram-5-paises",
+    id: "google-impacto-ia-chile",
     title: {
-      es: "Alianza con UNESCO para evaluar preparación en IA en 5 países",
-      en: "Partnership with UNESCO to assess AI readiness in 5 countries",
+      es: "Estudio pionero: la IA podría aportar hasta un 20% al PIB de Chile",
+      en: "Pioneering study: AI could contribute up to 20% to Chile's GDP",
     },
     summary: {
-      es: "Foresight fue seleccionado por UNESCO para aplicar la metodología RAM (Readiness Assessment Methodology) en Uruguay, Costa Rica, Panamá, República Dominicana y Trinidad y Tobago.",
-      en: "Foresight was selected by UNESCO to apply the RAM (Readiness Assessment Methodology) in Uruguay, Costa Rica, Panama, Dominican Republic and Trinidad and Tobago.",
+      es: "Como parte de la serie AI Sprinters de Google, estimamos que la IA podría generar entre USD 36.000 y USD 67.000 millones anuales en Chile, transformando sectores como finanzas, comercio y manufactura.",
+      en: "As part of Google's AI Sprinters series, we estimated AI could generate between USD 36 and USD 67 billion annually in Chile, transforming sectors like finance, commerce and manufacturing.",
     },
-    date: "2024-09-01",
-    category: "alianza" as const,
+    date: "2025-03-10",
+    category: "publicacion" as const,
   },
   {
     id: "politica-ia-lascondes",
@@ -810,16 +844,16 @@ export const newsItems = [
     category: "logro" as const,
   },
   {
-    id: "google-impacto-ia",
+    id: "ilia-2024",
     title: {
-      es: "Estudio de impacto económico de la IA con Google",
-      en: "AI Economic Impact Study with Google",
+      es: "Publicación del Índice Latinoamericano de Inteligencia Artificial 2024",
+      en: "Publication of the Latin American Artificial Intelligence Index 2024",
     },
     summary: {
-      es: "Realizamos un estudio pionero sobre el impacto económico de la inteligencia artificial en Chile, estimando que la IA podría contribuir entre un 10,9% y un 20% adicional al PIB.",
-      en: "We conducted a pioneering study on the economic impact of artificial intelligence in Chile, estimating that AI could contribute an additional 10.9% to 20% to GDP.",
+      es: "Se lanzó la tercera edición del ILIA, el estudio más completo sobre el estado de la IA en América Latina, cubriendo 12 países con más de 200 indicadores.",
+      en: "The third edition of ILIA was launched, the most comprehensive study on the state of AI in Latin America, covering 12 countries with over 200 indicators.",
     },
-    date: "2024-03-10",
+    date: "2024-11-15",
     category: "publicacion" as const,
   },
 ];

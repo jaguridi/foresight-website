@@ -55,7 +55,7 @@ export function TeamCard({
 
       {/* Info */}
       <h3 className="text-xl font-semibold text-navy mb-1">{name}</h3>
-      <p className="text-cyan font-medium mb-3">{role}</p>
+      {role && <p className="text-cyan font-medium mb-3">{role}</p>}
       <p className="text-slate-500 text-sm mb-4 line-clamp-3">{bio}</p>
 
       {/* LinkedIn */}

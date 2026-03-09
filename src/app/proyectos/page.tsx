@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ProjectCard } from "@/components/ui";
-import { projects } from "@/data/content";
+import { projects, clientLogos } from "@/data/content";
 import { useLang } from "@/lib/i18n";
 
 export default function ProjectsPage() {
@@ -242,6 +242,7 @@ export default function ProjectsPage() {
                   title={project.title[lang]}
                   description={project.description[lang]}
                   client={project.client}
+                  clientLogo={clientLogos[project.client]}
                   year={project.year}
                   yearEnd={project.yearEnd}
                   status={project.status}

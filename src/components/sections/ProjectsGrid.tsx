@@ -1,7 +1,7 @@
 "use client";
 
 import { SectionHeading, ProjectCard, GradientButton } from "@/components/ui";
-import { projects } from "@/data/content";
+import { projects, clientLogos } from "@/data/content";
 import { ArrowRight } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
@@ -37,6 +37,7 @@ export function ProjectsGrid({
               title={project.title[lang]}
               description={project.description[lang]}
               client={project.client}
+              clientLogo={clientLogos[project.client]}
               year={project.year}
               yearEnd={project.yearEnd}
               status={project.status}

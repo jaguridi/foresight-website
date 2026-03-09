@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, Linkedin, MapPin } from "lucide-react";
+import { Send, Mail, Linkedin, MapPin, CheckCircle } from "lucide-react";
 import { GradientButton } from "@/components/ui";
 import { siteConfig, contactContent } from "@/data/content";
 import { useLang } from "@/lib/i18n";
@@ -15,6 +15,8 @@ export default function ContactPage() {
     organization: "",
     message: "",
   });
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const subject = encodeURIComponent(
@@ -26,9 +28,20 @@ export default function ContactPage() {
       `${formData.message}\n\n---\n${lang === "es" ? "De" : "From"}: ${formData.name}\nEmail: ${formData.email}${formData.organization ? `\n${lang === "es" ? "Organización" : "Organization"}: ${formData.organization}` : ""}`
     );
     window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+    setSubmitted(true);
   };
 
   const c = contactContent[lang];
+
+  const emailHint =
+    lang === "es"
+      ? "Al enviar se abrirá tu cliente de correo con el mensaje pre-completado"
+      : "Clicking submit will open your email client with the message pre-filled";
+
+  const successMessage =
+    lang === "es"
+      ? "Se abrió tu cliente de correo. Si no se abrió, escríbenos directamente a"
+      : "Your email client should have opened. If it didn't, email us directly at";
 
   return (
     <div className="pt-20">
@@ -62,6 +75,27 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
+              {submitted ? (
+                <div className="flex flex-col items-center justify-center text-center py-12 px-6 bg-slate-50 rounded-2xl">
+                  <CheckCircle className="w-16 h-16 text-emerald-500 mb-4" />
+                  <h3 className="text-2xl font-bold text-navy mb-3">
+                    {lang === "es" ? "¡Gracias!" : "Thank you!"}
+                  </h3>
+                  <p className="text-slate-500 mb-4">{successMessage}</p>
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="text-cyan font-medium hover:underline"
+                  >
+                    {siteConfig.email}
+                  </a>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="mt-6 text-sm text-slate-400 hover:text-slate-600 transition-colors"
+                  >
+                    {lang === "es" ? "Enviar otro mensaje" : "Send another message"}
+                  </button>
+                </div>
+              ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="contact-name" className="sr-only">
@@ -139,7 +173,11 @@ export default function ContactPage() {
                     {c.submit}
                     <Send className="w-5 h-5 ml-2" />
                   </GradientButton>
+                  <p className="text-xs text-slate-400 text-center">
+                    {emailHint}
+                  </p>
                 </form>
+              )}
             </motion.div>
 
             {/* Contact Info */}

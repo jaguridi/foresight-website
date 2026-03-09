@@ -2,9 +2,11 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { GradientButton } from "@/components/ui";
-import { heroContent } from "@/data/content";
+import { heroContent, heroStats, clients } from "@/data/content";
 import { useLang } from "@/lib/i18n";
+import { asset } from "@/lib/utils";
 
 export function Hero() {
   const { lang } = useLang();
@@ -74,6 +76,45 @@ export function Hero() {
             {content.cta}
             <ArrowRight className="w-5 h-5 ml-2" />
           </GradientButton>
+        </motion.div>
+
+        {/* Social proof stats */}
+        <motion.div
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-16 flex flex-wrap items-center justify-center gap-8 md:gap-12"
+        >
+          {heroStats.map((stat, i) => (
+            <div key={i} className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-navy">{stat.value}</div>
+              <div className="text-sm text-slate-500 mt-1">{stat.label[lang]}</div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Trusted by logos */}
+        <motion.div
+          initial={prefersReducedMotion ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-12"
+        >
+          <p className="text-xs uppercase tracking-wider text-slate-400 mb-4">
+            {lang === "es" ? "Confían en nosotros" : "Trusted by"}
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            {clients.slice(0, 6).map((client) => (
+              <Image
+                key={client.name}
+                src={asset(client.logo)}
+                alt={client.name}
+                width={100}
+                height={40}
+                className="h-8 w-auto object-contain"
+              />
+            ))}
+          </div>
         </motion.div>
       </div>
 
