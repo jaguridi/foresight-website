@@ -703,7 +703,7 @@ export const team = [
       es: "Ph.D. en Engineering Systems (MIT) y Profesor en la Escuela de Ingeniería de la PUC Chile. Como Subsecretario de Economía, impulsó la agenda de transformación digital y apoyo a pymes del país. Especialista en diseño de estrategias de desarrollo tecnológico para el sector público y privado.",
       en: "Ph.D. in Engineering Systems (MIT) and Professor at PUC Chile's School of Engineering. As Undersecretary of Economy, he drove the digital transformation agenda and SME support nationwide. Specialist in designing technology development strategies for the public and private sectors.",
     },
-    image: "/images/team/julio-pertuze.jpg",
+    image: "/images/team/julio.jpeg",
     linkedin: "https://www.linkedin.com/in/julio-pertuzé-1458124/",
   },
   {
@@ -725,7 +725,7 @@ export const team = [
       es: "Ingeniera Comercial con mención en Economía (Universidad de Chile). Ex Jefa de Estudios del Ministerio de Economía y economista senior en la Comisión Nacional de Evaluación y Productividad. Especialista en análisis regulatorio, telecomunicaciones y evaluación de políticas públicas.",
       en: "Commercial Engineer with Economics focus (University of Chile). Former Head of Studies at the Ministry of Economy and senior economist at the National Commission of Evaluation and Productivity. Specialist in regulatory analysis, telecommunications, and public policy evaluation.",
     },
-    image: "/images/team/sandra-peralta.jpg",
+    image: "/images/team/sandra.jpeg",
     linkedin: "https://www.linkedin.com/in/sandra-peralta-alvarez-23580a252/",
   },
   {
@@ -736,7 +736,7 @@ export const team = [
       es: "Cientista social con especialización en Economía y Ciencia Política (PUC Chile). Asesoró directamente a la Presidencia y al Ministerio de Economía en la agenda de transformación digital. Especialista en economía digital y negociación de política tecnológica multilateral.",
       en: "Social scientist specializing in Economics and Political Science (PUC Chile). Directly advised the Presidency and the Ministry of Economy on the digital transformation agenda. Specialist in digital economy and multilateral technology policy negotiation.",
     },
-    image: "/images/team/sebastian-adasme.jpg",
+    image: "/images/team/seba.jpeg",
     linkedin: "https://www.linkedin.com/in/sebastián-adasme-toro-18465b201/",
   },
   {
@@ -747,7 +747,7 @@ export const team = [
       es: "Abogada (Universidad de Chile) con M.Sc. en Food Studies (NYU). Ex Jefa de la División de Empresas de Menor Tamaño del Ministerio de Economía y asesora senior de INAPI. Especialista en propiedad intelectual, innovación y marcos regulatorios para pymes.",
       en: "Lawyer (University of Chile) with M.Sc. in Food Studies (NYU). Former Head of the Small Business Division at the Ministry of Economy and senior advisor at INAPI. Specialist in intellectual property, innovation, and regulatory frameworks for SMEs.",
     },
-    image: "/images/team/pilar-trivelli.jpg",
+    image: "/images/team/pilar.jpeg",
     linkedin: "https://www.linkedin.com/in/pilar-trivelli-98823b69/",
   },
   {
@@ -758,7 +758,7 @@ export const team = [
       es: "Economista (Universidad de Chile). Trabajó en la unidad FAST del Ministerio de Economía y en Fundación País Digital, contribuyendo a la agenda de transformación digital del país. Especialista en análisis económico, innovación y economía circular.",
       en: "Economist (University of Chile). Worked at the FAST unit of the Ministry of Economy and at País Digital Foundation, contributing to the country's digital transformation agenda. Specialist in economic analysis, innovation, and circular economy.",
     },
-    image: "/images/team/nicole-rabba.jpg",
+    image: "/images/team/nico.jpeg",
     linkedin: "https://www.linkedin.com/in/prabba/",
   },
 ];
