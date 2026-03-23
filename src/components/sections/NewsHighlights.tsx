@@ -14,13 +14,8 @@ export function NewsHighlights() {
         <SectionHeading
           title={
             lang === "es"
-              ? "Últimas Publicaciones"
-              : "Latest Posts"
-          }
-          subtitle={
-            lang === "es"
-              ? "Síguenos en LinkedIn para conocer nuestras últimas novedades"
-              : "Follow us on LinkedIn for our latest updates"
+              ? "Noticias Destacadas"
+              : "Featured News"
           }
         />
 

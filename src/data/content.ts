@@ -10,7 +10,6 @@ export const navigation = {
   es: [
     { name: "Inicio", href: "/" },
     { name: "Proyectos", href: "/proyectos" },
-    { name: "Reportes", href: "/reportes" },
     { name: "Noticias", href: "/noticias" },
     { name: "Equipo", href: "/equipo" },
     { name: "Contacto", href: "/contacto" },
@@ -18,7 +17,6 @@ export const navigation = {
   en: [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/proyectos" },
-    { name: "Reports", href: "/reportes" },
     { name: "News", href: "/noticias" },
     { name: "Team", href: "/equipo" },
     { name: "Contact", href: "/contacto" },
@@ -206,7 +204,162 @@ export const projects = [
     type: "research",
     status: "completed" as const,
     featuredStat: { value: "10", label: { es: "Países analizados", en: "Countries analyzed" } },
-    reportSlug: "ai-sprinters-chile",
+  },
+  {
+    id: "ai-sprinters-chile",
+    title: {
+      es: "Una oportunidad histórica: IA para Chile",
+      en: "A Historic Opportunity: AI for Chile",
+    },
+    subtitle: {
+      es: "Inteligencia artificial para desatar el potencial económico de Chile",
+      en: "Artificial intelligence to unlock Chile's economic potential",
+    },
+    description: {
+      es: "Estudio de impacto económico de la IA en Chile, parte de la serie AI Digital Sprinters de Google. Se estima que la IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB.",
+      en: "AI economic impact study for Chile, part of Google's AI Digital Sprinters series. AI could generate between USD 36.432 and USD 67.224 billion annually, equivalent to 10.9% and 20% of GDP.",
+    },
+    client: "Google",
+    year: 2025,
+    region: "Chile",
+    type: "research" as const,
+    status: "completed" as const,
+    featured: true,
+    parentProject: "ai-sprinters",
+    featuredStat: {
+      value: "10,9–20%",
+      label: { es: "Del PIB de Chile podría representar el impacto económico de la IA", en: "Of Chile's GDP could represent AI's economic impact" },
+    },
+    executiveSummary: {
+      es: "Al analizar la matriz productiva de Chile, se estima que la IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB. Los sectores con mayor impacto proyectado son las actividades financieras y de seguros, el comercio y la manufactura, que en conjunto representarían más del 65% del efecto económico total. Sin embargo, según datos de PwC, solo el 5% de las empresas chilenas ha integrado IA en sus operaciones. Este reporte es parte de la serie IA Digital Sprinters de Google.",
+      en: "Analyzing Chile's productive matrix, AI could generate between USD 36.432 and USD 67.224 billion annually, equivalent to 10.9% and 20% of GDP. The sectors with the highest projected impact are financial activities and insurance, commerce and manufacturing, which together would represent more than 65% of the total economic effect. However, according to PwC data, only 5% of Chilean companies have integrated AI into their operations. This report is part of Google's AI Digital Sprinters series.",
+    },
+    keyStats: [
+      { value: "10,9–20%", label: { es: "Impacto potencial en PIB", en: "Potential GDP Impact" } },
+      { value: "$36–67B", label: { es: "USD millones anuales", en: "USD Billion Annual" } },
+      { value: "5%", label: { es: "Empresas con IA adoptada", en: "Companies with AI Adopted" } },
+      { value: "45", label: { es: "Centros de datos en Chile", en: "Data Centers in Chile" } },
+    ],
+    sectors: [
+      { name: { es: "Servicios Financieros y Seguros", en: "Financial Services & Insurance" }, percentage: 38 },
+      { name: { es: "Comercio", en: "Commerce" }, percentage: 20 },
+      { name: { es: "Manufactura", en: "Manufacturing" }, percentage: 10 },
+      { name: { es: "Minería", en: "Mining" }, percentage: 6 },
+      { name: { es: "Agricultura", en: "Agriculture" }, percentage: 4 },
+      { name: { es: "Electricidad y Gas", en: "Electricity & Gas" }, percentage: 4 },
+    ],
+    pillars: [
+      {
+        title: { es: "Políticas Públicas Habilitantes", en: "Enabling Public Policies" },
+        icon: "Scale",
+        content: {
+          es: "Chile ha tomado un rol de liderazgo en el diseño de políticas para impulsar la IA. Publicó su Política Nacional de IA en 2021 y la actualizó en 2024. Adoptó los principios de IA de la OCDE y fue el primero en usar la Metodología RAM de UNESCO. Recomendaciones: promover un enfoque regulatorio equilibrado y basado en evidencia, priorizar la fiscalización sectorial y aclarar el marco legal para minería de datos.",
+          en: "Chile has taken a leadership role in designing policies to promote AI. It published its National AI Policy in 2021 and updated it in 2024. It adopted the OECD AI principles and was the first to use UNESCO's RAM Methodology. Recommendations: promote a balanced, evidence-based regulatory approach, prioritize sectoral oversight, and clarify the legal framework for data mining.",
+        },
+      },
+      {
+        title: { es: "Infraestructura", en: "Infrastructure" },
+        icon: "Server",
+        content: {
+          es: "Chile se perfila como un nodo digital clave en Hispanoamérica con 45 centros de datos (incluido el de Google en Quilicura) y cables submarinos como Humboldt y Curie. El 96,5% de los hogares tiene acceso a internet y posee las redes móviles más rápidas de la región. Recomendaciones: alinear inversiones con desarrollo sostenible, expandir adopción Cloud First y crear plataformas de datos abiertos.",
+          en: "Chile is positioning itself as a key digital node in Hispanic America with 45 data centers (including Google's in Quilicura) and submarine cables like Humboldt and Curie. 96.5% of households have internet access and it has the fastest mobile networks in the region. Recommendations: align investments with sustainable development, expand Cloud First adoption, and create open data platforms.",
+        },
+      },
+      {
+        title: { es: "Fomento a la Innovación", en: "Innovation Promotion" },
+        icon: "Lightbulb",
+        content: {
+          es: "Chile necesita conectar mejor la academia, la industria y el gobierno para traducir conocimiento en soluciones concretas de IA. El ecosistema emprendedor es dinámico pero se requiere mayor financiamiento y colaboración entre actores del ecosistema para escalar soluciones de IA.",
+          en: "Chile needs to better connect academia, industry, and government to translate knowledge into concrete AI solutions. The entrepreneurial ecosystem is dynamic but more funding and collaboration between ecosystem actors is needed to scale AI solutions.",
+        },
+      },
+      {
+        title: { es: "Fortalecimiento del Capital Humano", en: "Human Capital Development" },
+        icon: "GraduationCap",
+        content: {
+          es: "El desarrollo del capital humano es el pilar que sostiene la transformación digital y la adopción de IA. Fortalecer la formación en habilidades digitales, integrar la IA en el sistema educativo y promover programas de capacitación continua permitirá a las personas adaptarse a los cambios del mercado laboral y liderar la creación de nuevas oportunidades.",
+          en: "Human capital development is the pillar that sustains digital transformation and AI adoption. Strengthening digital skills training, integrating AI into the educational system, and promoting continuous training programs will enable people to adapt to labor market changes and lead the creation of new opportunities.",
+        },
+      },
+    ],
+    downloadUrl: "/reports/ai-sprinters-chile.pdf",
+  },
+  {
+    id: "ai-sprinters-mexico",
+    title: {
+      es: "Desbloqueando el potencial de la IA en México",
+      en: "Unlocking AI's Potential in Mexico",
+    },
+    subtitle: {
+      es: "Velocistas de la IA: el impacto económico de la inteligencia artificial en México",
+      en: "AI Sprinters: the economic impact of artificial intelligence in Mexico",
+    },
+    description: {
+      es: "Estudio de impacto económico de la IA en México, parte de la serie AI Digital Sprinters de Google. Se estima un potencial de crecimiento de entre USD $54.770 y $102.525 millones anuales, concentrado en manufactura, comercio y servicios financieros.",
+      en: "AI economic impact study for Mexico, part of Google's AI Digital Sprinters series. Estimated growth potential of between USD $54.770 and $102.525 billion annually, concentrated in manufacturing, retail and financial services.",
+    },
+    client: "Google",
+    year: 2025,
+    region: "México",
+    type: "research" as const,
+    status: "completed" as const,
+    featured: true,
+    parentProject: "ai-sprinters",
+    featuredStat: {
+      value: "3–5,6%",
+      label: { es: "Del PIB podría provenir del crecimiento impulsado por IA", en: "Of GDP could come from AI-driven growth" },
+    },
+    executiveSummary: {
+      es: "La inteligencia artificial está redefiniendo el panorama económico global y, si México aprovecha su potencial, puede aumentar entre un 3% y un 5.6% el PIB. En México, se podrían generar entre USD $54.770 y $102.525 millones anuales de crecimiento económico, concentrándose en sectores clave como la manufactura, el comercio minorista y los servicios financieros. Este reporte presenta hallazgos y recomendaciones en cuatro factores habilitantes del marco Digital Sprinters.",
+      en: "Artificial intelligence is redefining the global economic landscape and, if Mexico leverages its potential, it can increase GDP by between 3% and 5.6%. Mexico could generate between USD $54.770 and $102.525 billion in annual economic growth, concentrated in key sectors such as manufacturing, retail and financial services. This report presents findings and recommendations across four enabling factors of the Digital Sprinters framework.",
+    },
+    keyStats: [
+      { value: "3–5,6%", label: { es: "Impacto potencial en PIB", en: "Potential GDP Impact" } },
+      { value: "$55–103B", label: { es: "USD millones anuales", en: "USD Billion Annual" } },
+      { value: "3", label: { es: "Sectores clave", en: "Key Sectors" } },
+      { value: "4", label: { es: "Pilares estratégicos", en: "Strategic Pillars" } },
+    ],
+    sectors: [
+      { name: { es: "Manufactura", en: "Manufacturing" }, percentage: 35 },
+      { name: { es: "Comercio Minorista", en: "Retail" }, percentage: 30 },
+      { name: { es: "Servicios Financieros", en: "Financial Services" }, percentage: 20 },
+      { name: { es: "Sector Público", en: "Public Sector" }, percentage: 15 },
+    ],
+    pillars: [
+      {
+        title: { es: "Políticas Públicas Efectivas", en: "Effective Public Policies" },
+        icon: "Scale",
+        content: {
+          es: "Crear una estrategia nacional de IA con visión a largo plazo, objetivos claros y métricas medibles. Diseñar un marco regulatorio equilibrado que fomente el uso ético y responsable sin restricciones excesivas. Promover la colaboración estratégica entre gobierno, industria y academia.",
+          en: "Create a national AI strategy with long-term vision, clear objectives and measurable metrics. Design a balanced regulatory framework that promotes ethical and responsible use without excessive restrictions. Promote strategic collaboration between government, industry and academia.",
+        },
+      },
+      {
+        title: { es: "Infraestructura Tecnológica Sólida", en: "Solid Technological Infrastructure" },
+        icon: "Server",
+        content: {
+          es: "Reforzar las políticas enfocadas en expandir el acceso a infraestructura digital, incluyendo fibra óptica, redes 5G e internet satelital. Reforzar el rol del Estado en la curaduría y apertura de datos públicos. Facilitar el acceso de mipymes a infraestructura tecnológica y servicios en la nube.",
+          en: "Strengthen policies focused on expanding access to digital infrastructure, including fiber optics, 5G networks and satellite internet. Strengthen the State's role in curating and opening public data. Facilitate SME access to technological infrastructure and cloud services.",
+        },
+      },
+      {
+        title: { es: "Innovación Tecnológica", en: "Technological Innovation" },
+        icon: "Lightbulb",
+        content: {
+          es: "Establecer laboratorios regionales de IA en universidades que aprovechen las ventajas comparativas de cada estado. Crear fondos de financiamiento para startups de base tecnológica. Fomentar una cultura de innovación y emprendimiento en todos los niveles educativos, empresariales y gubernamentales.",
+          en: "Establish regional AI labs in universities that leverage each state's comparative advantages. Create funding for technology-based startups. Foster a culture of innovation and entrepreneurship at all educational, business and governmental levels.",
+        },
+      },
+      {
+        title: { es: "Personas", en: "People" },
+        icon: "GraduationCap",
+        content: {
+          es: "Implementar programas de formación en habilidades digitales y en IA, integrándolos al sistema educativo en todos los niveles. Desarrollar estrategias de divulgación y educación pública sobre los beneficios y riesgos de la IA. Organizar talleres prácticos para mipymes y el sector público mostrando aplicaciones concretas.",
+          en: "Implement digital and AI skills training programs, integrating them into the educational system at all levels. Develop public education and outreach strategies about AI's benefits and risks. Organize practical workshops for SMEs and the public sector showing concrete applications.",
+        },
+      },
+    ],
+    downloadUrl: "/reports/ai-sprinters-mexico-es.pdf",
   },
   {
     id: "ram-camboya",
@@ -395,6 +548,7 @@ export const projects = [
     region: "Chile",
     type: "assessment",
     status: "completed" as const,
+    featured: true,
     featuredStat: { value: "300+", label: { es: "Participantes", en: "Participants" } },
     externalUrl: "https://www.unesco.org/ethics-ai/en/chile",
   },

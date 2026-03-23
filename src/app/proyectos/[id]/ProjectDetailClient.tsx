@@ -9,18 +9,26 @@ import {
   Calendar,
   Building2,
   ArrowRight,
+  Download,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { GradientButton } from "@/components/ui";
-import { projects, reports, clients } from "@/data/content";
+import {
+  GradientButton,
+  StatCard,
+  PillarCard,
+  BarChart,
+  SectionHeading,
+} from "@/components/ui";
+import { projects, clients } from "@/data/content";
+import * as LucideIcons from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { asset } from "@/lib/utils";
 
 export default function ProjectDetailClient({ id }: { id: string }) {
   const { lang } = useLang();
 
-  const project = projects.find((p) => p.id === id);
+  const project = projects.find((p) => p.id === id) as any;
 
   if (!project) {
     return (
@@ -66,23 +74,31 @@ export default function ProjectDetailClient({ id }: { id: string }) {
     consulting: { es: "Consultoría", en: "Consulting" },
   };
 
-  // Find related report if one exists
-  const relatedReport =
-    "reportSlug" in project
-      ? reports.find((r) => r.slug === (project as { reportSlug?: string }).reportSlug)
-      : undefined;
-
   // Find client logo
   const clientLogo = clients.find((c) => c.name === project.client)?.logo;
 
-  // Find related projects (same client or same type, excluding current)
+  // Related projects: same parentProject, or same client/type
   const relatedProjects = projects
     .filter(
-      (p) =>
+      (p: any) =>
         p.id !== project.id &&
-        (p.client === project.client || p.type === project.type)
+        (
+          (project.parentProject && p.id === project.parentProject) ||
+          (project.parentProject && (p as any).parentProject === project.parentProject) ||
+          (!project.parentProject && ((p as any).parentProject === project.id)) ||
+          p.client === project.client ||
+          p.type === project.type
+        )
     )
     .slice(0, 3);
+
+  // Rich content flags
+  const hasExecutiveSummary = !!project.executiveSummary;
+  const hasKeyStats = !!project.keyStats?.length;
+  const hasSectors = !!project.sectors?.length;
+  const hasPillars = !!project.pillars?.length;
+  const hasDownload = !!project.downloadUrl;
+  const hasExternalUrl = !!project.externalUrl;
 
   return (
     <div className="pt-20">
@@ -91,7 +107,6 @@ export default function ProjectDetailClient({ id }: { id: string }) {
         <div className="absolute inset-0 bg-gradient-brand" />
         <div className="absolute inset-0 bg-black/20" />
 
-        {/* Pattern overlay */}
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -131,11 +146,25 @@ export default function ProjectDetailClient({ id }: { id: string }) {
                 >
                   {statusLabel}
                 </span>
+                {project.parentProject && (
+                  <Link
+                    href={`/proyectos/${project.parentProject}`}
+                    className="inline-block px-3 py-1.5 rounded-full bg-cyan/20 text-cyan-100 text-sm hover:bg-cyan/30 transition-colors"
+                  >
+                    {projects.find((p) => p.id === project.parentProject)?.title[lang] || project.parentProject}
+                  </Link>
+                )}
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                 {project.title[lang]}
               </h1>
+
+              {project.subtitle && (
+                <p className="text-xl text-white/90 mb-4">
+                  {project.subtitle[lang]}
+                </p>
+              )}
 
               <p className="text-lg md:text-xl text-white/80 leading-relaxed">
                 {project.description[lang]}
@@ -207,9 +236,9 @@ export default function ProjectDetailClient({ id }: { id: string }) {
         </div>
       </section>
 
-      {/* Links Section */}
-      {(("externalUrl" in project && project.externalUrl) || relatedReport) && (
-        <section className="py-16 bg-slate-50">
+      {/* Executive Summary */}
+      {hasExecutiveSummary && (
+        <section className="section-padding">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -217,66 +246,157 @@ export default function ProjectDetailClient({ id }: { id: string }) {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold text-navy mb-6">
-                {lang === "es"
-                  ? "Recursos y documentos"
-                  : "Resources & Documents"}
+              <h2 className="text-3xl font-bold text-navy mb-6">
+                {lang === "es" ? "Resumen Ejecutivo" : "Executive Summary"}
               </h2>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                {project.executiveSummary[lang]}
+              </p>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
-              <div className="space-y-4">
-                {relatedReport && (
-                  <Link
-                    href={`/reportes/${relatedReport.slug}`}
-                    className="group flex items-center justify-between p-5 bg-white rounded-xl border border-slate-200 hover:border-cyan hover:shadow-lg transition-all"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-brand flex items-center justify-center">
-                        <FileText className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-navy group-hover:text-cyan transition-colors">
-                          {relatedReport.title[lang]}
-                        </div>
-                        <div className="text-sm text-slate-500">
-                          {lang === "es"
-                            ? "Ver reporte completo"
-                            : "View full report"}
-                        </div>
-                      </div>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-cyan group-hover:translate-x-1 transition-all" />
-                  </Link>
-                )}
+      {/* Key Stats */}
+      {hasKeyStats && (
+        <section className="py-16 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              title={lang === "es" ? "Cifras Clave" : "Key Figures"}
+            />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {project.keyStats.map((stat: any, index: number) => (
+                <StatCard
+                  key={stat.label[lang]}
+                  value={stat.value}
+                  label={stat.label[lang]}
+                  variant="large"
+                  delay={index * 0.1}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
-                {"externalUrl" in project && project.externalUrl && (
-                  <a
-                    href={project.externalUrl as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center justify-between p-5 bg-white rounded-xl border border-slate-200 hover:border-cyan hover:shadow-lg transition-all"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center">
-                        <ExternalLink className="w-6 h-6 text-cyan" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-navy group-hover:text-cyan transition-colors">
-                          {lang === "es"
-                            ? "Recurso externo"
-                            : "External resource"}
+      {/* Sector Breakdown */}
+      {hasSectors && (
+        <section className="section-padding">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              title={
+                lang === "es" ? "Impacto por Sector" : "Impact by Sector"
+              }
+              subtitle={
+                lang === "es"
+                  ? "Distribución del potencial de impacto de IA por sector económico"
+                  : "Distribution of AI impact potential by economic sector"
+              }
+            />
+            <BarChart
+              data={project.sectors.map((s: any) => ({
+                name: s.name[lang],
+                percentage: s.percentage,
+              }))}
+            />
+          </div>
+        </section>
+      )}
+
+      {/* Pillars */}
+      {hasPillars && (
+        <section className="py-16 bg-slate-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              title={
+                lang === "es"
+                  ? "Pilares Estratégicos"
+                  : "Strategic Pillars"
+              }
+              subtitle={
+                lang === "es"
+                  ? "Áreas de acción clave para maximizar el impacto de la IA"
+                  : "Key action areas to maximize AI impact"
+              }
+            />
+            <div className="space-y-4">
+              {project.pillars.map((pillar: any, index: number) => (
+                <PillarCard
+                  key={pillar.title[lang]}
+                  title={pillar.title[lang]}
+                  content={pillar.content[lang]}
+                  icon={pillar.icon as keyof typeof LucideIcons}
+                  delay={index * 0.1}
+                  defaultOpen={index === 0}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Resources: External URL and/or Download */}
+      {(hasExternalUrl || hasDownload) && (
+        <section className={`py-16 ${hasPillars ? "" : "bg-slate-50"}`}>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              {hasDownload ? (
+                <div className="bg-navy rounded-2xl p-8 md:p-12 text-center">
+                  <FileText className="w-16 h-16 text-cyan mx-auto mb-6" />
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                    {lang === "es"
+                      ? "Descarga el reporte completo"
+                      : "Download the full report"}
+                  </h3>
+                  <p className="text-slate-300 mb-8 max-w-xl mx-auto">
+                    {lang === "es"
+                      ? "Accede a todos los datos, metodología y recomendaciones detalladas"
+                      : "Access all data, methodology and detailed recommendations"}
+                  </p>
+                  <GradientButton href={project.downloadUrl}>
+                    <Download className="w-5 h-5 mr-2" />
+                    {lang === "es" ? "Descargar PDF" : "Download PDF"}
+                  </GradientButton>
+                </div>
+              ) : (
+                <>
+                  <h2 className="text-2xl font-bold text-navy mb-6">
+                    {lang === "es"
+                      ? "Recursos y documentos"
+                      : "Resources & Documents"}
+                  </h2>
+                  <div className="space-y-4">
+                    <a
+                      href={project.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between p-5 bg-white rounded-xl border border-slate-200 hover:border-cyan hover:shadow-lg transition-all"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center">
+                          <ExternalLink className="w-6 h-6 text-cyan" />
                         </div>
-                        <div className="text-sm text-slate-500 truncate max-w-md">
-                          {(project.externalUrl as string).replace(
-                            /^https?:\/\//,
-                            ""
-                          )}
+                        <div>
+                          <div className="font-semibold text-navy group-hover:text-cyan transition-colors">
+                            {lang === "es"
+                              ? "Recurso externo"
+                              : "External resource"}
+                          </div>
+                          <div className="text-sm text-slate-500 truncate max-w-md">
+                            {project.externalUrl.replace(/^https?:\/\//, "")}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-cyan transition-colors" />
-                  </a>
-                )}
-              </div>
+                      <ExternalLink className="w-5 h-5 text-slate-400 group-hover:text-cyan transition-colors" />
+                    </a>
+                  </div>
+                </>
+              )}
             </motion.div>
           </div>
         </section>
