@@ -14,11 +14,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ServicesSection />
       <ProjectsShowcase />
       <NewsHighlights />
       <ClientsSection />
       <TeamPreview />
+      <ServicesSection />
       <ContactCTA />
     </>
   );

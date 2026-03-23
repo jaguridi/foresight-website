@@ -25,15 +25,15 @@ export const navigation = {
 
 export const heroContent = {
   es: {
-    headline: "Diseñamos la estrategia de IA para gobiernos y empresas líderes en América Latina",
+    headline: "Acompañamos la adopción y gobernanza de la IA",
     subtext:
-      "De la política nacional de IA de Chile a estudios de impacto para Google — ayudamos a las organizaciones más ambiciosas a tomar decisiones informadas sobre inteligencia artificial",
+      "Evaluaciones, estrategias, políticas públicas e implementación de inteligencia artificial para gobiernos y empresas",
     cta: "Conoce nuestros proyectos",
   },
   en: {
-    headline: "We Design AI Strategy for Leading Governments and Companies in Latin America",
+    headline: "We Guide AI Adoption and Governance",
     subtext:
-      "From Chile's national AI policy to impact studies for Google — we help the most ambitious organizations make informed decisions about artificial intelligence",
+      "Assessments, strategies, public policy, and AI implementation for governments and enterprises",
     cta: "Explore our projects",
   },
 };
@@ -41,7 +41,7 @@ export const heroContent = {
 export const heroStats = [
   { value: "10+", label: { es: "Países asesorados", en: "Countries advised" } },
   { value: "20+", label: { es: "Proyectos entregados", en: "Projects delivered" } },
-  { value: "6", label: { es: "Socios especialistas", en: "Specialist partners" } },
+  { value: "5+", label: { es: "Años de experiencia", en: "Years of experience" } },
 ];
 
 export const stats = [
@@ -54,25 +54,25 @@ export const services = {
     {
       title: "Estrategia e Implementación de IA",
       description:
-        "Tu organización obtiene una hoja de ruta concreta con prioridades claras, plazos definidos y casos de uso validados para adoptar IA — no un documento genérico, sino un plan ejecutable",
+        "Diseñamos hojas de ruta con casos de uso concretos, plazos y responsables. No entregamos documentos genéricos: trabajamos hasta que el plan se ejecute.",
       icon: "Rocket",
     },
     {
       title: "Evaluaciones y Diagnósticos",
       description:
-        "Sabrás exactamente dónde está tu país u organización en su preparación para la IA, con brechas identificadas y recomendaciones priorizadas. Usamos la metodología RAM de UNESCO y el ILIA",
+        "Medimos dónde está tu país u organización en su preparación para la IA. Usamos la metodología RAM de UNESCO y el ILIA para identificar brechas y prioridades reales.",
       icon: "BarChart3",
     },
     {
       title: "Transformación Organizacional",
       description:
-        "Tu equipo adquiere las capacidades para adoptar IA de forma sostenible: desde la gobernanza interna hasta la capacitación práctica para que los cambios perduren",
+        "Capacitamos equipos y diseñamos gobernanza interna para que la adopción de IA sea sostenible, no solo un piloto que queda en el aire.",
       icon: "Building2",
     },
     {
       title: "Investigación y Reportes",
       description:
-        "Obtienes evidencia rigurosa para tomar decisiones estratégicas: estudios de impacto económico, análisis sectoriales y reportes que posicionan tu visión en la conversación pública",
+        "Producimos estudios de impacto económico, análisis sectoriales y reportes que sirven como base para tomar decisiones de política pública y estrategia empresarial.",
       icon: "FileSearch",
     },
   ],
@@ -80,25 +80,25 @@ export const services = {
     {
       title: "AI Strategy & Implementation",
       description:
-        "Your organization gets a concrete roadmap with clear priorities, defined timelines and validated use cases to adopt AI — not a generic document, but an executable plan",
+        "We design roadmaps with concrete use cases, timelines, and owners. We don't deliver generic documents: we work until the plan gets executed.",
       icon: "Rocket",
     },
     {
       title: "Assessments & Diagnostics",
       description:
-        "You'll know exactly where your country or organization stands in AI readiness, with identified gaps and prioritized recommendations. We use UNESCO's RAM methodology and ILIA",
+        "We measure where your country or organization stands in AI readiness. We use UNESCO's RAM methodology and ILIA to identify real gaps and priorities.",
       icon: "BarChart3",
     },
     {
       title: "Organizational Transformation",
       description:
-        "Your team acquires the capabilities to adopt AI sustainably: from internal governance to hands-on training so that changes last",
+        "We train teams and design internal governance so AI adoption sticks — not just a pilot that goes nowhere.",
       icon: "Building2",
     },
     {
       title: "Research & Reports",
       description:
-        "You get rigorous evidence for strategic decision-making: economic impact studies, sector analyses and reports that position your vision in the public conversation",
+        "We produce economic impact studies, sector analyses, and reports that serve as the basis for public policy decisions and business strategy.",
       icon: "FileSearch",
     },
   ],
@@ -876,8 +876,8 @@ export const team = [
     name: "Sebastián Adasme",
     role: { es: "", en: "" },
     bio: {
-      es: "Cientista social con especialización en Economía y Ciencia Política (PUC Chile). Asesoró directamente a la Presidencia y al Ministerio de Economía en la agenda de transformación digital. Especialista en economía digital y negociación de política tecnológica multilateral.",
-      en: "Social scientist specializing in Economics and Political Science (PUC Chile). Directly advised the Presidency and the Ministry of Economy on the digital transformation agenda. Specialist in digital economy and multilateral technology policy negotiation.",
+      es: "MSc Political Economy (KCL). Jefe de Estudios CENIA, cofundador de Foresight. Consultor para CEPAL, UNESCO, BID y gobiernos.",
+      en: "MSc Political Economy (KCL). Head of Research at CENIA, co-founder of Foresight. Consultant for ECLAC, UNESCO, IDB, and governments.",
     },
     image: "/images/team/seba.jpeg",
     linkedin: "https://www.linkedin.com/in/sebastián-adasme-toro-18465b201/",

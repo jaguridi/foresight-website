@@ -12,11 +12,11 @@ export function ServicesSection() {
     <section className="section-padding bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title={lang === "es" ? "Nuestros Servicios" : "Our Services"}
+          title={lang === "es" ? "Qué Hacemos" : "What We Do"}
           subtitle={
             lang === "es"
-              ? "Soluciones integrales para la adopción y transformación con inteligencia artificial"
-              : "End-to-end solutions for AI adoption and organizational transformation"
+              ? "Trabajamos con gobiernos y empresas en cada etapa de su camino con la IA"
+              : "We work with governments and companies at every stage of their AI journey"
           }
         />
 
