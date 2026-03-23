@@ -885,8 +885,8 @@ export const team = [
     name: "Pilar Trivelli",
     role: { es: "", en: "" },
     bio: {
-      es: "Abogada (Universidad de Chile) con M.Sc. en Food Studies (NYU). Ex Jefa de la División de Empresas de Menor Tamaño del Ministerio de Economía y asesora senior de INAPI. Especialista en propiedad intelectual, innovación y marcos regulatorios para pymes.",
-      en: "Lawyer (University of Chile) with M.Sc. in Food Studies (NYU). Former Head of the Small Business Division at the Ministry of Economy and senior advisor at INAPI. Specialist in intellectual property, innovation, and regulatory frameworks for SMEs.",
+      es: "Abogada U. de Chile, MSc NYU. Trabajó en el Ministerio de Economía e INAPI. Experta en regulación y propiedad intelectual.",
+      en: "Lawyer, U. de Chile, MSc NYU. Worked at the Ministry of Economy and INAPI. Expert in regulation and intellectual property.",
     },
     image: "/images/team/pilar.jpeg",
     linkedin: "https://www.linkedin.com/in/pilar-trivelli-98823b69/",
