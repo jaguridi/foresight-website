@@ -119,20 +119,9 @@ export const clients = [
   { name: "Centro de Innovación UC", logo: "/images/clients/centroinnovacion.png" },
 ];
 
-export const clientLogos: Record<string, string> = {
-  UNESCO: "/images/clients/unesco.svg",
-  Google: "/images/clients/google.svg",
-  CENIA: "/images/clients/cenia.svg",
-  "Municipalidad de Las Condes": "/images/clients/lascondes.svg",
-  "Conecta Logística": "/images/clients/conecta.svg",
-  "Centro de Innovación UC": "/images/clients/innovacionuc.svg",
-  BID: "/images/clients/bid.svg",
-  "Ministerio de Ciencia": "/images/clients/minciencia.svg",
-  CChC: "/images/clients/cchc.svg",
-  UNAB: "/images/clients/unab.svg",
-  "Ministerio de Economía": "/images/clients/mineconomia.svg",
-  CAF: "/images/clients/caf.svg",
-};
+export const clientLogos: Record<string, string> = Object.fromEntries(
+  clients.map((c) => [c.name, c.logo])
+);
 
 export const projects = [
   // ── 2025–2026 | En desarrollo ──────────────────────────────────
