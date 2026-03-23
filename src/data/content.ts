@@ -158,6 +158,23 @@ export const projects = [
     status: "in_progress" as const,
   },
   {
+    id: "ram-panama",
+    title: {
+      es: "Implementación RAM Panamá",
+      en: "RAM Implementation Panama",
+    },
+    description: {
+      es: "Evaluación de la preparación de Panamá para la adopción de IA mediante la metodología RAM de UNESCO. El diagnóstico identifica brechas y oportunidades para informar el diseño de la Estrategia Nacional de Inteligencia Artificial del país.",
+      en: "Assessment of Panama's readiness for AI adoption using UNESCO's RAM methodology. The assessment identifies gaps and opportunities to inform the design of the country's National Artificial Intelligence Strategy.",
+    },
+    client: "UNESCO",
+    year: 2025,
+    yearEnd: 2026,
+    region: "Panamá",
+    type: "assessment",
+    status: "in_progress" as const,
+  },
+  {
     id: "ram-guatemala",
     title: {
       es: "Implementación RAM Guatemala",
