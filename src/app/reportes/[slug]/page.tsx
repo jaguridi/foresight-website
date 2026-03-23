@@ -1,4 +1,9 @@
-import { redirect } from "next/navigation";
+import { reports } from "@/data/content";
+import ReportRedirect from "./ReportRedirect";
+
+export function generateStaticParams() {
+  return reports.map((r) => ({ slug: r.slug }));
+}
 
 export default async function ReportPage({
   params,
@@ -6,5 +11,5 @@ export default async function ReportPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  redirect(`/proyectos/${slug}`);
+  return <ReportRedirect slug={slug} />;
 }
