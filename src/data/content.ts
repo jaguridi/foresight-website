@@ -854,8 +854,8 @@ export const team = [
     name: "José A. Guridi",
     role: { es: "", en: "" },
     bio: {
-      es: "Candidato a Ph.D. en Information Science (Cornell) y miembro de UNESCO AI Ethics Experts Without Borders. Lideró la creación de la Política Nacional de IA de Chile y la unidad FAST del Ministerio de Economía. Especialista en política pública de inteligencia artificial y gobernanza tecnológica.",
-      en: "Ph.D. candidate in Information Science (Cornell) and member of UNESCO AI Ethics Experts Without Borders. Led the creation of Chile's National AI Policy and the FAST unit at the Ministry of Economy. Specialist in artificial intelligence public policy and technology governance.",
+      es: "PhD (c) en Ciencias de la Información, Cornell. Experto en gobernanza y adopción de IA en instituciones públicas y privadas.",
+      en: "PhD candidate in Information Science, Cornell. Expert in AI governance and adoption in public and private institutions.",
     },
     image: "/images/team/jose-guridi.png",
     linkedin: "https://www.linkedin.com/in/jaguridi/",
