@@ -580,7 +580,7 @@ export const projects = [
       es: "Evaluación de la preparación de Chile para la adopción ética de IA, convocando a más de 300 actores del ecosistema. Identificamos los cambios institucionales y regulatorios necesarios para una gobernanza de IA responsable.",
       en: "Assessment of Chile's readiness for ethical AI adoption, convening over 300 ecosystem stakeholders. We identified the institutional and regulatory changes needed for responsible AI governance.",
     },
-    client: "Ministerio de Ciencia",
+    client: "UNESCO",
     year: 2023,
     region: "Chile",
     type: "assessment",
