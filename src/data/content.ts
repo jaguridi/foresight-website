@@ -124,6 +124,22 @@ export const clientLogos: Record<string, string> = Object.fromEntries(
 export const projects = [
   // ── 2025–2026 | En desarrollo ──────────────────────────────────
   {
+    id: "ballerina-ia-generativa",
+    title: {
+      es: "Adopción de IA Generativa en Ballerina",
+      en: "Generative AI Adoption at Ballerina",
+    },
+    description: {
+      es: "Acompañamiento a Ballerina en la adopción de IA generativa para mejorar sus procesos internos. Diseñamos la estrategia, identificamos casos de uso y apoyamos la implementación.",
+      en: "Supporting Ballerina in adopting generative AI to improve their internal processes. We design the strategy, identify use cases, and support implementation.",
+    },
+    client: "Ballerina",
+    year: 2025,
+    region: "Chile",
+    type: "consulting" as const,
+    status: "in_progress" as const,
+  },
+  {
     id: "ram-el-salvador",
     title: {
       es: "Implementación RAM El Salvador",
