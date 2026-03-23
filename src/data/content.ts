@@ -206,8 +206,25 @@ export const projects = [
     yearEnd: 2025,
     region: "Latinoamérica",
     type: "research",
-    status: "completed" as const,
+    status: "in_progress" as const,
     featuredStat: { value: "10", label: { es: "Países analizados", en: "Countries analyzed" } },
+  },
+  {
+    id: "ai-sprinters-el-salvador",
+    title: {
+      es: "Impacto económico de la IA en El Salvador",
+      en: "Economic Impact of AI in El Salvador",
+    },
+    description: {
+      es: "Estudio de impacto económico de la IA en El Salvador, parte de la serie AI Digital Sprinters de Google. Análisis en profundidad del potencial de la IA en la economía salvadoreña con recomendaciones de política pública.",
+      en: "AI economic impact study for El Salvador, part of Google's AI Digital Sprinters series. In-depth analysis of AI's potential in the Salvadoran economy with public policy recommendations.",
+    },
+    client: "Google",
+    year: 2025,
+    region: "El Salvador",
+    type: "research" as const,
+    status: "in_progress" as const,
+    parentProject: "ai-sprinters",
   },
   {
     id: "ai-sprinters-chile",
