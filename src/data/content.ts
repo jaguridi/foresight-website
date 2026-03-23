@@ -3,7 +3,7 @@ export const siteConfig = {
   url: "https://foresight.cl",
   email: "consultoria@foresight.cl",
   description: "Consultoría estratégica en inteligencia artificial para organizaciones públicas y privadas en América Latina",
-  linkedIn: "https://www.linkedin.com/company/foresightcl",
+  linkedIn: "https://www.linkedin.com/company/foresight-cl",
 };
 
 export const navigation = {
