@@ -722,8 +722,8 @@ export const team = [
     name: "Sandra Peralta",
     role: { es: "", en: "" },
     bio: {
-      es: "Ingeniera Comercial con mención en Economía (Universidad de Chile). Ex Jefa de Estudios del Ministerio de Economía y economista senior en la Comisión Nacional de Evaluación y Productividad. Especialista en análisis regulatorio, telecomunicaciones y evaluación de políticas públicas.",
-      en: "Commercial Engineer with Economics focus (University of Chile). Former Head of Studies at the Ministry of Economy and senior economist at the National Commission of Evaluation and Productivity. Specialist in regulatory analysis, telecommunications, and public policy evaluation.",
+      es: "Economista especializada en inteligencia artificial, economía digital y políticas públicas. Cofundadora de Foresight.",
+      en: "Economist specialized in artificial intelligence, digital economy, and public policy. Co-founder of Foresight.",
     },
     image: "/images/team/sandra.jpeg",
     linkedin: "https://www.linkedin.com/in/sandra-peralta-alvarez-23580a252/",
@@ -755,8 +755,8 @@ export const team = [
     name: "Nicole Rabba",
     role: { es: "", en: "" },
     bio: {
-      es: "Economista (Universidad de Chile). Trabajó en la unidad FAST del Ministerio de Economía y en Fundación País Digital, contribuyendo a la agenda de transformación digital del país. Especialista en análisis económico, innovación y economía circular.",
-      en: "Economist (University of Chile). Worked at the FAST unit of the Ministry of Economy and at País Digital Foundation, contributing to the country's digital transformation agenda. Specialist in economic analysis, innovation, and circular economy.",
+      es: "Economista (U. de Chile), Máster en Economía e Innovación (U. Complutense de Madrid). Trabajó en el Ministerio de Economía de Chile, País Digital y CIEC.",
+      en: "Economist (U. de Chile), Master in Economics and Innovation (U. Complutense de Madrid). Worked at Chile's Ministry of Economy, País Digital, and CIEC.",
     },
     image: "/images/team/nico.jpeg",
     linkedin: "https://www.linkedin.com/in/prabba/",

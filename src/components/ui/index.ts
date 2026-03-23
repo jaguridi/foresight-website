@@ -10,3 +10,4 @@ export { BarChart } from "./BarChart";
 export { ServiceCard } from "./ServiceCard";
 export { ScrollToTop } from "./ScrollToTop";
 export { NewsCard } from "./NewsCard";
+export { LinkedInFeed } from "./LinkedInFeed";
