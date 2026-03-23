@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { SectionHeading, LinkedInFeed } from "@/components/ui";
 import { useLang } from "@/lib/i18n";
 
@@ -20,16 +18,6 @@ export function NewsHighlights() {
         />
 
         <LinkedInFeed />
-
-        <div className="text-center mt-12">
-          <Link
-            href="/noticias"
-            className="inline-flex items-center gap-2 text-cyan font-semibold hover:gap-3 transition-all"
-          >
-            {lang === "es" ? "Ver más publicaciones" : "View more posts"}
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
       </div>
     </section>
   );

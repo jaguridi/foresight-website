@@ -10,14 +10,12 @@ export const navigation = {
   es: [
     { name: "Inicio", href: "/" },
     { name: "Proyectos", href: "/proyectos" },
-    { name: "Noticias", href: "/noticias" },
     { name: "Equipo", href: "/equipo" },
     { name: "Contacto", href: "/contacto" },
   ],
   en: [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/proyectos" },
-    { name: "News", href: "/noticias" },
     { name: "Team", href: "/equipo" },
     { name: "Contact", href: "/contacto" },
   ],
