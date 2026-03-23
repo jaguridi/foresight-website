@@ -841,8 +841,8 @@ export const team = [
     name: "Julio Pertuzé",
     role: { es: "", en: "" },
     bio: {
-      es: "Profesor UC, PhD del MIT y exsubsecretario de Economía. Experto en innovación, políticas públicas y gobernanza de tecnologías emergentes.",
-      en: "UC Professor, MIT PhD, and former Undersecretary of Economy. Expert in innovation, public policy, and governance of emerging technologies.",
+      es: "Profesor UC, PhD MIT y exsubsecretario de Economía. Experto en innovación y gobernanza de tecnologías emergentes.",
+      en: "UC Professor, MIT PhD, and former Undersecretary of Economy. Expert in innovation and governance of emerging technologies.",
     },
     image: "/images/team/julio.jpeg",
     linkedin: "https://www.linkedin.com/in/julio-pertuzé-1458124/",
@@ -896,8 +896,8 @@ export const team = [
     name: "Nicole Rabba",
     role: { es: "", en: "" },
     bio: {
-      es: "Economista (U. de Chile), Máster en Economía e Innovación (U. Complutense de Madrid). Trabajó en el Ministerio de Economía de Chile, País Digital y CIEC.",
-      en: "Economist (U. de Chile), Master in Economics and Innovation (U. Complutense de Madrid). Worked at Chile's Ministry of Economy, País Digital, and CIEC.",
+      es: "Economista U. de Chile, Máster U. Complutense de Madrid. Trabajó en el Ministerio de Economía, País Digital y CIEC.",
+      en: "Economist, U. de Chile. Master's, U. Complutense de Madrid. Worked at the Ministry of Economy, País Digital, and CIEC.",
     },
     image: "/images/team/nico.jpeg",
     linkedin: "https://www.linkedin.com/in/prabba/",
