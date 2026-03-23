@@ -841,8 +841,8 @@ export const team = [
     name: "Julio Pertuzé",
     role: { es: "", en: "" },
     bio: {
-      es: "Ph.D. en Engineering Systems (MIT) y Profesor en la Escuela de Ingeniería de la PUC Chile. Como Subsecretario de Economía, impulsó la agenda de transformación digital y apoyo a pymes del país. Especialista en diseño de estrategias de desarrollo tecnológico para el sector público y privado.",
-      en: "Ph.D. in Engineering Systems (MIT) and Professor at PUC Chile's School of Engineering. As Undersecretary of Economy, he drove the digital transformation agenda and SME support nationwide. Specialist in designing technology development strategies for the public and private sectors.",
+      es: "Profesor UC, PhD del MIT y exsubsecretario de Economía. Experto en innovación, políticas públicas y gobernanza de tecnologías emergentes.",
+      en: "UC Professor, MIT PhD, and former Undersecretary of Economy. Expert in innovation, public policy, and governance of emerging technologies.",
     },
     image: "/images/team/julio.jpeg",
     linkedin: "https://www.linkedin.com/in/julio-pertuzé-1458124/",

@@ -19,8 +19,8 @@ export function TeamPreview() {
           }
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {team.slice(0, 3).map((member, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {team.map((member, index) => (
             <TeamCard
               key={member.id}
               name={member.name}
@@ -31,13 +31,6 @@ export function TeamPreview() {
               delay={index * 0.1}
             />
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <GradientButton href="/equipo" variant="outline">
-            {lang === "es" ? "Conoce al equipo completo" : "Meet the full team"}
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </GradientButton>
         </div>
       </div>
     </section>
