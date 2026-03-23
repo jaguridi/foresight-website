@@ -879,7 +879,7 @@ export const team = [
       es: "MSc Political Economy (KCL). Jefe de Estudios CENIA, cofundador de Foresight. Consultor para CEPAL, UNESCO, BID y gobiernos.",
       en: "MSc Political Economy (KCL). Head of Research at CENIA, co-founder of Foresight. Consultant for ECLAC, UNESCO, IDB, and governments.",
     },
-    image: "/images/team/seba.jpeg",
+    image: "/images/team/Sebastián Adasme.jpg",
     linkedin: "https://www.linkedin.com/in/sebastián-adasme-toro-18465b201/",
   },
   {
