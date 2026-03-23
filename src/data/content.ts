@@ -228,15 +228,15 @@ export const projects = [
   {
     id: "ai-sprinters-el-salvador",
     title: {
-      es: "Impacto económico de la IA en El Salvador",
-      en: "Economic Impact of AI in El Salvador",
+      es: "Impacto de la IA y casos de éxito en El Salvador",
+      en: "AI Impact and Success Cases in El Salvador",
     },
     description: {
-      es: "Estudio de impacto económico de la IA en El Salvador, parte de la serie AI Digital Sprinters de Google. Análisis en profundidad del potencial de la IA en la economía salvadoreña con recomendaciones de política pública.",
-      en: "AI economic impact study for El Salvador, part of Google's AI Digital Sprinters series. In-depth analysis of AI's potential in the Salvadoran economy with public policy recommendations.",
+      es: "Evaluación del impacto económico de la IA y documentación de casos de éxito de uso de IA en El Salvador, parte de la serie AI Digital Sprinters de Google.",
+      en: "Assessment of AI's economic impact and documentation of successful AI use cases in El Salvador, part of Google's AI Digital Sprinters series.",
     },
     client: "Google",
-    year: 2025,
+    year: 2026,
     region: "El Salvador",
     type: "research" as const,
     status: "in_progress" as const,
