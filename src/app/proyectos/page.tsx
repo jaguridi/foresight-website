@@ -96,7 +96,7 @@ export default function ProjectsPage() {
               <div>
                 <div className="text-3xl font-bold text-navy">{uniqueCountries}</div>
                 <div className="text-sm text-slate-500">
-                  {lang === "es" ? "Regiones" : "Regions"}
+                  {lang === "es" ? "Países" : "Countries"}
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function ProjectsPage() {
             {/* Region Filter */}
             <div className="flex items-center gap-2">
               <span className="text-sm text-slate-500 font-medium">
-                {lang === "es" ? "Región:" : "Region:"}
+                {lang === "es" ? "País:" : "Country:"}
               </span>
               <select
                 value={filters.region}
@@ -144,7 +144,7 @@ export default function ProjectsPage() {
                   <option key={region} value={region}>
                     {region === "all"
                       ? lang === "es"
-                        ? "Todas"
+                        ? "Todos"
                         : "All"
                       : region}
                   </option>
