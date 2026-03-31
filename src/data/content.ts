@@ -144,6 +144,27 @@ export const projects = [
     status: "in_progress" as const,
   },
   {
+    id: "meta-analisis-ram",
+    title: {
+      es: "Implementación del Meta-Análisis de las RAM",
+      en: "RAM Meta-Analysis Implementation",
+    },
+    subtitle: {
+      es: "Análisis comparativo de más de 30 informes RAM para identificar tendencias globales en preparación para la IA",
+      en: "Comparative analysis of over 30 RAM reports to identify global trends in AI readiness",
+    },
+    description: {
+      es: "Elaboración de un meta-análisis de los informes RAM sobre la implementación de la Recomendación de la UNESCO en Ética de la Inteligencia Artificial, con el objetivo de producir el primer informe consolidado para la 43ª Conferencia General. Diseño de la metodología de investigación e integración de los hallazgos en el Observatorio Global sobre Ética y Gobernanza de la IA. Además, se contribuyó a mejorar la metodología RAM con entrevistas a actores clave incluyendo expertos de UNESCO AI Experts without Borders y Women for Ethics of AI, buscando sinergias con iniciativas globales en ética y gobernanza de la IA.",
+      en: "Development of a meta-analysis of RAM reports on the implementation of UNESCO's Recommendation on the Ethics of Artificial Intelligence, aimed at producing the first consolidated report for the 43rd General Conference. Design of the research methodology and integration of findings into the Global Observatory on Ethics and Governance of AI. Additionally, the project contributed to improving the RAM methodology through interviews with key stakeholders including UNESCO AI Experts without Borders and Women for Ethics of AI experts, seeking synergies with global initiatives on AI ethics and governance.",
+    },
+    client: "UNESCO",
+    year: 2025,
+    yearEnd: 2026,
+    region: "Global",
+    type: "research" as const,
+    status: "completed" as const,
+  },
+  {
     id: "ram-el-salvador",
     title: {
       es: "Implementación RAM El Salvador",
