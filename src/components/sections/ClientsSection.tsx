@@ -31,6 +31,7 @@ export function ClientsSection() {
               key={client.name}
               name={client.name}
               logo={client.logo}
+              url={client.url}
               delay={index * 0.05}
             />
           ))}

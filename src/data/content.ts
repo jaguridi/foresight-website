@@ -103,18 +103,18 @@ export const services = {
 };
 
 export const clients = [
-  { name: "UNESCO", logo: "/images/clients/unesco.svg" },
-  { name: "Google", logo: "/images/clients/Google_2015_logo.svg.png" },
-  { name: "BID", logo: "/images/clients/960px-Logo_BID_Español.png" },
-  { name: "CENIA", logo: "/images/clients/CENIA.png" },
-  { name: "Ministerio de Ciencia", logo: "/images/clients/Logo_del_Ministerio_de_Ciencia,_Tecnología,_Conocimiento_y_Innovación_de_Chile.png" },
-  { name: "CAF", logo: "/images/clients/Logotipo_CAF_-_Banco_de_Desarrollo_de_América_Latina_y_el_Caribe.png" },
-  { name: "Ministerio de Economía", logo: "/images/clients/Ministerioeconomia.png" },
-  { name: "CChC", logo: "/images/clients/ccchc.png" },
-  { name: "UNAB", logo: "/images/clients/Logo-unab.svg.png" },
-  { name: "Municipalidad de Las Condes", logo: "/images/clients/las-condes.jpg" },
-  { name: "Conecta Logística", logo: "/images/clients/conecta.webp" },
-  { name: "Centro de Innovación UC", logo: "/images/clients/centroinnovacion.png" },
+  { name: "UNESCO", logo: "/images/clients/unesco.svg", url: "https://www.unesco.org/en" },
+  { name: "Google", logo: "/images/clients/Google_2015_logo.svg.png", url: "https://about.google/company-info/" },
+  { name: "BID", logo: "/images/clients/960px-Logo_BID_Español.png", url: "https://www.iadb.org/" },
+  { name: "CENIA", logo: "/images/clients/CENIA.png", url: "https://cenia.cl/" },
+  { name: "Ministerio de Ciencia", logo: "/images/clients/Logo_del_Ministerio_de_Ciencia,_Tecnología,_Conocimiento_y_Innovación_de_Chile.png", url: "https://www.minciencia.gob.cl/" },
+  { name: "CAF", logo: "/images/clients/Logotipo_CAF_-_Banco_de_Desarrollo_de_América_Latina_y_el_Caribe.png", url: "https://www.caf.com/" },
+  { name: "Ministerio de Economía", logo: "/images/clients/Ministerioeconomia.png", url: "https://www.economia.gob.cl/" },
+  { name: "CChC", logo: "/images/clients/ccchc.png", url: "https://www.cchc.cl/" },
+  { name: "UNAB", logo: "/images/clients/Logo-unab.svg.png", url: "https://www.unab.cl/" },
+  { name: "Municipalidad de Las Condes", logo: "/images/clients/las-condes.jpg", url: "https://www.lascondes.cl/" },
+  { name: "Conecta Logística", logo: "/images/clients/conecta.webp", url: "https://www.conectalogistica.cl/" },
+  { name: "Centro de Innovación UC", logo: "/images/clients/centroinnovacion.png", url: "https://centrodeinnovacion.uc.cl/" },
 ];
 
 export const clientLogos: Record<string, string> = Object.fromEntries(
