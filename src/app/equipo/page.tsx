@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import { TeamCard } from "@/components/ui";
-import { team } from "@/data/content";
+import { team, aboutContent } from "@/data/content";
 import { useLang } from "@/lib/i18n";
 
 export default function TeamPage() {
   const { lang } = useLang();
+  const about = aboutContent[lang];
 
   return (
     <div className="pt-20">
@@ -20,20 +21,79 @@ export default function TeamPage() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6">
-              {lang === "es" ? "Nuestro Equipo" : "Our Team"}
+              {about.title}
             </h1>
-            <p className="text-xl text-slate-500 max-w-3xl mx-auto">
-              {lang === "es"
-                ? "Expertos en políticas públicas, tecnología y gobernanza de inteligencia artificial"
-                : "Experts in public policy, technology and AI governance"}
-            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Team Grid */}
+      {/* About Text */}
+      <section className="section-padding">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="space-y-6"
+          >
+            {about.paragraphs.map((paragraph, index) => (
+              <p key={index} className="text-lg text-slate-600 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm"
+            >
+              <h3 className="text-2xl font-bold text-navy mb-4">
+                {about.mission.title}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {about.mission.text}
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm"
+            >
+              <h3 className="text-2xl font-bold text-navy mb-4">
+                {about.vision.title}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {about.vision.text}
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl md:text-4xl font-bold text-navy text-center mb-12"
+          >
+            {about.teamTitle}
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <TeamCard

@@ -10,13 +10,13 @@ export const navigation = {
   es: [
     { name: "Inicio", href: "/" },
     { name: "Proyectos", href: "/proyectos" },
-    { name: "Equipo", href: "/equipo" },
+    { name: "Quiénes somos", href: "/equipo" },
     { name: "Contacto", href: "/contacto" },
   ],
   en: [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/proyectos" },
-    { name: "Team", href: "/equipo" },
+    { name: "About us", href: "/equipo" },
     { name: "Contact", href: "/contacto" },
   ],
 };
@@ -884,6 +884,43 @@ export const reports = [
     downloadUrl: "/reports/ai-sprinters-mexico-es.pdf",
   },
 ];
+
+export const aboutContent = {
+  es: {
+    title: "¿Quiénes somos?",
+    paragraphs: [
+      "Foresight es una consultora especializada en inteligencia artificial, innovación y políticas públicas. Fue fundada por un equipo interdisciplinario que lideró políticas de innovación y economía digital desde la Subsecretaría de Economía de Chile, y que decidió seguir aplicando esa experiencia al servicio de organizaciones públicas y privadas a nivel global.",
+      "Conocemos el sector público por dentro: hemos diseñado políticas que se implementaron, asesorado organismos internacionales como UNESCO y el BID, y acompañado a empresas en la adopción estratégica de inteligencia artificial. Entendemos los tiempos, las restricciones y las oportunidades reales de quienes toman decisiones en tecnología e innovación.",
+      "Hemos desarrollado más de 20 proyectos para organizaciones como UNESCO, Google, el BID, CAF y gobiernos de la región. Nuestro trabajo abarca desde evaluaciones de preparación en IA para países, diseño de estrategias nacionales de inteligencia artificial y políticas públicas de innovación, hasta la adopción de IA en empresas y la formación de capital humano en tecnología.",
+    ],
+    mission: {
+      title: "Misión",
+      text: "Acelerar la adopción responsable de la inteligencia artificial, cerrando la brecha entre el potencial de la tecnología y la capacidad de gobiernos y organizaciones para aprovecharla.",
+    },
+    vision: {
+      title: "Visión",
+      text: "Un mundo donde la inteligencia artificial sea una herramienta de desarrollo inclusivo, y donde cada decisión estratégica sobre tecnología se tome con la mejor evidencia disponible.",
+    },
+    teamTitle: "Nuestro Equipo",
+  },
+  en: {
+    title: "About Us",
+    paragraphs: [
+      "Foresight is a consultancy specialized in artificial intelligence, innovation, and public policy. It was founded by an interdisciplinary team that led innovation and digital economy policies at Chile's Undersecretariat of Economy, and decided to continue applying that experience to serve public and private organizations globally.",
+      "We know the public sector from the inside: we have designed policies that were implemented, advised international organizations such as UNESCO and the IDB, and supported companies in the strategic adoption of artificial intelligence. We understand the timelines, constraints, and real opportunities faced by decision-makers in technology and innovation.",
+      "We have delivered over 20 projects for organizations such as UNESCO, Google, the IDB, CAF, and governments across the region. Our work spans from AI readiness assessments for countries, design of national AI strategies and innovation public policies, to AI adoption in companies and technology-focused human capital development.",
+    ],
+    mission: {
+      title: "Mission",
+      text: "To accelerate the responsible adoption of artificial intelligence, bridging the gap between the potential of technology and the ability of governments and organizations to harness it.",
+    },
+    vision: {
+      title: "Vision",
+      text: "A world where artificial intelligence is a tool for inclusive development, and where every strategic decision about technology is made with the best available evidence.",
+    },
+    teamTitle: "Our Team",
+  },
+};
 
 export const team = [
   {
