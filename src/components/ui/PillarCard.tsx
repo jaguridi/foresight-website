@@ -2,14 +2,31 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import * as LucideIcons from "lucide-react";
-import { ChevronDown } from "lucide-react";
+import {
+  ChevronDown,
+  Scale,
+  Server,
+  Users,
+  GraduationCap,
+  TrendingUp,
+  Lightbulb,
+  type LucideIcon,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
+
+const iconMap: Record<string, LucideIcon> = {
+  Scale,
+  Server,
+  Users,
+  GraduationCap,
+  TrendingUp,
+  Lightbulb,
+};
 
 interface PillarCardProps {
   title: string;
   content: string;
-  icon: keyof typeof LucideIcons;
+  icon: string;
   className?: string;
   delay?: number;
   defaultOpen?: boolean;
@@ -24,11 +41,7 @@ export function PillarCard({
   defaultOpen = false,
 }: PillarCardProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
-  const RawIcon = LucideIcons[icon];
-  const IconComponent =
-    RawIcon && typeof RawIcon === "function"
-      ? (RawIcon as React.ComponentType<{ className?: string }>)
-      : null;
+  const IconComponent = iconMap[icon] || null;
 
   return (
     <motion.div
@@ -46,8 +59,8 @@ export function PillarCard({
         className="w-full p-6 flex items-center justify-between text-left hover:bg-slate-50 transition-colors"
       >
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-gradient-brand flex items-center justify-center">
-            {IconComponent && <IconComponent className="w-6 h-6 text-white" />}
+          <div className="w-12 h-12 rounded-xl bg-navy/10 flex items-center justify-center shrink-0">
+            {IconComponent && <IconComponent className="w-6 h-6 text-navy" />}
           </div>
           <h3 className="text-lg font-semibold text-navy">{title}</h3>
         </div>

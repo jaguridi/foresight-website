@@ -25,6 +25,42 @@ import * as LucideIcons from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { asset } from "@/lib/utils";
 
+function SectionDivider() {
+  return (
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-center py-2">
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+        <div className="mx-4 w-1.5 h-1.5 rounded-full bg-cyan/40" />
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+      </div>
+    </div>
+  );
+}
+
+const regionFlags: Record<string, string> = {
+  "Chile": "🇨🇱",
+  "México": "🇲🇽",
+  "Camboya": "🇰🇭",
+  "Latinoamérica": "🌎",
+  "El Salvador": "🇸🇻",
+  "Honduras": "🇭🇳",
+  "Panamá": "🇵🇦",
+  "Guatemala": "🇬🇹",
+  "Colombia": "🇨🇴",
+  "Paraguay": "🇵🇾",
+  "Costa Rica": "🇨🇷",
+  "Ecuador": "🇪🇨",
+  "Perú": "🇵🇪",
+  "Uruguay": "🇺🇾",
+  "República Dominicana": "🇩🇴",
+  "Trinidad y Tobago": "🇹🇹",
+  "Centroamérica": "🌎",
+  "Cuba": "🇨🇺",
+  "Rep. Dominicana y Uruguay": "🌎",
+  "Global": "🌍",
+  "Asia-Pacífico": "🌏",
+};
+
 export default function ProjectDetailClient({ id }: { id: string }) {
   const { lang } = useLang();
 
@@ -99,6 +135,7 @@ export default function ProjectDetailClient({ id }: { id: string }) {
   const hasPillars = !!project.pillars?.length;
   const hasDownload = !!project.downloadUrl;
   const hasExternalUrl = !!project.externalUrl;
+  const hasImages = !!project.images?.length;
 
   return (
     <div className="pt-20">
@@ -160,15 +197,15 @@ export default function ProjectDetailClient({ id }: { id: string }) {
                 {project.title[lang]}
               </h1>
 
-              {project.subtitle && (
-                <p className="text-xl text-white/90 mb-4">
+              {project.subtitle ? (
+                <p className="text-xl text-white/80 leading-relaxed">
                   {project.subtitle[lang]}
                 </p>
+              ) : (
+                <p className="text-xl text-white/80 leading-relaxed">
+                  {project.description[lang]}
+                </p>
               )}
-
-              <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-                {project.description[lang]}
-              </p>
             </div>
 
             {/* Sidebar Info Card */}
@@ -227,6 +264,7 @@ export default function ProjectDetailClient({ id }: { id: string }) {
                     {lang === "es" ? "Región" : "Region"}
                   </div>
                   <div className="text-white font-medium">
+                    {regionFlags[project.region] && <span className="mr-1.5">{regionFlags[project.region]}</span>}
                     {project.region}
                   </div>
                 </div>
@@ -249,6 +287,13 @@ export default function ProjectDetailClient({ id }: { id: string }) {
               <h2 className="text-3xl font-bold text-navy mb-6">
                 {lang === "es" ? "Resumen Ejecutivo" : "Executive Summary"}
               </h2>
+              {project.summaryHighlight && (
+                <div className="bg-cyan/5 border-l-4 border-cyan rounded-r-xl p-6 mb-8">
+                  <p className="text-xl font-semibold text-navy">
+                    {project.summaryHighlight[lang]}
+                  </p>
+                </div>
+              )}
               <p className="text-lg text-slate-600 leading-relaxed">
                 {project.executiveSummary[lang]}
               </p>
@@ -264,7 +309,7 @@ export default function ProjectDetailClient({ id }: { id: string }) {
             <SectionHeading
               title={lang === "es" ? "Cifras Clave" : "Key Figures"}
             />
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className={`grid grid-cols-2 ${project.keyStats.length <= 3 ? "md:grid-cols-3" : "md:grid-cols-4"} gap-6`}>
               {project.keyStats.map((stat: any, index: number) => (
                 <StatCard
                   key={stat.label[lang]}
@@ -278,6 +323,9 @@ export default function ProjectDetailClient({ id }: { id: string }) {
           </div>
         </section>
       )}
+
+      {/* Divider */}
+      {hasKeyStats && hasSectors && <SectionDivider />}
 
       {/* Sector Breakdown */}
       {hasSectors && (
@@ -309,14 +357,14 @@ export default function ProjectDetailClient({ id }: { id: string }) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeading
               title={
-                lang === "es"
-                  ? "Pilares Estratégicos"
-                  : "Strategic Pillars"
+                project.pillarsTitle?.[lang] ??
+                (lang === "es" ? "Pilares Estratégicos" : "Strategic Pillars")
               }
               subtitle={
-                lang === "es"
+                project.pillarsSubtitle?.[lang] ??
+                (lang === "es"
                   ? "Áreas de acción clave para maximizar el impacto de la IA"
-                  : "Key action areas to maximize AI impact"
+                  : "Key action areas to maximize AI impact")
               }
             />
             <div className="space-y-4">
@@ -331,6 +379,98 @@ export default function ProjectDetailClient({ id }: { id: string }) {
                 />
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* Divider */}
+      {hasImages && <SectionDivider />}
+
+      {/* Project Gallery */}
+      {hasImages && (
+        <section className="py-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              title={lang === "es" ? "Galería del Proyecto" : "Project Gallery"}
+            />
+            {project.images.length === 3 ? (
+              <>
+                <div className="grid grid-cols-2 gap-4">
+                  {project.images.slice(0, 2).map((img: any, index: number) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="group"
+                    >
+                      <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                        <Image
+                          src={asset(img.src)}
+                          alt={img.caption?.[lang] || `${project.title[lang]} - ${index + 1}`}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      {img.caption && (
+                        <p className="mt-2 text-sm text-slate-500 text-center">
+                          {img.caption[lang]}
+                        </p>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mt-4 group"
+                >
+                  <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+                    <Image
+                      src={asset(project.images[2].src)}
+                      alt={project.images[2].caption?.[lang] || `${project.title[lang]} - 3`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  {project.images[2].caption && (
+                    <p className="mt-2 text-sm text-slate-500 text-center">
+                      {project.images[2].caption[lang]}
+                    </p>
+                  )}
+                </motion.div>
+              </>
+            ) : (
+              <div className={`grid gap-4 ${project.images.length === 1 ? "grid-cols-1 max-w-2xl mx-auto" : "grid-cols-1 md:grid-cols-2"}`}>
+                {project.images.map((img: any, index: number) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="group"
+                  >
+                    <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                      <Image
+                        src={asset(img.src)}
+                        alt={img.caption?.[lang] || `${project.title[lang]} - ${index + 1}`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    {img.caption && (
+                      <p className="mt-2 text-sm text-slate-500 text-center">
+                        {img.caption[lang]}
+                      </p>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}
@@ -360,7 +500,7 @@ export default function ProjectDetailClient({ id }: { id: string }) {
                   </p>
                   <GradientButton href={project.downloadUrl}>
                     <Download className="w-5 h-5 mr-2" />
-                    {lang === "es" ? "Descargar PDF" : "Download PDF"}
+                    {lang === "es" ? "Descargar el reporte completo" : "Download the full report"}
                   </GradientButton>
                 </div>
               ) : (

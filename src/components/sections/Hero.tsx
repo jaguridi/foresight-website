@@ -2,11 +2,9 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { GradientButton } from "@/components/ui";
-import { heroContent, heroStats, clients } from "@/data/content";
+import { heroContent, heroStats } from "@/data/content";
 import { useLang } from "@/lib/i18n";
-import { asset } from "@/lib/utils";
 
 export function Hero() {
   const { lang } = useLang();
@@ -93,29 +91,6 @@ export function Hero() {
           ))}
         </motion.div>
 
-        {/* Trusted by logos */}
-        <motion.div
-          initial={prefersReducedMotion ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-12"
-        >
-          <p className="text-xs uppercase tracking-wider text-slate-400 mb-4">
-            {lang === "es" ? "Confían en nosotros" : "Trusted by"}
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-            {clients.slice(0, 6).map((client) => (
-              <Image
-                key={client.name}
-                src={asset(client.logo)}
-                alt={client.name}
-                width={100}
-                height={40}
-                className="h-8 w-auto object-contain"
-              />
-            ))}
-          </div>
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}

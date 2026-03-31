@@ -46,6 +46,20 @@ export function GradientButton({
   const MotionComponent = motion.create("span");
 
   if (href) {
+    const isExternal = href.startsWith("http");
+    if (isExternal) {
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+          <MotionComponent
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-2"
+          >
+            {children}
+          </MotionComponent>
+        </a>
+      );
+    }
     return (
       <Link href={href} className={classes}>
         <MotionComponent

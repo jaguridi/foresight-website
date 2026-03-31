@@ -129,6 +129,10 @@ export const projects = [
       es: "Adopción de IA Generativa en Ballerina",
       en: "Generative AI Adoption at Ballerina",
     },
+    subtitle: {
+      es: "Estrategia e implementación de IA generativa para transformar procesos internos",
+      en: "Generative AI strategy and implementation to transform internal processes",
+    },
     description: {
       es: "Acompañamiento a Ballerina en la adopción de IA generativa para mejorar sus procesos internos. Diseñamos la estrategia, identificamos casos de uso y apoyamos la implementación.",
       en: "Supporting Ballerina in adopting generative AI to improve their internal processes. We design the strategy, identify use cases, and support implementation.",
@@ -144,6 +148,10 @@ export const projects = [
     title: {
       es: "Implementación RAM El Salvador",
       en: "RAM Implementation El Salvador",
+    },
+    subtitle: {
+      es: "Evaluación de preparación en IA mediante la metodología RAM de UNESCO",
+      en: "AI readiness assessment using UNESCO's RAM methodology",
     },
     description: {
       es: "Diagnóstico integral de las capacidades y desafíos de El Salvador para la adopción de IA, aplicando la metodología RAM de UNESCO. Los resultados orientan el diseño de las primeras políticas nacionales de inteligencia artificial del país.",
@@ -162,6 +170,10 @@ export const projects = [
       es: "Implementación RAM Honduras",
       en: "RAM Implementation Honduras",
     },
+    subtitle: {
+      es: "Evaluación de preparación en IA mediante la metodología RAM de UNESCO",
+      en: "AI readiness assessment using UNESCO's RAM methodology",
+    },
     description: {
       es: "Evaluación del ecosistema de IA en Honduras mediante la metodología RAM de UNESCO, identificando brechas institucionales y oportunidades. Las recomendaciones alimentan el diseño de la hoja de ruta nacional en inteligencia artificial.",
       en: "Assessment of Honduras' AI ecosystem using UNESCO's RAM methodology, identifying institutional gaps and opportunities. The recommendations inform the design of the national artificial intelligence roadmap.",
@@ -178,6 +190,10 @@ export const projects = [
     title: {
       es: "Implementación RAM Panamá",
       en: "RAM Implementation Panama",
+    },
+    subtitle: {
+      es: "Evaluación de preparación en IA mediante la metodología RAM de UNESCO",
+      en: "AI readiness assessment using UNESCO's RAM methodology",
     },
     description: {
       es: "Evaluación de la preparación de Panamá para la adopción de IA mediante la metodología RAM de UNESCO. El diagnóstico identifica brechas y oportunidades para informar el diseño de la Estrategia Nacional de Inteligencia Artificial del país.",
@@ -196,6 +212,10 @@ export const projects = [
       es: "Implementación RAM Guatemala",
       en: "RAM Implementation Guatemala",
     },
+    subtitle: {
+      es: "Evaluación de preparación en IA mediante la metodología RAM de UNESCO",
+      en: "AI readiness assessment using UNESCO's RAM methodology",
+    },
     description: {
       es: "Aplicación de la metodología RAM de UNESCO en Guatemala para mapear capacidades tecnológicas, talento y gobernanza de IA. El diagnóstico sienta las bases para la formulación de políticas públicas de inteligencia artificial en el país.",
       en: "Application of UNESCO's RAM methodology in Guatemala to map technological capabilities, talent, and AI governance. The assessment lays the groundwork for formulating public artificial intelligence policies in the country.",
@@ -212,6 +232,10 @@ export const projects = [
     title: {
       es: "AI Sprinters: Impacto de la IA en Hispanoamérica",
       en: "AI Sprinters: AI Impact in Hispanic America",
+    },
+    subtitle: {
+      es: "Estudio regional que cuantifica el impacto potencial de la IA en 10 economías hispanoamericanas",
+      en: "Regional study quantifying AI's potential impact across 10 Hispanic American economies",
     },
     description: {
       es: "Estudio regional encargado por Google que cuantifica el impacto potencial de la IA en 10 economías hispanoamericanas. Entrega un conjunto de recomendaciones de política pública para maximizar los beneficios de la adopción tecnológica en la región.",
@@ -230,6 +254,10 @@ export const projects = [
     title: {
       es: "Impacto de la IA y casos de éxito en El Salvador",
       en: "AI Impact and Success Cases in El Salvador",
+    },
+    subtitle: {
+      es: "Evaluación del impacto económico de la IA y documentación de casos de éxito en El Salvador",
+      en: "Assessment of AI's economic impact and documentation of success cases in El Salvador",
     },
     description: {
       es: "Evaluación del impacto económico de la IA y documentación de casos de éxito de uso de IA en El Salvador, parte de la serie AI Digital Sprinters de Google.",
@@ -267,16 +295,21 @@ export const projects = [
       value: "10,9–20%",
       label: { es: "Del PIB de Chile podría representar el impacto económico de la IA", en: "Of Chile's GDP could represent AI's economic impact" },
     },
+    summaryHighlight: {
+      es: "La IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB",
+      en: "AI could generate between USD 36.432 and USD 67.224 billion annually, equivalent to 10.9% and 20% of GDP",
+    },
     executiveSummary: {
       es: "Al analizar la matriz productiva de Chile, se estima que la IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB. Los sectores con mayor impacto proyectado son las actividades financieras y de seguros, el comercio y la manufactura, que en conjunto representarían más del 65% del efecto económico total. Sin embargo, según datos de PwC, solo el 5% de las empresas chilenas ha integrado IA en sus operaciones. Este reporte es parte de la serie IA Digital Sprinters de Google.",
       en: "Analyzing Chile's productive matrix, AI could generate between USD 36.432 and USD 67.224 billion annually, equivalent to 10.9% and 20% of GDP. The sectors with the highest projected impact are financial activities and insurance, commerce and manufacturing, which together would represent more than 65% of the total economic effect. However, according to PwC data, only 5% of Chilean companies have integrated AI into their operations. This report is part of Google's AI Digital Sprinters series.",
     },
     keyStats: [
-      { value: "10,9–20%", label: { es: "Impacto potencial en PIB", en: "Potential GDP Impact" } },
       { value: "$36–67B", label: { es: "USD millones anuales", en: "USD Billion Annual" } },
       { value: "5%", label: { es: "Empresas con IA adoptada", en: "Companies with AI Adopted" } },
       { value: "45", label: { es: "Centros de datos en Chile", en: "Data Centers in Chile" } },
     ],
+    pillarsTitle: { es: "Factores Habilitantes", en: "Enabling Factors" },
+    pillarsSubtitle: { es: "Áreas clave del marco Digital Sprinters de Google", en: "Key areas of Google's Digital Sprinters framework" },
     sectors: [
       { name: { es: "Servicios Financieros y Seguros", en: "Financial Services & Insurance" }, percentage: 38 },
       { name: { es: "Comercio", en: "Commerce" }, percentage: 20 },
@@ -346,16 +379,21 @@ export const projects = [
       value: "3–5,6%",
       label: { es: "Del PIB podría provenir del crecimiento impulsado por IA", en: "Of GDP could come from AI-driven growth" },
     },
+    summaryHighlight: {
+      es: "México podría generar entre USD $54.770 y $102.525 millones anuales de crecimiento económico impulsado por IA",
+      en: "Mexico could generate between USD $54.770 and $102.525 billion in annual AI-driven economic growth",
+    },
     executiveSummary: {
       es: "La inteligencia artificial está redefiniendo el panorama económico global y, si México aprovecha su potencial, puede aumentar entre un 3% y un 5.6% el PIB. En México, se podrían generar entre USD $54.770 y $102.525 millones anuales de crecimiento económico, concentrándose en sectores clave como la manufactura, el comercio minorista y los servicios financieros. Este reporte presenta hallazgos y recomendaciones en cuatro factores habilitantes del marco Digital Sprinters.",
       en: "Artificial intelligence is redefining the global economic landscape and, if Mexico leverages its potential, it can increase GDP by between 3% and 5.6%. Mexico could generate between USD $54.770 and $102.525 billion in annual economic growth, concentrated in key sectors such as manufacturing, retail and financial services. This report presents findings and recommendations across four enabling factors of the Digital Sprinters framework.",
     },
     keyStats: [
-      { value: "3–5,6%", label: { es: "Impacto potencial en PIB", en: "Potential GDP Impact" } },
       { value: "$55–103B", label: { es: "USD millones anuales", en: "USD Billion Annual" } },
       { value: "3", label: { es: "Sectores clave", en: "Key Sectors" } },
-      { value: "4", label: { es: "Pilares estratégicos", en: "Strategic Pillars" } },
+      { value: "4", label: { es: "Factores habilitantes", en: "Enabling Factors" } },
     ],
+    pillarsTitle: { es: "Factores Habilitantes", en: "Enabling Factors" },
+    pillarsSubtitle: { es: "Áreas clave del marco Digital Sprinters de Google", en: "Key areas of Google's Digital Sprinters framework" },
     sectors: [
       { name: { es: "Manufactura", en: "Manufacturing" }, percentage: 35 },
       { name: { es: "Comercio Minorista", en: "Retail" }, percentage: 30 },
@@ -401,8 +439,12 @@ export const projects = [
   {
     id: "ram-camboya",
     title: {
-      es: "Implementación RAM Camboya",
-      en: "RAM Implementation Cambodia",
+      es: "Evaluación de Preparación en IA: Camboya",
+      en: "AI Readiness Assessment: Cambodia",
+    },
+    subtitle: {
+      es: "Perfil país capturando el panorama sociotécnico de la IA en Camboya mediante la Metodología de Evaluación de Preparación (RAM) de UNESCO",
+      en: "Country profile capturing the sociotechnical landscape of AI in Cambodia through UNESCO's Readiness Assessment Methodology (RAM)",
     },
     description: {
       es: "Primera aplicación de la metodología RAM de UNESCO en el sudeste asiático, evaluando la preparación de Camboya para la adopción de IA. Los hallazgos contribuyeron directamente al diseño de la primera Estrategia Nacional de Inteligencia Artificial del país.",
@@ -412,9 +454,76 @@ export const projects = [
     year: 2024,
     yearEnd: 2025,
     region: "Camboya",
-    type: "assessment",
+    type: "assessment" as const,
     status: "completed" as const,
-    externalUrl: "https://www.unesco.org/ethics-ai/en/cambodia",
+    featured: true,
+    featuredStat: {
+      value: "0,09%",
+      label: { es: "Del PIB destinado a I+D, reflejando la brecha de inversión en innovación", en: "Of GDP spent on R&D, reflecting the innovation investment gap" },
+    },
+    summaryHighlight: {
+      es: "Los hallazgos de la RAM informarán directamente la elaboración de la primera Estrategia Nacional de Inteligencia Artificial de Camboya",
+      en: "The RAM findings will directly inform the drafting of Cambodia's first National Artificial Intelligence Strategy",
+    },
+    executiveSummary: {
+      es: "Camboya inició el estudio de su ecosistema de IA a través de la Metodología de Evaluación de Preparación (RAM) de UNESCO, cuyos hallazgos informarán directamente la elaboración de su primera Estrategia Nacional de IA. El reporte revela un panorama dinámico con avances significativos y oportunidades de crecimiento. En la dimensión legal, Camboya participa activamente en la gobernanza de IA de ASEAN y avanza en legislación clave. En lo social y cultural, se está cerrando la brecha de género en internet y se desarrollan datasets en idioma jemer. El ámbito científico muestra crecimiento en publicaciones con énfasis en ética y nuevos programas de posgrado. Proyectos piloto como Sarika y Khmer Braille demuestran la capacidad de innovación local. Técnicamente, el país cuenta con acceso casi universal a electricidad y avanza en políticas de Cloud First y gobernanza de datos.",
+      en: "Cambodia initiated the study of its AI ecosystem through UNESCO's Readiness Assessment Methodology (RAM), whose findings will directly inform the drafting of its first National AI Strategy. The report reveals a dynamic landscape with significant advances and growth opportunities. In the legal dimension, Cambodia actively participates in ASEAN AI governance and is advancing key legislation. Socially and culturally, the internet gender gap is narrowing and Khmer language datasets are being developed. The scientific sphere shows growth in publications with an ethics emphasis and new postgraduate programs. Pilot projects like Sarika and Khmer Braille demonstrate local innovation capacity. Technically, the country has near-universal electricity access and is advancing Cloud First and data governance policies.",
+    },
+    keyStats: [
+      { value: "60,7%", label: { es: "Uso de internet (% de la población)", en: "Internet Usage (% of population)" } },
+      { value: "55/100", label: { es: "Puntaje de infraestructura de datos", en: "Data Infrastructure Score" } },
+      { value: "95%", label: { es: "Acceso a electricidad", en: "Electricity Access" } },
+    ],
+    pillarsTitle: { es: "Dimensiones Evaluadas", en: "Assessed Dimensions" },
+    pillarsSubtitle: { es: "Las cinco dimensiones de la Metodología RAM de UNESCO", en: "The five dimensions of UNESCO's RAM Methodology" },
+    pillars: [
+      {
+        title: { es: "Legal y Regulatoria", en: "Legal and Regulatory" },
+        icon: "Scale",
+        content: {
+          es: "Camboya participa activamente en la gobernanza de IA de ASEAN y avanza en legislación clave como protección de datos personales, ciberseguridad y directrices éticas de IA. Ha introducido guías de protección infantil en línea y se han realizado avances significativos en capacitación digital para el sector público. La Estrategia Nacional de IA está en elaboración y representa una oportunidad clave para consolidar un marco institucional robusto, incluyendo leyes de adquisición pública de IA y alineación con estándares internacionales.",
+          en: "Cambodia actively participates in ASEAN AI governance and is advancing key legislation such as personal data protection, cybersecurity and AI ethics guidelines. Child online protection guidelines have been introduced and significant progress has been made in digital skills training for the public sector. The National AI Strategy is under development and represents a key opportunity to consolidate a robust institutional framework, including AI procurement laws and alignment with international standards.",
+        },
+      },
+      {
+        title: { es: "Social y Cultural", en: "Social and Cultural" },
+        icon: "Users",
+        content: {
+          es: "Se observan avances alentadores: la brecha de género en el uso de internet se está cerrando, con buenos resultados PISA para niñas en ciencia y lectura. Múltiples iniciativas promueven habilidades digitales y oportunidades para mujeres. CADT lidera el desarrollo de datasets en idioma jemer, cruciales para una IA inclusiva. Camboya está además integrando la IA en sus estrategias de salud digital y preservación del patrimonio cultural, con oportunidades para fortalecer los servicios de e-gobierno y la participación ciudadana.",
+          en: "Encouraging progress is observed: the internet gender gap is narrowing, with good PISA results for girls in science and reading. Multiple initiatives promote digital skills and opportunities for women. CADT leads the development of Khmer language datasets, crucial for inclusive AI. Cambodia is also integrating AI into its digital health and cultural heritage preservation strategies, with opportunities to strengthen e-government services and citizen participation.",
+        },
+      },
+      {
+        title: { es: "Científica y Educativa", en: "Scientific and Educational" },
+        icon: "GraduationCap",
+        content: {
+          es: "El ámbito científico muestra un crecimiento prometedor en publicaciones de investigación en IA, con un notable énfasis en ética desde sus inicios. Nuevos programas de maestría en IA y ciencia de datos integran consideraciones éticas en sus currículos, y la colaboración con UNESCO fortalece la educación en IA. Existe una oportunidad estratégica de aumentar la inversión en I+D, integrar el pensamiento computacional en el currículo escolar, invertir en formación docente y desarrollar talento avanzado en IA.",
+          en: "The scientific sphere shows promising growth in AI research publications, with a notable emphasis on ethics from the outset. New AI and Data Science master's programs integrate ethical considerations into their curricula, and collaboration with UNESCO strengthens AI education. There is a strategic opportunity to increase R&D investment, integrate computational thinking into school curricula, invest in teacher training and develop advanced AI talent.",
+        },
+      },
+      {
+        title: { es: "Económica", en: "Economic" },
+        icon: "TrendingUp",
+        content: {
+          es: "Proyectos piloto prometedores como Sarika y Khmer Braille demuestran la capacidad de innovación local de Camboya, y estudios proyectan un aumento significativo del PIB impulsado por IA hacia 2030. Sectores como agricultura, finanzas, PYMEs y turismo presentan oportunidades estratégicas para la adopción temprana de IA. La recopilación de datos sobre el mercado laboral e inversiones en IA permitirá una planificación más efectiva para maximizar el impacto económico.",
+          en: "Promising pilot projects like Sarika and Khmer Braille demonstrate Cambodia's local innovation capacity, and studies project a significant AI-driven GDP increase by 2030. Sectors such as agriculture, finance, SMEs and tourism present strategic opportunities for early AI adoption. Gathering data on the labour market and AI investments will enable more effective planning to maximise economic impact.",
+        },
+      },
+      {
+        title: { es: "Técnica e Infraestructural", en: "Technical and Infrastructural" },
+        icon: "Server",
+        content: {
+          es: "Camboya cuenta con una base sólida: acceso casi universal a electricidad, mejoras en conectividad móvil, estándares estadísticos establecidos y políticas de Cloud First y gobernanza de datos en desarrollo. El país tiene la oportunidad de mejorar el acceso y velocidad de internet, expandir la capacidad de centros de datos, participar en organismos internacionales de estandarización de IA y establecer un Centro de Recursos de IA que democratice el acceso a infraestructura computacional avanzada.",
+          en: "Cambodia has a solid foundation: near-universal electricity access, mobile connectivity improvements, established statistical standards and Cloud First and data governance policies under development. The country has the opportunity to improve internet access and speed, expand data centre capacity, participate in international AI standardisation bodies and establish an AI Resource Centre to democratise access to advanced computing infrastructure.",
+        },
+      },
+    ],
+    images: [
+      { src: "/images/projects/ram-camboya/1738671465327.jpeg", caption: { es: "Presentación de resultados preliminares de la RAM Camboya", en: "Presentation of preliminary RAM Cambodia results" } },
+      { src: "/images/projects/ram-camboya/20250204_083735.jpg", caption: { es: "Evento de presentación en CADT con UNESCO", en: "Presentation event at CADT with UNESCO" } },
+      { src: "/images/projects/ram-camboya/20250204_110523.jpg", caption: { es: "Mesas de validación multiactor", en: "Multi-stakeholder validation workshops" } },
+    ],
+    downloadUrl: "https://unesdoc.unesco.org/ark:/48223/pf0000394553",
   },
   // ── 2024 ───────────────────────────────────────────────────────
   {
@@ -422,6 +531,10 @@ export const projects = [
     title: {
       es: "Análisis Comparativo de Marcos Regulatorios de IA en ALC",
       en: "Comparative Analysis of AI Regulatory Frameworks in LAC",
+    },
+    subtitle: {
+      es: "Mapeo y análisis de legislación de IA en más de 12 países de América Latina y el Caribe",
+      en: "Mapping and analysis of AI legislation across 12+ Latin American and Caribbean countries",
     },
     description: {
       es: "Mapeo y análisis comparativo de la legislación de IA en más de 12 países de América Latina y el Caribe. Generamos recomendaciones concretas para armonizar marcos regulatorios y fomentar la innovación responsable en la región.",
@@ -440,6 +553,10 @@ export const projects = [
       es: "Política Municipal de Inteligencia Artificial",
       en: "Municipal Artificial Intelligence Policy",
     },
+    subtitle: {
+      es: "Primera política municipal de IA en Chile, diseñada mediante participación ciudadana",
+      en: "Chile's first municipal AI policy, designed through citizen participation",
+    },
     description: {
       es: "Diseño y facilitación de un proceso de participación ciudadana que culminó en la primera Política Municipal de IA en Chile. Elaborada en colaboración con CENIA, establece lineamientos para el uso responsable de IA en la gestión municipal.",
       en: "Design and facilitation of a citizen participation process that culminated in Chile's first Municipal AI Policy. Developed in collaboration with CENIA, it establishes guidelines for the responsible use of AI in municipal governance.",
@@ -456,6 +573,10 @@ export const projects = [
       es: "Índice de Investigación, Desarrollo e Innovación en Logística",
       en: "Logistics Research, Development & Innovation Index",
     },
+    subtitle: {
+      es: "Primer índice de I+D+i del sector logístico chileno",
+      en: "First R&D&I index for Chile's logistics sector",
+    },
     description: {
       es: "Creación del primer índice de I+D+i del sector logístico chileno, con metodología validada por un comité académico. Permite al sector medir su madurez en innovación y priorizar inversiones estratégicas.",
       en: "Creation of the first R&D&I index for Chile's logistics sector, with methodology validated by an academic committee. Enables the sector to measure its innovation maturity and prioritize strategic investments.",
@@ -471,6 +592,10 @@ export const projects = [
     title: {
       es: "Prospección sobre la Regulación de IA",
       en: "AI Regulation Foresight",
+    },
+    subtitle: {
+      es: "Escenarios prospectivos sobre regulación de IA mediante grupos focales participativos",
+      en: "Foresight scenarios on AI regulation through participatory focus groups",
     },
     description: {
       es: "Facilitación de grupos focales participativos para construir escenarios prospectivos sobre regulación de IA en Chile. Los resultados orientan la toma de decisiones frente a un entorno regulatorio en rápida evolución.",
@@ -489,6 +614,10 @@ export const projects = [
       es: "Levantamiento de Casos y Recomendaciones para Sandboxes de IA en Chile",
       en: "AI Regulatory Sandboxes: Cases & Recommendations for Chile",
     },
+    subtitle: {
+      es: "Hoja de ruta para entornos de prueba regulatoria de IA en Chile",
+      en: "Roadmap for AI regulatory testing environments in Chile",
+    },
     description: {
       es: "Investigación de experiencias internacionales de sandboxes regulatorios de IA y desarrollo de recomendaciones adaptadas a Chile. Entregamos una hoja de ruta para la implementación de entornos de prueba que aceleren la innovación con supervisión regulatoria.",
       en: "Research of international AI regulatory sandbox experiences and development of recommendations tailored to Chile. We delivered a roadmap for implementing testing environments that accelerate innovation with regulatory oversight.",
@@ -505,6 +634,10 @@ export const projects = [
       es: "Levantamiento de Proyectos de IA en Chile",
       en: "Mapping of AI Projects in Chile",
     },
+    subtitle: {
+      es: "Mapeo exhaustivo del ecosistema de investigación en IA de Chile",
+      en: "Comprehensive mapping of Chile's AI research ecosystem",
+    },
     description: {
       es: "Mapeo exhaustivo de los proyectos de investigación en IA del país, identificando capacidades, brechas y oportunidades de colaboración. El resultado entrega una visión estratégica para orientar la inversión pública en I+D de inteligencia artificial.",
       en: "Comprehensive mapping of the country's AI research projects, identifying capabilities, gaps, and collaboration opportunities. The result provides a strategic vision to guide public investment in artificial intelligence R&D.",
@@ -519,12 +652,16 @@ export const projects = [
   {
     id: "ram-republica-dominicana",
     title: {
-      es: "Implementación RAM República Dominicana",
-      en: "RAM Implementation Dominican Republic",
+      es: "Evaluación de Preparación en IA: República Dominicana",
+      en: "AI Readiness Assessment: Dominican Republic",
+    },
+    subtitle: {
+      es: "Primera implementación de la metodología RAM de UNESCO en Centroamérica y el Caribe",
+      en: "First implementation of UNESCO's RAM methodology in Central America and the Caribbean",
     },
     description: {
-      es: "Lideramos la primera implementación de la metodología RAM en Centroamérica y el Caribe, evaluando desafíos y oportunidades para la adopción de IA. Las recomendaciones fueron incorporadas directamente en la Estrategia Nacional de Inteligencia Artificial del país.",
-      en: "We led the first RAM methodology implementation in Central America and the Caribbean, assessing challenges and opportunities for AI adoption. The recommendations were directly incorporated into the country's National Artificial Intelligence Strategy.",
+      es: "Primera implementación de la metodología RAM de UNESCO en Centroamérica y el Caribe, liderada por la OGTIC. Las recomendaciones fueron incorporadas directamente en la Estrategia Nacional de Inteligencia Artificial (ENIA), lanzada por decreto presidencial en 2023.",
+      en: "First implementation of UNESCO's RAM methodology in Central America and the Caribbean, led by OGTIC. The recommendations were directly incorporated into the National Artificial Intelligence Strategy (NAIS), launched by presidential decree in 2023.",
     },
     client: "UNESCO",
     year: 2023,
@@ -532,13 +669,78 @@ export const projects = [
     region: "República Dominicana",
     type: "assessment",
     status: "completed" as const,
-    externalUrl: "https://www.unesco.org/ethics-ai/en/dominicanrepublic",
+    featuredStat: {
+      value: "8",
+      label: { es: "Recomendaciones integradas en la ENIA", en: "Recommendations integrated into the NAIS" },
+    },
+    summaryHighlight: {
+      es: "Las recomendaciones de la RAM fueron incorporadas directamente en la Estrategia Nacional de Inteligencia Artificial (ENIA), lanzada por decreto presidencial durante la implementación del estudio",
+      en: "The RAM recommendations were directly incorporated into the National Artificial Intelligence Strategy (NAIS), launched by presidential decree during the study's implementation",
+    },
+    executiveSummary: {
+      es: "República Dominicana fue seleccionada en 2023 como uno de los primeros países de la región en implementar la RAM de UNESCO, con el apoyo de la cooperación japonesa (JFIT). La OGTIC lideró el proceso en coordinación con UNESCO, y el gobierno publicó su Estrategia Nacional de IA (ENIA) incorporando las recomendaciones del reporte. El diagnóstico revela un país comprometido con la gobernanza ética de la IA, con avances en datos abiertos (posición 60 de 187 en el Open Data Inventory), una Agenda Digital 2030 como marco estratégico, y 11 programas universitarios en IA y ciencia de datos. Las oportunidades incluyen actualizar la legislación de protección de datos, fortalecer las capacidades del sector público, cerrar la brecha digital urbano-rural y aumentar la inversión en investigación.",
+      en: "The Dominican Republic was selected in 2023 as one of the first countries in the region to implement UNESCO's RAM, with support from Japanese cooperation (JFIT). OGTIC led the process in coordination with UNESCO, and the government published its National AI Strategy (NAIS) incorporating the report's recommendations. The assessment reveals a country committed to ethical AI governance, with advances in open data (position 60 of 187 in the Open Data Inventory), a Digital Agenda 2030 as strategic framework, and 11 university programs in AI and data science. Opportunities include updating data protection legislation, strengthening public sector capacities, closing the urban-rural digital divide and increasing research investment.",
+    },
+    keyStats: [
+      { value: "85%", label: { es: "Uso de internet (% de la población)", en: "Internet usage (% of population)" } },
+      { value: "0,086%", label: { es: "Del PIB en I+D", en: "Of GDP in R&D" } },
+      { value: "98,1%", label: { es: "Acceso a electricidad", en: "Electricity access" } },
+    ],
+    pillarsTitle: { es: "Dimensiones Evaluadas", en: "Assessed Dimensions" },
+    pillarsSubtitle: { es: "Las cinco dimensiones de la Metodología RAM de UNESCO", en: "The five dimensions of UNESCO's RAM Methodology" },
+    pillars: [
+      {
+        title: { es: "Legal y Regulatoria", en: "Legal and Regulatory" },
+        icon: "Scale",
+        content: {
+          es: "República Dominicana lanzó su ENIA por decreto presidencial en 2023, incorporando un componente ético y de derechos humanos. Cuenta con una Ley de Protección de Datos Personales y la Agenda Digital 2030 como marco estratégico. El país tiene una Política Nacional de Datos Abiertos (posición 60/187 en el Open Data Inventory) y un portal de datos abiertos gubernamental. Las oportunidades incluyen actualizar la legislación de datos personales, crear regulaciones de contratación pública de IA y establecer mecanismos de rendición de cuentas para sistemas de IA.",
+          en: "The Dominican Republic launched its NAIS by presidential decree in 2023, incorporating an ethical and human rights component. It has a Personal Data Protection Law and the Digital Agenda 2030 as a strategic framework. The country has a National Open Data Policy (position 60/187 in the Open Data Inventory) and a government open data portal. Opportunities include updating personal data legislation, creating AI procurement regulations and establishing accountability mechanisms for AI systems.",
+        },
+      },
+      {
+        title: { es: "Social y Cultural", en: "Social and Cultural" },
+        icon: "Users",
+        content: {
+          es: "El país muestra una brecha de género en internet casi inexistente (índice 0,963), y las niñas superan a los niños en desempeño en matemáticas y ciencias. El PLANEG III promueve activamente la igualdad de género en tecnologías digitales. El 48% de la ciudadanía confía en los sitios web y aplicaciones del gobierno. La oportunidad está en cerrar la brecha digital urbano-rural (49,2% vs 30,6% de acceso a internet en hogares), promover la diversidad en equipos de IA e integrar la IA en estrategias de salud digital y preservación cultural.",
+          en: "The country shows an almost non-existent internet gender gap (index 0.963), and girls outperform boys in mathematics and science. PLANEG III actively promotes gender equality in digital technologies. 48% of citizens trust government websites and applications. The opportunity lies in closing the urban-rural digital divide (49.2% vs 30.6% household internet access), promoting diversity in AI teams and integrating AI into digital health and cultural preservation strategies.",
+        },
+      },
+      {
+        title: { es: "Científica y Educativa", en: "Scientific and Educational" },
+        icon: "GraduationCap",
+        content: {
+          es: "El país cuenta con 11 programas terciarios en IA, aprendizaje automático y ciencia de datos (2 licenciaturas, 7 diplomados y 2 maestrías), y ocupa la posición 63 a nivel global en ciencia de datos en Coursera. Un promedio de 10 autores activos publican anualmente en IA, y se registran 68 artículos científicos relacionados. La ENIA prioriza el fortalecimiento del ecosistema de I+D+i, con oportunidades para crear centros de investigación en IA, aumentar la inversión en I+D (actualmente 0,086% del PIB) y promover la colaboración industria-universidad.",
+          en: "The country has 11 tertiary programs in AI, machine learning and data science (2 undergraduate, 7 diplomas and 2 master's), and ranks 63rd globally in data science on Coursera. An average of 10 active authors publish annually on AI, with 68 related scientific articles recorded. The NAIS prioritizes strengthening the R&D&I ecosystem, with opportunities to create AI research centers, increase R&D investment (currently 0.086% of GDP) and promote industry-university collaboration.",
+        },
+      },
+      {
+        title: { es: "Económica", en: "Economic" },
+        icon: "TrendingUp",
+        content: {
+          es: "República Dominicana ocupa la posición 50 en el Índice Global de Innovación y muestra potencial de crecimiento en la adopción de IA. La ENIA contempla el impacto de la IA en el mercado laboral como un eje prioritario. Las exportaciones de alta tecnología representan el 2,9% del comercio. La oportunidad clave es mejorar la recopilación de datos sobre el ecosistema económico de IA, incluyendo datos laborales, de inversión y de consumo, para generar líneas base que permitan medir el progreso y diseñar políticas más efectivas.",
+          en: "The Dominican Republic ranks 50th in the Global Innovation Index and shows growth potential in AI adoption. The NAIS considers AI's impact on the labor market as a priority axis. High-tech exports represent 2.9% of trade. The key opportunity is improving data collection on the AI economic ecosystem, including labor, investment and consumption data, to generate baselines that allow measuring progress and designing more effective policies.",
+        },
+      },
+      {
+        title: { es: "Técnica e Infraestructura", en: "Technical and Infrastructure" },
+        icon: "Server",
+        content: {
+          es: "El país cuenta con 88% de suscripciones móviles, cobertura 3G del 99% y acceso a electricidad del 98,1%. La velocidad promedio de descarga de banda ancha es de 20,58 Mbps. República Dominicana tiene un centro de datos (operado por Kio Networks) y participa como observador en ISO/IEC JTC 1/SC 27. Las oportunidades incluyen expandir la capacidad de centros de datos, mejorar la conectividad de banda ancha fija (actualmente 10% de penetración) y cerrar la brecha urbano-rural en acceso a internet de alta velocidad.",
+          en: "The country has 88% mobile subscriptions, 99% 3G coverage and 98.1% electricity access. Average broadband download speed is 20.58 Mbps. The Dominican Republic has one data center (operated by Kio Networks) and participates as an observer in ISO/IEC JTC 1/SC 27. Opportunities include expanding data center capacity, improving fixed broadband connectivity (currently 10% penetration) and closing the urban-rural gap in high-speed internet access.",
+        },
+      },
+    ],
+    downloadUrl: "https://unesdoc.unesco.org/ark:/48223/pf0000391573",
   },
   {
     id: "ram-cuba",
     title: {
       es: "Implementación RAM Cuba",
       en: "RAM Implementation Cuba",
+    },
+    subtitle: {
+      es: "Evaluación de preparación en IA mediante la metodología RAM de UNESCO",
+      en: "AI readiness assessment using UNESCO's RAM methodology",
     },
     description: {
       es: "Evaluación de los desafíos y oportunidades de Cuba para la adopción de IA mediante la metodología RAM de UNESCO. Entregamos recomendaciones concretas que alimentan la formulación de la política nacional de inteligencia artificial.",
@@ -559,6 +761,10 @@ export const projects = [
       es: "Actualización Política de Inteligencia Artificial de Chile",
       en: "Chile's AI Policy Update",
     },
+    subtitle: {
+      es: "Revisión integral de la Política Nacional de IA alineada con la RAM de UNESCO",
+      en: "Comprehensive review of the National AI Policy aligned with UNESCO's RAM",
+    },
     description: {
       es: "Revisión integral de la Política Nacional de IA de Chile y su plan de acción, generando una propuesta actualizada alineada con las recomendaciones de la RAM UNESCO. El resultado informó la nueva versión de la política publicada por el Ministerio de Ciencia.",
       en: "Comprehensive review of Chile's National AI Policy and its action plan, generating an updated proposal aligned with UNESCO RAM recommendations. The result informed the new policy version published by the Ministry of Science.",
@@ -573,12 +779,16 @@ export const projects = [
   {
     id: "ram-chile",
     title: {
-      es: "Implementación RAM Chile",
-      en: "RAM Implementation Chile",
+      es: "Evaluación de Preparación en IA: Chile",
+      en: "AI Readiness Assessment: Chile",
+    },
+    subtitle: {
+      es: "Evaluación del estadío de preparación en materia de Inteligencia Artificial de la UNESCO",
+      en: "UNESCO's Readiness Assessment Methodology for Artificial Intelligence",
     },
     description: {
-      es: "Evaluación de la preparación de Chile para la adopción ética de IA, convocando a más de 300 actores del ecosistema. Identificamos los cambios institucionales y regulatorios necesarios para una gobernanza de IA responsable.",
-      en: "Assessment of Chile's readiness for ethical AI adoption, convening over 300 ecosystem stakeholders. We identified the institutional and regulatory changes needed for responsible AI governance.",
+      es: "Chile fue uno de los primeros países del mundo en implementar la metodología RAM de UNESCO, consolidándose como pionero en América Latina. Más de 300 actores del ecosistema participaron en mesas redondas en seis regiones del país, generando recomendaciones que informaron la actualización de la Política Nacional de IA.",
+      en: "Chile was one of the first countries in the world to implement UNESCO's RAM methodology, establishing itself as a pioneer in Latin America. Over 300 ecosystem stakeholders participated in roundtables across six regions, generating recommendations that informed the update of the National AI Policy.",
     },
     client: "UNESCO",
     year: 2023,
@@ -586,14 +796,75 @@ export const projects = [
     type: "assessment",
     status: "completed" as const,
     featured: true,
-    featuredStat: { value: "300+", label: { es: "Participantes", en: "Participants" } },
-    externalUrl: "https://www.unesco.org/ethics-ai/en/chile",
+    featuredStat: { value: "300+", label: { es: "Participantes en mesas redondas en 6 regiones", en: "Roundtable participants across 6 regions" } },
+    summaryHighlight: {
+      es: "Chile fue pionero en implementar la RAM de UNESCO, generando recomendaciones que informaron directamente la actualización de la Política Nacional de Inteligencia Artificial",
+      en: "Chile pioneered the implementation of UNESCO's RAM, generating recommendations that directly informed the update of the National Artificial Intelligence Policy",
+    },
+    executiveSummary: {
+      es: "Chile fue uno de los primeros países del mundo en implementar la metodología de evaluación de preparación en IA de UNESCO, posicionándose como pionero en América Latina con una estrategia de IA reconocida por su amplio proceso participativo. La Política Nacional de IA (2021) incluye 70 acciones prioritarias y 185 iniciativas con un presupuesto estimado de USD 32 millones. Las consultas nacionales reunieron a más de 300 personas de diferentes regiones, sectores y disciplinas, revelando una visión optimista pero matizada: entusiasmo por mejorar la productividad y dinamizar la democracia, junto con preocupaciones sobre privacidad, transparencia e impacto laboral. Las recomendaciones abarcan regulación, marco institucional y desarrollo de capacidades, sentando las bases para la actualización de la estrategia nacional con un enfoque más ético y equitativo.",
+      en: "Chile was one of the first countries in the world to implement UNESCO's AI readiness assessment methodology, positioning itself as a pioneer in Latin America with an AI strategy recognized for its broad participatory process. The National AI Policy (2021) includes 70 priority actions and 185 initiatives with an estimated budget of USD 32 million. National consultations brought together over 300 people from different regions, sectors and disciplines, revealing an optimistic but nuanced vision: enthusiasm for improving productivity and energizing democracy, alongside concerns about privacy, transparency and labor impact. Recommendations span regulation, institutional frameworks and capacity building, laying the groundwork for updating the national strategy with a more ethical and equitable approach.",
+    },
+    keyStats: [
+      { value: "88,3%", label: { es: "Uso de internet (% de la población)", en: "Internet usage (% of population)" } },
+      { value: "0,34%", label: { es: "Del PIB en I+D", en: "Of GDP in R&D" } },
+      { value: "100%", label: { es: "Acceso a electricidad", en: "Electricity access" } },
+    ],
+    pillarsTitle: { es: "Dimensiones Evaluadas", en: "Assessed Dimensions" },
+    pillarsSubtitle: { es: "Las cinco dimensiones de la Metodología RAM de UNESCO", en: "The five dimensions of UNESCO's RAM Methodology" },
+    pillars: [
+      {
+        title: { es: "Legal y Regulatoria", en: "Legal and Regulatory" },
+        icon: "Scale",
+        content: {
+          es: "Chile publicó su Política Nacional de IA en 2021, incluyendo un componente ético robusto. El país cuenta con un sólido cuerpo de instrumentos legales para promover la transparencia, el debido proceso y la contratación pública. Se avanza en la actualización de la Ley de Protección de Datos Personales y se discute un proyecto de ley de IA en el Congreso. La oportunidad está en consolidar un marco regulatorio equilibrado, basado en evidencia, y en crear directrices de transparencia algorítmica para el sector público.",
+          en: "Chile published its National AI Policy in 2021, including a robust ethical component. The country has a solid body of legal instruments to promote transparency, due process and public procurement. Progress is being made on updating the Personal Data Protection Law and an AI bill is being discussed in Congress. The opportunity lies in consolidating a balanced, evidence-based regulatory framework and creating algorithmic transparency guidelines for the public sector.",
+        },
+      },
+      {
+        title: { es: "Social y Cultural", en: "Social and Cultural" },
+        icon: "Users",
+        content: {
+          es: "Chile muestra fortalezas en acceso digital con una brecha de género casi inexistente en el uso de internet. Múltiples programas promueven la diversidad en CTIM, incluyendo la Política Nacional para la Igualdad de Género en Ciencia y Tecnología. El 63% de los chilenos cree que la IA tiene más beneficios que inconvenientes. Las oportunidades incluyen fortalecer la inclusión urbano-rural, desarrollar datos en lenguas indígenas y evaluar el impacto de la IA en la preservación del patrimonio cultural.",
+          en: "Chile shows strengths in digital access with an almost non-existent gender gap in internet use. Multiple programs promote STEM diversity, including the National Policy for Gender Equality in Science and Technology. 63% of Chileans believe AI has more benefits than drawbacks. Opportunities include strengthening urban-rural inclusion, developing indigenous language data, and evaluating AI's impact on cultural heritage preservation.",
+        },
+      },
+      {
+        title: { es: "Científica y Educativa", en: "Scientific and Educational" },
+        icon: "GraduationCap",
+        content: {
+          es: "Chile cuenta con tres centros de investigación en IA (CENIA, Milenio Futures of AI e Instituto Milenio en Ingeniería e IA para la Salud) y 837 investigadores activos. Las ofertas de educación terciaria en IA han crecido significativamente: 15 universidades ofrecen 15 cursos, 39 diplomados, 10 maestrías y 1 doctorado. La oportunidad estratégica es aumentar la inversión en I+D (actualmente 0,34% del PIB), integrar IA en el currículo escolar y fortalecer la formación docente en tecnologías digitales.",
+          en: "Chile has three AI research centers (CENIA, Milenio Futures of AI and Milenio Institute in Engineering and AI for Health) and 837 active researchers. Tertiary AI education offerings have grown significantly: 15 universities offer 15 courses, 39 diplomas, 10 master's and 1 doctorate. The strategic opportunity is to increase R&D investment (currently 0.34% of GDP), integrate AI into school curricula and strengthen teacher training in digital technologies.",
+        },
+      },
+      {
+        title: { es: "Económica", en: "Economic" },
+        icon: "TrendingUp",
+        content: {
+          es: "Chile registra un crecimiento sostenido en la contratación de talento en IA, con una concentración de talento que se ha triplicado entre 2017 y 2022. El sector de servicios de comunicaciones e información representó el 2,6% del PIB en 2022. Chile atrae inversiones tecnológicas significativas, con 589 millones de dólares registrados. Las oportunidades incluyen mejorar la recopilación de datos sobre el mercado laboral de IA, promover la certificación de competencias digitales y expandir los programas de reciclaje profesional.",
+          en: "Chile shows sustained growth in AI talent hiring, with talent concentration tripling between 2017 and 2022. The communications and information services sector represented 2.6% of GDP in 2022. Chile attracts significant technology investments, with $589 million registered. Opportunities include improving AI labor market data collection, promoting digital skills certification and expanding professional reskilling programs.",
+        },
+      },
+      {
+        title: { es: "Técnica e Infraestructura", en: "Technical and Infrastructure" },
+        icon: "Server",
+        content: {
+          es: "Chile destaca por su conectividad: 88,3% de uso de internet, 100% de acceso a electricidad, cobertura móvil del 98% y una de las velocidades de banda ancha más rápidas de la región (229 Mbps). El país cuenta con 15 centros de datos y suscripciones móviles que alcanzan el 107% de la población. La oportunidad está en expandir la capacidad de centros de datos, participar en organismos internacionales de estandarización de IA y cerrar las brechas de conectividad entre zonas urbanas y rurales.",
+          en: "Chile stands out for its connectivity: 88.3% internet usage, 100% electricity access, 98% mobile coverage and one of the fastest broadband speeds in the region (229 Mbps). The country has 15 data centers and mobile subscriptions reaching 107% of the population. The opportunity lies in expanding data center capacity, participating in international AI standardization bodies and closing urban-rural connectivity gaps.",
+        },
+      },
+    ],
+    downloadUrl: "https://unesdoc.unesco.org/ark:/48223/pf0000387216",
   },
   {
     id: "innovacion-construccion",
     title: {
       es: "Análisis de Prácticas de Innovación en la Construcción",
       en: "Innovation Practices Analysis in Construction",
+    },
+    subtitle: {
+      es: "Diagnóstico de innovación del sector de la construcción con indicadores medibles",
+      en: "Construction sector innovation assessment with measurable indicators",
     },
     description: {
       es: "Diagnóstico de las prácticas de innovación del sector de la construcción, desarrollando indicadores medibles y recomendaciones accionables. El estudio permite a las empresas del rubro compararse y priorizar sus esfuerzos de innovación.",
@@ -610,6 +881,10 @@ export const projects = [
     title: {
       es: "La Voz de los Nuevos Votantes",
       en: "The Voice of New Voters",
+    },
+    subtitle: {
+      es: "Análisis con procesamiento de lenguaje natural de deliberaciones del proceso constitucional",
+      en: "NLP analysis of deliberations from the constitutional process",
     },
     description: {
       es: "Desarrollo de metodología de procesamiento de lenguaje natural para analizar las deliberaciones de nuevos votantes en el proceso constitucional. Transformamos grandes volúmenes de conversaciones en hallazgos accionables sobre preferencias ciudadanas.",
@@ -628,6 +903,10 @@ export const projects = [
       es: "Índice Municipal de Inteligencia Artificial",
       en: "Municipal Artificial Intelligence Index",
     },
+    subtitle: {
+      es: "Primer instrumento para medir la preparación de los municipios chilenos para adoptar IA",
+      en: "First instrument to measure Chilean municipalities' readiness to adopt AI",
+    },
     description: {
       es: "Diseñamos el primer instrumento para medir la preparación de los municipios chilenos para adoptar IA, identificando brechas y oportunidades concretas. Una herramienta pionera que permite priorizar inversiones en transformación digital local.",
       en: "We designed the first instrument to measure Chilean municipalities' readiness to adopt AI, identifying concrete gaps and opportunities. A pioneering tool that enables prioritizing investments in local digital transformation.",
@@ -643,6 +922,10 @@ export const projects = [
     title: {
       es: "Estudio sobre Sesgos Dañinos de Sistemas de IA",
       en: "Study on Harmful Biases in AI Systems",
+    },
+    subtitle: {
+      es: "Investigación para APEC sobre riesgos de sesgo en IA con marcos de mitigación",
+      en: "APEC research on AI bias risks with mitigation frameworks",
     },
     description: {
       es: "Investigación para APEC sobre sesgos dañinos en sistemas de inteligencia artificial, desarrollada en colaboración con CENIA. El estudio identifica riesgos concretos y propone marcos de mitigación aplicables a las economías del Asia-Pacífico.",
@@ -660,6 +943,10 @@ export const projects = [
     title: {
       es: "Índice Latinoamericano de Inteligencia Artificial 2023",
       en: "Latin American Artificial Intelligence Index 2023",
+    },
+    subtitle: {
+      es: "Primer instrumento de referencia regional para medir el avance de los países en IA",
+      en: "First regional benchmark instrument to measure countries' progress in AI",
     },
     description: {
       es: "Diseñamos la metodología y lideramos el levantamiento de datos del primer Índice Latinoamericano de IA, con apoyo de CAF y UNESCO. Un instrumento de referencia regional que permite comparar el avance de los países en adopción y gobernanza de IA.",
@@ -679,6 +966,10 @@ export const projects = [
       es: "Jornada Participativa sobre Equidad de Género y Movilidad",
       en: "Participatory Workshop on Gender Equity and Mobility",
     },
+    subtitle: {
+      es: "Análisis automatizado con IA de deliberaciones sobre transporte inclusivo",
+      en: "Automated AI analysis of deliberations on inclusive transportation",
+    },
     description: {
       es: "Diseño de metodología deliberativa y análisis automatizado con IA de una jornada participativa sobre equidad de género y movilidad. Convertimos las opiniones de los participantes en hallazgos estructurados para informar políticas de transporte inclusivo.",
       en: "Design of deliberative methodology and automated AI analysis of a participatory workshop on gender equity and mobility. We transformed participant opinions into structured findings to inform inclusive transportation policies.",
@@ -696,6 +987,10 @@ export const projects = [
     title: {
       es: "Apoyo en Procesos de Participación Ciudadana en ALC",
       en: "Citizen Participation Support in LAC",
+    },
+    subtitle: {
+      es: "Diseño y facilitación de participación ciudadana para estrategias nacionales de IA",
+      en: "Design and facilitation of citizen participation for national AI strategies",
     },
     description: {
       es: "Diseñamos y facilitamos los procesos de participación ciudadana para la creación de la Estrategia Nacional de IA de República Dominicana y la actualización de la de Uruguay. Cientos de actores aportaron a políticas que reflejan las necesidades reales de cada país.",
@@ -716,6 +1011,10 @@ export const projects = [
       es: "Análisis de Emprendimientos en Climate Tech en ALC",
       en: "Climate Tech Startups Analysis in LAC",
     },
+    subtitle: {
+      es: "Marco conceptual y benchmark del ecosistema de emprendimiento climático regional",
+      en: "Conceptual framework and benchmark of the regional climate entrepreneurship ecosystem",
+    },
     description: {
       es: "Definición del marco conceptual de Climate Tech para América Latina y benchmark del ecosistema de emprendimiento en la región. Entregamos al BID un diagnóstico que identifica oportunidades de inversión y brechas del ecosistema climático regional.",
       en: "Definition of the Climate Tech conceptual framework for Latin America and benchmark of the regional entrepreneurship ecosystem. We delivered to the IDB an assessment identifying investment opportunities and gaps in the regional climate ecosystem.",
@@ -731,6 +1030,10 @@ export const projects = [
     title: {
       es: "Análisis Automático de Participación",
       en: "Automated Participation Analysis",
+    },
+    subtitle: {
+      es: "Metodología de IA para procesar deliberaciones ciudadanas en tiempo real",
+      en: "AI methodology to process citizen deliberations in real time",
     },
     description: {
       es: "Desarrollo de metodología y análisis automatizado con IA de sesiones de participación ciudadana, entregando un panel de visualizaciones comparativas. Permitimos a los investigadores procesar grandes volúmenes de deliberaciones en tiempo real.",
