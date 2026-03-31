@@ -456,7 +456,6 @@ export const projects = [
     region: "Camboya",
     type: "assessment" as const,
     status: "completed" as const,
-    featured: true,
     featuredStat: {
       value: "0,09%",
       label: { es: "Del PIB destinado a I+D, reflejando la brecha de inversión en innovación", en: "Of GDP spent on R&D, reflecting the innovation investment gap" },
@@ -669,10 +668,6 @@ export const projects = [
     region: "República Dominicana",
     type: "assessment",
     status: "completed" as const,
-    featuredStat: {
-      value: "8",
-      label: { es: "Recomendaciones integradas en la ENIA", en: "Recommendations integrated into the NAIS" },
-    },
     summaryHighlight: {
       es: "Las recomendaciones de la RAM fueron incorporadas directamente en la Estrategia Nacional de Inteligencia Artificial (ENIA), lanzada por decreto presidencial durante la implementación del estudio",
       en: "The RAM recommendations were directly incorporated into the National Artificial Intelligence Strategy (NAIS), launched by presidential decree during the study's implementation",

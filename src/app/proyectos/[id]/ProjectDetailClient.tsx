@@ -20,6 +20,7 @@ import {
   BarChart,
   SectionHeading,
 } from "@/components/ui";
+import { RegionFlag } from "@/components/ui/RegionFlag";
 import { projects, clients } from "@/data/content";
 import * as LucideIcons from "lucide-react";
 import { useLang } from "@/lib/i18n";
@@ -37,29 +38,6 @@ function SectionDivider() {
   );
 }
 
-const regionFlags: Record<string, string> = {
-  "Chile": "🇨🇱",
-  "México": "🇲🇽",
-  "Camboya": "🇰🇭",
-  "Latinoamérica": "🌎",
-  "El Salvador": "🇸🇻",
-  "Honduras": "🇭🇳",
-  "Panamá": "🇵🇦",
-  "Guatemala": "🇬🇹",
-  "Colombia": "🇨🇴",
-  "Paraguay": "🇵🇾",
-  "Costa Rica": "🇨🇷",
-  "Ecuador": "🇪🇨",
-  "Perú": "🇵🇪",
-  "Uruguay": "🇺🇾",
-  "República Dominicana": "🇩🇴",
-  "Trinidad y Tobago": "🇹🇹",
-  "Centroamérica": "🌎",
-  "Cuba": "🇨🇺",
-  "Rep. Dominicana y Uruguay": "🌎",
-  "Global": "🌍",
-  "Asia-Pacífico": "🌏",
-};
 
 export default function ProjectDetailClient({ id }: { id: string }) {
   const { lang } = useLang();
@@ -264,7 +242,7 @@ export default function ProjectDetailClient({ id }: { id: string }) {
                     {lang === "es" ? "Región" : "Region"}
                   </div>
                   <div className="text-white font-medium">
-                    {regionFlags[project.region] && <span className="mr-1.5">{regionFlags[project.region]}</span>}
+                    <span className="mr-1.5"><RegionFlag region={project.region} /></span>
                     {project.region}
                   </div>
                 </div>

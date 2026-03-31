@@ -130,6 +130,7 @@ export function ProjectsShowcase() {
                 description={project.description[lang]}
                 client={project.client}
                 clientLogo={clientLogos[project.client]}
+                region={project.region}
                 year={project.year}
                 yearEnd={project.yearEnd}
                 status={project.status}

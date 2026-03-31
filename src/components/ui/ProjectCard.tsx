@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { cn, asset } from "@/lib/utils";
 import { useLang } from "@/lib/i18n";
+import { RegionFlag } from "./RegionFlag";
 
 interface ProjectCardProps {
   id: string;
@@ -19,6 +20,7 @@ interface ProjectCardProps {
     value: string;
     label: string;
   };
+  region?: string;
   clientLogo?: string;
   className?: string;
   delay?: number;
@@ -33,6 +35,7 @@ export function ProjectCard({
   yearEnd,
   status,
   featuredStat,
+  region,
   clientLogo,
   className,
   delay = 0,
@@ -83,7 +86,10 @@ export function ProjectCard({
               {client}
             </span>
           )}
-          <span className="text-sm text-slate-400">{yearDisplay}</span>
+          <span className="text-sm text-slate-400 flex items-center gap-2">
+            {region && <RegionFlag region={region} size={20} />}
+            {yearDisplay}
+          </span>
         </div>
 
         <h3 className="text-xl font-semibold text-navy mb-2 group-hover:text-cyan transition-colors">
