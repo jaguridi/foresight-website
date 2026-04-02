@@ -303,8 +303,8 @@ export const projects = [
       en: "Artificial intelligence to unlock Chile's economic potential",
     },
     description: {
-      es: "Estudio de impacto económico de la IA en Chile, parte de la serie AI Digital Sprinters de Google. Se estima que la IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB.",
-      en: "AI economic impact study for Chile, part of Google's AI Digital Sprinters series. AI could generate between USD 36.432 and USD 67.224 billion annually, equivalent to 10.9% and 20% of GDP.",
+      es: "Estudio comisionado por Google como parte de la serie AI Sprinters, que analiza el impacto económico de la IA en Chile. Se estima que la IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB.",
+      en: "Study commissioned by Google as part of the AI Sprinters series, analyzing the economic impact of AI in Chile. AI could generate between USD 36,432 and USD 67,224 million annually, equivalent to 10.9% and 20% of GDP.",
     },
     client: "Google",
     year: 2025,
@@ -319,11 +319,11 @@ export const projects = [
     },
     summaryHighlight: {
       es: "La IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB",
-      en: "AI could generate between USD 36.432 and USD 67.224 billion annually, equivalent to 10.9% and 20% of GDP",
+      en: "AI could generate between USD 36,432 and USD 67,224 million annually, equivalent to 10.9% and 20% of GDP",
     },
     executiveSummary: {
-      es: "Al analizar la matriz productiva de Chile, se estima que la IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB. Los sectores con mayor impacto proyectado son las actividades financieras y de seguros, el comercio y la manufactura, que en conjunto representarían más del 65% del efecto económico total. Sin embargo, según datos de PwC, solo el 5% de las empresas chilenas ha integrado IA en sus operaciones. Este reporte es parte de la serie IA Digital Sprinters de Google.",
-      en: "Analyzing Chile's productive matrix, AI could generate between USD 36.432 and USD 67.224 billion annually, equivalent to 10.9% and 20% of GDP. The sectors with the highest projected impact are financial activities and insurance, commerce and manufacturing, which together would represent more than 65% of the total economic effect. However, according to PwC data, only 5% of Chilean companies have integrated AI into their operations. This report is part of Google's AI Digital Sprinters series.",
+      es: "Estudio comisionado por Google como parte de la serie AI Sprinters. Al analizar la matriz productiva de Chile, se estima que la IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB. Los sectores con mayor impacto proyectado son las actividades financieras y de seguros, el comercio y la manufactura, que en conjunto representarían más del 65% del efecto económico total. Sin embargo, según datos de PwC, solo el 5% de las empresas chilenas ha integrado IA en sus operaciones. El marco Digital Sprinters se basa en cuatro factores habilitantes: políticas públicas efectivas, infraestructura tecnológica sólida, innovación tecnológica y personas.",
+      en: "Study commissioned by Google as part of the AI Sprinters series. Analyzing Chile's productive matrix, AI could generate between USD 36,432 and USD 67,224 million annually, equivalent to 10.9% and 20% of GDP. The sectors with the highest projected impact are financial activities and insurance, commerce and manufacturing, which together would represent more than 65% of the total economic effect. However, according to PwC data, only 5% of Chilean companies have integrated AI into their operations. The Digital Sprinters framework is based on four enabling factors: effective public policies, solid technological infrastructure, technological innovation, and people.",
     },
     keyStats: [
       { value: "$36–67B", label: { es: "USD millones anuales", en: "USD Billion Annual" } },
