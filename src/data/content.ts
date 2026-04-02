@@ -123,26 +123,27 @@ export const clientLogos: Record<string, string> = Object.fromEntries(
 
 export const projects = [
   // ── 2025–2026 | En desarrollo ──────────────────────────────────
-  {
-    id: "ballerina-ia-generativa",
-    title: {
-      es: "Adopción de IA Generativa en Ballerina",
-      en: "Generative AI Adoption at Ballerina",
-    },
-    subtitle: {
-      es: "Estrategia e implementación de IA generativa para transformar procesos internos",
-      en: "Generative AI strategy and implementation to transform internal processes",
-    },
-    description: {
-      es: "Acompañamiento a Ballerina en la adopción de IA generativa para mejorar sus procesos internos. Diseñamos la estrategia, identificamos casos de uso y apoyamos la implementación.",
-      en: "Supporting Ballerina in adopting generative AI to improve their internal processes. We design the strategy, identify use cases, and support implementation.",
-    },
-    client: "Ballerina",
-    year: 2025,
-    region: "Chile",
-    type: "consulting" as const,
-    status: "in_progress" as const,
-  },
+  // TODO: Descomentar cuando se tenga autorización del cliente
+  // {
+  //   id: "ballerina-ia-generativa",
+  //   title: {
+  //     es: "Adopción de IA Generativa en Ballerina",
+  //     en: "Generative AI Adoption at Ballerina",
+  //   },
+  //   subtitle: {
+  //     es: "Estrategia e implementación de IA generativa para transformar procesos internos",
+  //     en: "Generative AI strategy and implementation to transform internal processes",
+  //   },
+  //   description: {
+  //     es: "Acompañamiento a Ballerina en la adopción de IA generativa para mejorar sus procesos internos. Diseñamos la estrategia, identificamos casos de uso y apoyamos la implementación.",
+  //     en: "Supporting Ballerina in adopting generative AI to improve their internal processes. We design the strategy, identify use cases, and support implementation.",
+  //   },
+  //   client: "Ballerina",
+  //   year: 2025,
+  //   region: "Chile",
+  //   type: "consulting" as const,
+  //   status: "in_progress" as const,
+  // },
   {
     id: "meta-analisis-ram",
     title: {
