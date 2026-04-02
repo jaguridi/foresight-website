@@ -358,19 +358,19 @@ export const projects = [
         },
       },
       {
-        title: { es: "Fomento a la Innovación", en: "Innovation Promotion" },
+        title: { es: "Innovación Tecnológica", en: "Technological Innovation" },
         icon: "Lightbulb",
         content: {
-          es: "Chile necesita conectar mejor la academia, la industria y el gobierno para traducir conocimiento en soluciones concretas de IA. El ecosistema emprendedor es dinámico pero se requiere mayor financiamiento y colaboración entre actores del ecosistema para escalar soluciones de IA.",
-          en: "Chile needs to better connect academia, industry, and government to translate knowledge into concrete AI solutions. The entrepreneurial ecosystem is dynamic but more funding and collaboration between ecosystem actors is needed to scale AI solutions.",
+          es: "Chile ha construido una sólida base institucional para el desarrollo de la IA. El Centro Nacional de Inteligencia Artificial (CENIA) conecta investigación con industria en áreas como detección de incendios forestales y agricultura de precisión. El país ocupa el tercer lugar en Sudamérica en startups de IA, con 152 empresas fundadas desde 2015. Se proyecta que el mercado de IA en Chile alcanzará los USD 764,8 millones en 2025, con un crecimiento anual de 28%. La minería es uno de los sectores más beneficiados, con aplicaciones en mantenimiento predictivo, seguridad laboral y exploración de yacimientos.",
+          en: "Chile has built a solid institutional base for AI development. The National Center for Artificial Intelligence (CENIA) connects research with industry in areas such as wildfire detection and precision agriculture. The country ranks third in South America for AI startups, with 152 companies founded since 2015. Chile's AI market is projected to reach USD 764.8 million in 2025, with 28% annual growth. Mining is one of the most benefited sectors, with applications in predictive maintenance, workplace safety, and deposit exploration.",
         },
       },
       {
-        title: { es: "Fortalecimiento del Capital Humano", en: "Human Capital Development" },
+        title: { es: "Personas", en: "People" },
         icon: "GraduationCap",
         content: {
-          es: "El desarrollo del capital humano es el pilar que sostiene la transformación digital y la adopción de IA. Fortalecer la formación en habilidades digitales, integrar la IA en el sistema educativo y promover programas de capacitación continua permitirá a las personas adaptarse a los cambios del mercado laboral y liderar la creación de nuevas oportunidades.",
-          en: "Human capital development is the pillar that sustains digital transformation and AI adoption. Strengthening digital skills training, integrating AI into the educational system, and promoting continuous training programs will enable people to adapt to labor market changes and lead the creation of new opportunities.",
+          es: "Chile es líder en Hispanoamérica en formación de talento en IA, con 11 programas de magíster y 3 doctorados en IA, y una penetración de habilidades en IA cuatro veces superior al promedio regional. ChileValora impulsa la certificación de competencias digitales, mientras que Google se asoció con SENCE y Talento Digital para Chile para otorgar 5.000 becas en formación digital e IA. El programa GerencIA, diseñado por CENIA con el BID y SOFOFA, certificó a 150 ejecutivos, logrando que las empresas participantes tuvieran un 70% más de probabilidades de experimentar con IA.",
+          en: "Chile leads Hispanic America in AI talent development, with 11 master's programs and 3 PhDs in AI, and AI skills penetration four times higher than the regional average. ChileValora promotes digital skills certification, while Google partnered with SENCE and Talento Digital para Chile to provide 5,000 scholarships in digital and AI training. The GerencIA program, designed by CENIA with the IDB and SOFOFA, certified 150 executives, with participating companies being 70% more likely to experiment with AI.",
         },
       },
     ],
@@ -1117,19 +1117,19 @@ export const reports = [
         },
       },
       {
-        title: { es: "Fomento a la Innovación", en: "Innovation Promotion" },
+        title: { es: "Innovación Tecnológica", en: "Technological Innovation" },
         icon: "Lightbulb",
         content: {
-          es: "Chile necesita conectar mejor la academia, la industria y el gobierno para traducir conocimiento en soluciones concretas de IA. El ecosistema emprendedor es dinámico pero se requiere mayor financiamiento y colaboración entre actores del ecosistema para escalar soluciones de IA.",
-          en: "Chile needs to better connect academia, industry, and government to translate knowledge into concrete AI solutions. The entrepreneurial ecosystem is dynamic but more funding and collaboration between ecosystem actors is needed to scale AI solutions.",
+          es: "Chile ha construido una sólida base institucional para el desarrollo de la IA. El Centro Nacional de Inteligencia Artificial (CENIA) conecta investigación con industria en áreas como detección de incendios forestales y agricultura de precisión. El país ocupa el tercer lugar en Sudamérica en startups de IA, con 152 empresas fundadas desde 2015. Se proyecta que el mercado de IA en Chile alcanzará los USD 764,8 millones en 2025, con un crecimiento anual de 28%. La minería es uno de los sectores más beneficiados, con aplicaciones en mantenimiento predictivo, seguridad laboral y exploración de yacimientos.",
+          en: "Chile has built a solid institutional base for AI development. The National Center for Artificial Intelligence (CENIA) connects research with industry in areas such as wildfire detection and precision agriculture. The country ranks third in South America for AI startups, with 152 companies founded since 2015. Chile's AI market is projected to reach USD 764.8 million in 2025, with 28% annual growth. Mining is one of the most benefited sectors, with applications in predictive maintenance, workplace safety, and deposit exploration.",
         },
       },
       {
-        title: { es: "Fortalecimiento del Capital Humano", en: "Human Capital Development" },
+        title: { es: "Personas", en: "People" },
         icon: "GraduationCap",
         content: {
-          es: "El desarrollo del capital humano es el pilar que sostiene la transformación digital y la adopción de IA. Fortalecer la formación en habilidades digitales, integrar la IA en el sistema educativo y promover programas de capacitación continua permitirá a las personas adaptarse a los cambios del mercado laboral y liderar la creación de nuevas oportunidades.",
-          en: "Human capital development is the pillar that sustains digital transformation and AI adoption. Strengthening digital skills training, integrating AI into the educational system, and promoting continuous training programs will enable people to adapt to labor market changes and lead the creation of new opportunities.",
+          es: "Chile es líder en Hispanoamérica en formación de talento en IA, con 11 programas de magíster y 3 doctorados en IA, y una penetración de habilidades en IA cuatro veces superior al promedio regional. ChileValora impulsa la certificación de competencias digitales, mientras que Google se asoció con SENCE y Talento Digital para Chile para otorgar 5.000 becas en formación digital e IA. El programa GerencIA, diseñado por CENIA con el BID y SOFOFA, certificó a 150 ejecutivos, logrando que las empresas participantes tuvieran un 70% más de probabilidades de experimentar con IA.",
+          en: "Chile leads Hispanic America in AI talent development, with 11 master's programs and 3 PhDs in AI, and AI skills penetration four times higher than the regional average. ChileValora promotes digital skills certification, while Google partnered with SENCE and Talento Digital para Chile to provide 5,000 scholarships in digital and AI training. The GerencIA program, designed by CENIA with the IDB and SOFOFA, certified 150 executives, with participating companies being 70% more likely to experiment with AI.",
         },
       },
     ],
