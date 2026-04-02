@@ -41,6 +41,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://foresight.cl/proyectos/ballerina-ia-generativa</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/meta-analisis-ram</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://foresight.cl/proyectos/ram-el-salvador</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -51,12 +61,32 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://foresight.cl/proyectos/ram-panama</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://foresight.cl/proyectos/ram-guatemala</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://foresight.cl/proyectos/ai-sprinters</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ai-sprinters-el-salvador</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ai-sprinters-chile</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://foresight.cl/proyectos/ai-sprinters-mexico</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
