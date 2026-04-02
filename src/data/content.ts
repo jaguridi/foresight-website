@@ -123,7 +123,7 @@ export const clientLogos: Record<string, string> = Object.fromEntries(
 
 export const projects = [
   // ── 2025–2026 | En desarrollo ──────────────────────────────────
-  // TODO: Descomentar cuando se tenga autorización del cliente
+  // hidden until client authorization
   // {
   //   id: "ballerina-ia-generativa",
   //   title: {
