@@ -49,20 +49,22 @@ function FeaturedProjectCard({
             <div className="flex items-center justify-between mb-6">
               <div>
                 {clientLogo ? (
-                  <Image
-                    src={asset(clientLogo)}
-                    alt={client}
-                    width={80}
-                    height={28}
-                    className="h-7 w-auto object-contain brightness-0 invert"
-                  />
+                  <div className="bg-white rounded-lg px-3 py-1.5 shadow-sm">
+                    <Image
+                      src={asset(clientLogo)}
+                      alt={client}
+                      width={80}
+                      height={28}
+                      className="h-6 w-auto object-contain"
+                    />
+                  </div>
                 ) : (
-                  <span className="text-sm font-medium text-white/90">
+                  <span className="text-sm font-medium text-white/90 bg-white/20 rounded-lg px-3 py-1.5">
                     {client}
                   </span>
                 )}
               </div>
-              {region && <RegionFlag region={region} size={24} />}
+              {region && <RegionFlag region={region} size={32} />}
             </div>
             {featuredStat && (
               <div>
