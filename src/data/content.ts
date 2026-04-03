@@ -327,6 +327,26 @@ export const projects = [
     status: "in_progress" as const,
     parentProject: "ram-unesco",
   },
+  {
+    id: "ilia-participacion-ciudadana",
+    title: {
+      es: "Subindicador de IA para Participación Ciudadana en el ILIA",
+      en: "AI for Citizen Participation Sub-indicator in ILIA",
+    },
+    subtitle: {
+      es: "Desarrollo del primer subindicador que mide el uso y desarrollo de IA en procesos de participación ciudadana para el Índice Latinoamericano de Inteligencia Artificial",
+      en: "Development of the first sub-indicator measuring AI use and development in citizen participation processes for the Latin American Artificial Intelligence Index",
+    },
+    description: {
+      es: "Diseño e implementación del subindicador de IA para participación ciudadana, incorporado por primera vez en el ILIA 2025. El indicador mide el uso de IA en iniciativas participativas y la diversidad del ecosistema desarrollador en 19 países de América Latina y el Caribe, identificando 28 casos en 11 países. Colombia lidera con 69 puntos, seguido por México (58), Perú (56), Chile (55) y Brasil (53).",
+      en: "Design and implementation of the AI for citizen participation sub-indicator, incorporated for the first time in ILIA 2025. The indicator measures AI use in participatory initiatives and the diversity of the developer ecosystem across 19 Latin American and Caribbean countries, identifying 28 cases in 11 countries. Colombia leads with 69 points, followed by Mexico (58), Peru (56), Chile (55) and Brazil (53).",
+    },
+    client: "CENIA",
+    year: 2025,
+    region: "Latinoamérica",
+    type: "research" as const,
+    status: "completed" as const,
+  },
   // ── 2024–2025 ──────────────────────────────────────────────────
   {
     id: "ai-sprinters",
