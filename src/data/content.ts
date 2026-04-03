@@ -166,6 +166,86 @@ export const projects = [
     status: "completed" as const,
   },
   {
+    id: "ram-unesco",
+    title: {
+      es: "Evaluaciones de Preparación en IA (RAM) con UNESCO",
+      en: "AI Readiness Assessments (RAM) with UNESCO",
+    },
+    subtitle: {
+      es: "Diagnósticos nacionales de preparación en inteligencia artificial en 8 países de América Latina, el Caribe y Asia-Pacífico",
+      en: "National AI readiness assessments across 8 countries in Latin America, the Caribbean and Asia-Pacific",
+    },
+    description: {
+      es: "Foresight ha liderado la implementación de la Metodología de Evaluación de Preparación en IA (RAM) de UNESCO en 8 países: Chile, Camboya, República Dominicana, Cuba, Panamá, El Salvador, Honduras y Guatemala. Este trabajo ha contribuido directamente al diseño de estrategias nacionales de IA en múltiples países.",
+      en: "Foresight has led the implementation of UNESCO's AI Readiness Assessment Methodology (RAM) in 8 countries: Chile, Cambodia, Dominican Republic, Cuba, Panama, El Salvador, Honduras and Guatemala. This work has directly contributed to the design of national AI strategies in multiple countries.",
+    },
+    client: "UNESCO",
+    year: 2021,
+    yearEnd: 2026,
+    region: "Global",
+    type: "assessment" as const,
+    status: "in_progress" as const,
+    featured: true,
+    featuredStat: { value: "8", label: { es: "Países evaluados en 3 continentes", en: "Countries assessed across 3 continents" } },
+    summaryHighlight: {
+      es: "Foresight es la consultora con más implementaciones de la metodología RAM de UNESCO en el mundo, habiendo evaluado la preparación en IA de 8 países en América Latina, el Caribe y Asia-Pacífico",
+      en: "Foresight is the consultancy with the most implementations of UNESCO's RAM methodology worldwide, having assessed AI readiness in 8 countries across Latin America, the Caribbean and Asia-Pacific",
+    },
+    executiveSummary: {
+      es: "La Metodología de Evaluación de Preparación en IA (RAM) de UNESCO es un marco integral que evalúa las condiciones de un país para adoptar y beneficiarse de la inteligencia artificial. La metodología analiza cinco dimensiones: legal y regulatoria, social y cultural, científica y educativa, económica, y técnica e infraestructura. Foresight ha liderado la implementación de la RAM en 8 países, convirtiéndose en la consultora con más implementaciones a nivel mundial. Nuestros diagnósticos han contribuido directamente al diseño de estrategias nacionales de IA, incluyendo la Política Nacional de IA de Chile (2024), la Estrategia Nacional de IA de República Dominicana (2023) y la primera Estrategia Nacional de IA de Camboya (2025). El proceso incluye investigación documental, consultas con actores clave del ecosistema, mesas redondas multisectoriales y la formulación de recomendaciones accionables de política pública.",
+      en: "UNESCO's AI Readiness Assessment Methodology (RAM) is a comprehensive framework that evaluates a country's conditions for adopting and benefiting from artificial intelligence. The methodology analyzes five dimensions: legal and regulatory, social and cultural, scientific and educational, economic, and technical and infrastructure. Foresight has led the implementation of the RAM in 8 countries, becoming the consultancy with the most implementations worldwide. Our assessments have directly contributed to the design of national AI strategies, including Chile's National AI Policy (2024), the Dominican Republic's National AI Strategy (2023) and Cambodia's first National AI Strategy (2025). The process includes desk research, consultations with key ecosystem stakeholders, multisectoral roundtables and the formulation of actionable public policy recommendations.",
+    },
+    keyStats: [
+      { value: "8", label: { es: "Países evaluados", en: "Countries Assessed" } },
+      { value: "5", label: { es: "Dimensiones de análisis", en: "Analysis Dimensions" } },
+      { value: "3", label: { es: "Estrategias nacionales informadas", en: "National Strategies Informed" } },
+    ],
+    pillarsTitle: { es: "Dimensiones de la RAM", en: "RAM Dimensions" },
+    pillarsSubtitle: { es: "Las cinco dimensiones que evalúa la Metodología de Evaluación de Preparación en IA de UNESCO", en: "The five dimensions assessed by UNESCO's AI Readiness Assessment Methodology" },
+    pillars: [
+      {
+        title: { es: "Legal y Regulatoria", en: "Legal and Regulatory" },
+        icon: "Scale",
+        content: {
+          es: "Evalúa el marco legal y regulatorio existente en relación con la IA, incluyendo protección de datos, propiedad intelectual, transparencia algorítmica y gobernanza ética. Analiza la existencia de políticas y estrategias nacionales de IA, así como la adhesión a marcos internacionales como la Recomendación de UNESCO sobre Ética de la IA.",
+          en: "Evaluates the existing legal and regulatory framework regarding AI, including data protection, intellectual property, algorithmic transparency and ethical governance. Analyzes the existence of national AI policies and strategies, as well as adherence to international frameworks such as UNESCO's Recommendation on the Ethics of AI.",
+        },
+      },
+      {
+        title: { es: "Social y Cultural", en: "Social and Cultural" },
+        icon: "Users",
+        content: {
+          es: "Examina la inclusión digital, las brechas de género, la diversidad en STEM, la percepción pública de la IA y el impacto en la preservación del patrimonio cultural. Evalúa la existencia de mecanismos de participación ciudadana en la gobernanza de la IA y la sensibilización de la sociedad sobre sus beneficios y riesgos.",
+          en: "Examines digital inclusion, gender gaps, STEM diversity, public perception of AI and impact on cultural heritage preservation. Evaluates the existence of citizen participation mechanisms in AI governance and societal awareness of its benefits and risks.",
+        },
+      },
+      {
+        title: { es: "Científica y Educativa", en: "Scientific and Educational" },
+        icon: "GraduationCap",
+        content: {
+          es: "Analiza las capacidades de investigación, la oferta educativa en IA, la formación docente en tecnologías digitales y la inversión en I+D. Evalúa la existencia de centros de investigación, programas de postgrado y la integración de la IA en los currículos educativos en todos los niveles.",
+          en: "Analyzes research capabilities, AI educational offerings, teacher training in digital technologies and R&D investment. Evaluates the existence of research centers, graduate programs and the integration of AI into educational curricula at all levels.",
+        },
+      },
+      {
+        title: { es: "Económica", en: "Economic" },
+        icon: "TrendingUp",
+        content: {
+          es: "Evalúa el ecosistema de innovación, el mercado laboral de IA, la adopción empresarial de tecnologías avanzadas, la inversión en startups tecnológicas y el potencial de impacto económico de la IA. Analiza la disponibilidad de talento, la concentración de competencias digitales y los programas de reconversión profesional.",
+          en: "Evaluates the innovation ecosystem, AI labor market, enterprise adoption of advanced technologies, investment in tech startups and AI's potential economic impact. Analyzes talent availability, digital skills concentration and professional reskilling programs.",
+        },
+      },
+      {
+        title: { es: "Técnica e Infraestructura", en: "Technical and Infrastructure" },
+        icon: "Server",
+        content: {
+          es: "Mide la conectividad digital, el acceso a internet, la capacidad de centros de datos, la cobertura de redes móviles y la velocidad de banda ancha. Evalúa la disponibilidad de datos abiertos, la infraestructura de computación en la nube y la participación en organismos internacionales de estandarización.",
+          en: "Measures digital connectivity, internet access, data center capacity, mobile network coverage and broadband speed. Evaluates open data availability, cloud computing infrastructure and participation in international standardization bodies.",
+        },
+      },
+    ],
+  },
+  {
     id: "ram-el-salvador",
     title: {
       es: "Implementación RAM El Salvador",
@@ -185,6 +265,7 @@ export const projects = [
     region: "El Salvador",
     type: "assessment",
     status: "in_progress" as const,
+    parentProject: "ram-unesco",
   },
   {
     id: "ram-honduras",
@@ -206,6 +287,7 @@ export const projects = [
     region: "Honduras",
     type: "assessment",
     status: "in_progress" as const,
+    parentProject: "ram-unesco",
   },
   {
     id: "ram-panama",
@@ -227,6 +309,7 @@ export const projects = [
     region: "Panamá",
     type: "assessment",
     status: "in_progress" as const,
+    parentProject: "ram-unesco",
   },
   {
     id: "ram-guatemala",
@@ -247,6 +330,7 @@ export const projects = [
     region: "Guatemala",
     type: "assessment",
     status: "in_progress" as const,
+    parentProject: "ram-unesco",
   },
   // ── 2024–2025 ──────────────────────────────────────────────────
   {
@@ -480,6 +564,7 @@ export const projects = [
     region: "Camboya",
     type: "assessment" as const,
     status: "completed" as const,
+    parentProject: "ram-unesco",
     featuredStat: {
       value: "0,09%",
       label: { es: "Del PIB destinado a I+D, reflejando la brecha de inversión en innovación", en: "Of GDP spent on R&D, reflecting the innovation investment gap" },
@@ -692,6 +777,7 @@ export const projects = [
     region: "República Dominicana",
     type: "assessment",
     status: "completed" as const,
+    parentProject: "ram-unesco",
     summaryHighlight: {
       es: "Las recomendaciones de la RAM fueron incorporadas directamente en la Estrategia Nacional de Inteligencia Artificial (ENIA), lanzada por decreto presidencial durante la implementación del estudio",
       en: "The RAM recommendations were directly incorporated into the National Artificial Intelligence Strategy (NAIS), launched by presidential decree during the study's implementation",
@@ -771,6 +857,7 @@ export const projects = [
     region: "Cuba",
     type: "assessment",
     status: "completed" as const,
+    parentProject: "ram-unesco",
     externalUrl: "https://www.unesco.org/ethics-ai/en/cuba",
   },
   // ── 2023 ───────────────────────────────────────────────────────
@@ -814,7 +901,7 @@ export const projects = [
     region: "Chile",
     type: "assessment",
     status: "completed" as const,
-    featured: true,
+    parentProject: "ram-unesco",
     featuredStat: { value: "300+", label: { es: "Participantes en mesas redondas en 6 regiones", en: "Roundtable participants across 6 regions" } },
     summaryHighlight: {
       es: "Chile fue pionero en implementar la RAM de UNESCO, generando recomendaciones que informaron directamente la actualización de la Política Nacional de Inteligencia Artificial",

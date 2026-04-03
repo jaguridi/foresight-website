@@ -106,9 +106,19 @@ export default function ProjectDetailClient({ id }: { id: string }) {
     )
     .slice(0, 3);
 
+  // Child projects (projects that reference this one as parentProject)
+  const childProjects = projects
+    .filter((p: any) => p.parentProject === project.id)
+    .sort((a: any, b: any) => {
+      if (a.status === "in_progress" && b.status !== "in_progress") return 1;
+      if (a.status !== "in_progress" && b.status === "in_progress") return -1;
+      return a.year - b.year;
+    });
+
   // Rich content flags
   const hasExecutiveSummary = !!project.executiveSummary;
   const hasKeyStats = !!project.keyStats?.length;
+  const hasChildProjects = childProjects.length > 0;
   const hasSectors = !!project.sectors?.length;
   const hasPillars = !!project.pillars?.length;
   const hasDownload = !!project.downloadUrl;
@@ -297,6 +307,75 @@ export default function ProjectDetailClient({ id }: { id: string }) {
                   delay={index * 0.1}
                 />
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Child Projects (e.g., individual RAM countries) */}
+      {hasChildProjects && (
+        <section className="section-padding">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionHeading
+              title={lang === "es" ? "Países Evaluados" : "Countries Assessed"}
+              subtitle={
+                lang === "es"
+                  ? "Implementaciones por país en orden cronológico"
+                  : "Country implementations in chronological order"
+              }
+            />
+            <div className="space-y-4">
+              {childProjects.map((cp: any, index: number) => {
+                const cpYear = cp.yearEnd ? `${cp.year}–${cp.yearEnd}` : String(cp.year);
+                const isCompleted = cp.status === "completed";
+                const hasReport = !!cp.downloadUrl || !!cp.externalUrl;
+                return (
+                  <motion.div
+                    key={cp.id}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                  >
+                    <Link
+                      href={`/proyectos/${cp.id}`}
+                      className="group flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-200 hover:border-cyan hover:shadow-lg transition-all"
+                    >
+                      <div className="shrink-0">
+                        <RegionFlag region={cp.region} size={36} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-semibold text-navy group-hover:text-cyan transition-colors truncate">
+                          {cp.title[lang]}
+                        </h4>
+                        <p className="text-sm text-slate-500 line-clamp-1">
+                          {cp.subtitle?.[lang] || cp.description[lang]}
+                        </p>
+                      </div>
+                      <div className="shrink-0 flex items-center gap-3">
+                        <span className="text-sm text-slate-400 hidden sm:inline">{cpYear}</span>
+                        {isCompleted ? (
+                          hasReport ? (
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-medium">
+                              <FileText className="w-3.5 h-3.5" />
+                              {lang === "es" ? "Ver reporte" : "View report"}
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-medium">
+                              {lang === "es" ? "Completado" : "Completed"}
+                            </span>
+                          )
+                        ) : (
+                          <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-xs font-medium">
+                            {lang === "es" ? "En desarrollo" : "In progress"}
+                          </span>
+                        )}
+                        <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-cyan group-hover:translate-x-1 transition-all" />
+                      </div>
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
