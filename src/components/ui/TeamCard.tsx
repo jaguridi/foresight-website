@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Linkedin } from "lucide-react";
+import { Linkedin, GraduationCap } from "lucide-react";
 import { cn, asset } from "@/lib/utils";
 
 interface TeamCardProps {
@@ -11,6 +11,7 @@ interface TeamCardProps {
   bio: string;
   image?: string;
   linkedin?: string;
+  googleScholar?: string;
   className?: string;
   delay?: number;
 }
@@ -21,6 +22,7 @@ export function TeamCard({
   bio,
   image,
   linkedin,
+  googleScholar,
   className,
   delay = 0,
 }: TeamCardProps) {
@@ -58,16 +60,31 @@ export function TeamCard({
       {role && <p className="text-cyan font-medium mb-3">{role}</p>}
       <p className="text-slate-500 text-sm mb-4 line-clamp-3">{bio}</p>
 
-      {/* LinkedIn */}
-      {linkedin && (
-        <a
-          href={linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-600 hover:bg-cyan hover:text-white transition-colors"
-        >
-          <Linkedin className="w-5 h-5" />
-        </a>
+      {/* Social Links */}
+      {(linkedin || googleScholar) && (
+        <div className="flex items-center justify-center gap-2">
+          {linkedin && (
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-600 hover:bg-cyan hover:text-white transition-colors"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+          )}
+          {googleScholar && (
+            <a
+              href={googleScholar}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-600 hover:bg-cyan hover:text-white transition-colors"
+              title="Google Scholar"
+            >
+              <GraduationCap className="w-5 h-5" />
+            </a>
+          )}
+        </div>
       )}
     </motion.div>
   );

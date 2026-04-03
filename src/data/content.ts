@@ -1418,6 +1418,7 @@ export const team = [
     },
     image: "/images/team/julio.jpeg",
     linkedin: "https://www.linkedin.com/in/julio-pertuzé-1458124/",
+    googleScholar: "https://scholar.google.com/citations?user=4ekbr5YAAAAJ",
   },
   {
     id: "jose-guridi",
@@ -1429,6 +1430,7 @@ export const team = [
     },
     image: "/images/team/jose-guridi.png",
     linkedin: "https://www.linkedin.com/in/jaguridi/",
+    googleScholar: "https://scholar.google.com/citations?user=xT1gOjcAAAAJ",
   },
   {
     id: "sandra-peralta",
