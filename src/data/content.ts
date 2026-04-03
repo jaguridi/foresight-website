@@ -186,7 +186,7 @@ export const projects = [
     type: "assessment" as const,
     status: "in_progress" as const,
     featured: true,
-    featuredStat: { value: "8", label: { es: "Países evaluados en 3 continentes", en: "Countries assessed across 3 continents" } },
+    featuredStat: { value: "8", label: { es: "Países evaluados", en: "Countries assessed" } },
     summaryHighlight: {
       es: "Foresight es la consultora con más implementaciones de la metodología RAM de UNESCO en el mundo, habiendo evaluado la preparación en IA de 8 países en América Latina, el Caribe y Asia-Pacífico",
       en: "Foresight is the consultancy with the most implementations of UNESCO's RAM methodology worldwide, having assessed AI readiness in 8 countries across Latin America, the Caribbean and Asia-Pacific",
