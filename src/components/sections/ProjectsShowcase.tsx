@@ -99,6 +99,11 @@ export function ProjectsShowcase() {
   const featured = projects.filter((p) => (p as any).featured);
   const recent = projects
     .filter((p) => !(p as any).featured)
+    .sort((a, b) => {
+      if (a.status === "in_progress" && b.status !== "in_progress") return -1;
+      if (a.status !== "in_progress" && b.status === "in_progress") return 1;
+      return b.year - a.year;
+    })
     .slice(0, 6);
 
   return (
