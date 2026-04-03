@@ -10,12 +10,14 @@ export default function ProjectsPage() {
   const { lang } = useLang();
   const [filters, setFilters] = useState({
     type: "all",
+    client: "all",
     region: "all",
     year: "all",
     status: "all",
   });
 
   const projectTypes = ["all", ...new Set(projects.map((p) => p.type))];
+  const clientNames = ["all", ...new Set(projects.map((p) => p.client))];
   const regions = ["all", ...new Set(projects.map((p) => p.region))];
   const years = [
     "all",
@@ -27,19 +29,26 @@ export default function ProjectsPage() {
   });
   const statuses = ["all", "in_progress", "completed"];
 
-  const filteredProjects = projects.filter((project) => {
-    if (filters.type !== "all" && project.type !== filters.type) return false;
-    if (filters.region !== "all" && project.region !== filters.region)
-      return false;
-    if (filters.year !== "all" && String(project.year) !== filters.year)
-      return false;
-    if (
-      filters.status !== "all" &&
-      project.status !== filters.status
-    )
-      return false;
-    return true;
-  });
+  const filteredProjects = projects
+    .filter((project) => {
+      if (filters.type !== "all" && project.type !== filters.type) return false;
+      if (filters.client !== "all" && project.client !== filters.client) return false;
+      if (filters.region !== "all" && project.region !== filters.region)
+        return false;
+      if (filters.year !== "all" && String(project.year) !== filters.year)
+        return false;
+      if (
+        filters.status !== "all" &&
+        project.status !== filters.status
+      )
+        return false;
+      return true;
+    })
+    .sort((a, b) => {
+      if (a.status === "in_progress" && b.status !== "in_progress") return -1;
+      if (a.status !== "in_progress" && b.status === "in_progress") return 1;
+      return b.year - a.year;
+    });
 
   const typeLabels: Record<string, Record<string, string>> = {
     all: { es: "Todos", en: "All" },
@@ -128,6 +137,30 @@ export default function ProjectsPage() {
               </select>
             </div>
 
+            {/* Client Filter */}
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-slate-500 font-medium">
+                {lang === "es" ? "Cliente:" : "Client:"}
+              </span>
+              <select
+                value={filters.client}
+                onChange={(e) =>
+                  setFilters({ ...filters, client: e.target.value })
+                }
+                className="px-4 py-2 rounded-full border border-slate-200 text-sm focus:border-cyan focus:ring-2 focus:ring-cyan/20 outline-none"
+              >
+                {clientNames.map((c) => (
+                  <option key={c} value={c}>
+                    {c === "all"
+                      ? lang === "es"
+                        ? "Todos"
+                        : "All"
+                      : c}
+                  </option>
+                ))}
+              </select>
+            </div>
+
             {/* Region Filter */}
             <div className="flex items-center gap-2">
               <span className="text-sm text-slate-500 font-medium">
@@ -198,6 +231,7 @@ export default function ProjectsPage() {
 
             {/* Clear filters */}
             {(filters.type !== "all" ||
+              filters.client !== "all" ||
               filters.region !== "all" ||
               filters.year !== "all" ||
               filters.status !== "all") && (
@@ -205,6 +239,7 @@ export default function ProjectsPage() {
                 onClick={() =>
                   setFilters({
                     type: "all",
+                    client: "all",
                     region: "all",
                     year: "all",
                     status: "all",
@@ -270,6 +305,7 @@ export default function ProjectsPage() {
                 onClick={() =>
                   setFilters({
                     type: "all",
+                    client: "all",
                     region: "all",
                     year: "all",
                     status: "all",
