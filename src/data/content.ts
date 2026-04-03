@@ -346,6 +346,65 @@ export const projects = [
     region: "Latinoamérica",
     type: "research" as const,
     status: "completed" as const,
+    featuredStat: { value: "28", label: { es: "Casos de uso de IA en participación ciudadana identificados en 11 países", en: "AI use cases in citizen participation identified across 11 countries" } },
+    summaryHighlight: {
+      es: "Primer subindicador que mide el uso y desarrollo de inteligencia artificial en procesos de participación ciudadana en América Latina y el Caribe, incorporado al ILIA 2025",
+      en: "First sub-indicator measuring the use and development of artificial intelligence in citizen participation processes in Latin America and the Caribbean, incorporated into ILIA 2025",
+    },
+    executiveSummary: {
+      es: "La inteligencia artificial presenta oportunidades significativas para enriquecer la participación ciudadana, facilitando procesos más inclusivos, eficientes y de mayor alcance. Para el ILIA 2025, Foresight desarrolló el primer subindicador que mide tanto el uso como el desarrollo de IA en procesos participativos en 19 países de América Latina y el Caribe. Se identificaron 28 casos en 11 países, revelando un campo aún incipiente pero con experiencias valiosas y diversas. Las aplicaciones se concentran principalmente en las etapas de análisis (55,6%) e implementación (36,1%), con poca presencia en planificación y traducción política. Predomina el procesamiento de lenguaje natural para análisis de tópicos y sentimientos, y recientemente se explora el uso de LLMs. El subindicador evalúa dos componentes: el uso de IA en iniciativas participativas y la robustez del ecosistema desarrollador, proporcionando por primera vez una medición comparable del estado de la IA para la democracia participativa en la región.",
+      en: "Artificial intelligence presents significant opportunities to enrich citizen participation, enabling more inclusive, efficient and far-reaching processes. For ILIA 2025, Foresight developed the first sub-indicator measuring both the use and development of AI in participatory processes across 19 Latin American and Caribbean countries. 28 cases were identified in 11 countries, revealing a nascent but valuable and diverse field. Applications concentrate mainly in the analysis (55.6%) and implementation (36.1%) stages, with little presence in planning and political translation. Natural language processing predominates for topic and sentiment analysis, and the use of LLMs is recently being explored. The sub-indicator evaluates two components: AI use in participatory initiatives and the robustness of the developer ecosystem, providing for the first time a comparable measurement of the state of AI for participatory democracy in the region.",
+    },
+    keyStats: [
+      { value: "28", label: { es: "Casos identificados", en: "Cases Identified" } },
+      { value: "11", label: { es: "Países con casos activos", en: "Countries with Active Cases" } },
+      { value: "19", label: { es: "Países evaluados", en: "Countries Evaluated" } },
+      { value: "55,6%", label: { es: "Casos enfocados en análisis de datos", en: "Cases Focused on Data Analysis" } },
+    ],
+    sectors: [
+      { name: { es: "Colombia", en: "Colombia" }, percentage: 69 },
+      { name: { es: "México", en: "Mexico" }, percentage: 58 },
+      { name: { es: "Perú", en: "Peru" }, percentage: 56 },
+      { name: { es: "Chile", en: "Chile" }, percentage: 55 },
+      { name: { es: "Brasil", en: "Brazil" }, percentage: 53 },
+      { name: { es: "Costa Rica", en: "Costa Rica" }, percentage: 38 },
+    ],
+    pillarsTitle: { es: "Componentes del Subindicador", en: "Sub-indicator Components" },
+    pillarsSubtitle: { es: "Dimensiones que componen la medición de IA para participación ciudadana", en: "Dimensions comprising the measurement of AI for citizen participation" },
+    pillars: [
+      {
+        title: { es: "Uso de IA en Participación Ciudadana", en: "AI Use in Citizen Participation" },
+        icon: "Users",
+        content: {
+          es: "Mide el puntaje asignado por el uso de IA en iniciativas participativas, evaluando los tipos de procesos, las etapas en que se aplica, la continuidad y transversalidad del uso de IA. Colombia lidera con 69 puntos, seguido por México (58), Perú (56), Chile (55) y Brasil (53). El promedio regional es bajo, con 8 de los 19 países reportando un puntaje de 0, lo que evidencia un amplio espacio de crecimiento para la implementación de procesos de participación ciudadana con IA.",
+          en: "Measures the score assigned for AI use in participatory initiatives, evaluating process types, application stages, continuity and cross-cutting nature of AI use. Colombia leads with 69 points, followed by Mexico (58), Peru (56), Chile (55) and Brazil (53). The regional average is low, with 8 of the 19 countries reporting a score of 0, highlighting significant room for growth in implementing AI-enhanced citizen participation processes.",
+        },
+      },
+      {
+        title: { es: "Desarrollo de IA para Participación Ciudadana", en: "AI Development for Citizen Participation" },
+        icon: "Code",
+        content: {
+          es: "Evalúa la robustez del ecosistema desarrollador y la diversidad de sistemas de IA empleados en procesos de participación ciudadana, incluyendo procesamiento de lenguaje natural, reconocimiento de voz, machine learning y modelos de lenguaje (LLMs). Brasil y Colombia lideran con 100 puntos, seguidos por Chile (59), Costa Rica (53), Honduras (52) y Perú (51). El promedio regional es de 29,16 puntos, reflejando que la mayoría de los países aún no cuenta con un ecosistema diverso de desarrollo de IA para participación.",
+          en: "Evaluates the robustness of the developer ecosystem and the diversity of AI systems used in citizen participation processes, including natural language processing, speech recognition, machine learning and language models (LLMs). Brazil and Colombia lead with 100 points, followed by Chile (59), Costa Rica (53), Honduras (52) and Peru (51). The regional average is 29.16 points, reflecting that most countries still lack a diverse AI development ecosystem for participation.",
+        },
+      },
+      {
+        title: { es: "Definición y Alcance", en: "Definition and Scope" },
+        icon: "BookOpen",
+        content: {
+          es: "Se considera IA para participación ciudadana a los sistemas que transforman de forma sustantiva aspectos centrales del proceso participativo, involucrando capacidades como: análisis de datos complejos no estructurados a gran escala, facilitación activa del diálogo, personalización adaptativa de información, modelos predictivos y automatización de tareas cognitivas complejas. Se excluyen tareas rutinarias como el envío de recordatorios o la tabulación simple de votos, priorizando sistemas que aborden la complejidad inherente a la participación democrática.",
+          en: "AI for citizen participation refers to systems that substantively transform central aspects of the participatory process, involving capabilities such as: large-scale complex unstructured data analysis, active dialogue facilitation, adaptive information personalization, predictive models and automation of complex cognitive tasks. Routine tasks such as sending reminders or simple vote tabulation are excluded, prioritizing systems that address the complexity inherent to democratic participation.",
+        },
+      },
+      {
+        title: { es: "Hallazgos y Oportunidades", en: "Findings and Opportunities" },
+        icon: "Lightbulb",
+        content: {
+          es: "El análisis revela un campo en construcción, con experiencias únicas que requieren avanzar hacia plataformas permanentes y transferibles. La mayoría de las iniciativas usó IA en análisis (55,6%) e implementación (36,1%), con poca presencia en planificación (0%) y traducción política (8,3%). Predomina el NLP y recientemente los LLMs. La IA puede cumplir cuatro funciones clave en participación: mejorar la calidad de los resultados, ampliar el alcance a más audiencias, optimizar la deliberación, y reducir la carga administrativa. Un reto central es la escasa documentación de los casos, lo que limita la transparencia y el aprendizaje colectivo.",
+          en: "The analysis reveals a field under construction, with unique experiences that need to evolve toward permanent and transferable platforms. Most initiatives used AI in analysis (55.6%) and implementation (36.1%), with little presence in planning (0%) and political translation (8.3%). NLP predominates and recently LLMs. AI can fulfill four key functions in participation: improve result quality, expand reach to more audiences, optimize deliberation, and reduce administrative burden. A central challenge is the scarce documentation of cases, limiting transparency and collective learning.",
+        },
+      },
+    ],
   },
   // ── 2024–2025 ──────────────────────────────────────────────────
   {
