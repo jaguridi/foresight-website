@@ -110,9 +110,9 @@ export default function ProjectDetailClient({ id }: { id: string }) {
   const childProjects = projects
     .filter((p: any) => p.parentProject === project.id)
     .sort((a: any, b: any) => {
-      if (a.status === "in_progress" && b.status !== "in_progress") return 1;
-      if (a.status !== "in_progress" && b.status === "in_progress") return -1;
-      return a.year - b.year;
+      if (a.status === "in_progress" && b.status !== "in_progress") return -1;
+      if (a.status !== "in_progress" && b.status === "in_progress") return 1;
+      return b.year - a.year;
     });
 
   // Rich content flags
