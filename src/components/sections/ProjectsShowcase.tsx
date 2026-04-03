@@ -4,14 +4,17 @@ import { SectionHeading, ProjectCard, GradientButton } from "@/components/ui";
 import { projects, clientLogos } from "@/data/content";
 import { ArrowRight, FileText } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useLang } from "@/lib/i18n";
+import { asset } from "@/lib/utils";
 
 function FeaturedProjectCard({
   id,
   title,
   subtitle,
   client,
+  clientLogo,
   year,
   featuredStat,
   delay = 0,
@@ -20,6 +23,7 @@ function FeaturedProjectCard({
   title: string;
   subtitle?: string;
   client: string;
+  clientLogo?: string;
   year: number;
   featuredStat?: { value: string; label: string };
   delay?: number;
@@ -52,9 +56,19 @@ function FeaturedProjectCard({
         </div>
         <div className="p-6">
           <div className="flex items-center justify-between mb-3">
-            <span className="text-sm font-medium text-cyan bg-cyan/10 px-3 py-1 rounded-full">
-              {client}
-            </span>
+            {clientLogo ? (
+              <Image
+                src={asset(clientLogo)}
+                alt={client}
+                width={80}
+                height={28}
+                className="h-7 w-auto object-contain"
+              />
+            ) : (
+              <span className="text-sm font-medium text-cyan bg-cyan/10 px-3 py-1 rounded-full">
+                {client}
+              </span>
+            )}
             <span className="text-sm text-slate-400">{year}</span>
           </div>
           <h3 className="text-xl font-semibold text-navy mb-2 group-hover:text-cyan transition-colors">
@@ -102,6 +116,7 @@ export function ProjectsShowcase() {
               title={project.title[lang]}
               subtitle={(project as any).subtitle?.[lang]}
               client={project.client}
+              clientLogo={clientLogos[project.client]}
               year={project.year}
               featuredStat={
                 project.featuredStat
