@@ -265,7 +265,7 @@ export const projects = [
     },
     client: "Google",
     year: 2024,
-    yearEnd: 2025,
+    yearEnd: 2026,
     region: "Latinoamérica",
     type: "research",
     status: "in_progress" as const,
