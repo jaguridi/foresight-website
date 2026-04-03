@@ -72,10 +72,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  icons: {
-    icon: "/images/logos/isotipo-color.png",
-    apple: "/images/logos/isotipo-color.png",
-  },
 };
 
 export default function RootLayout({
