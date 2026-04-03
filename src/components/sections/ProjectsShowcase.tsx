@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLang } from "@/lib/i18n";
 import { asset } from "@/lib/utils";
+import { RegionFlag } from "@/components/ui/RegionFlag";
 
 function FeaturedProjectCard({
   id,
@@ -15,6 +16,7 @@ function FeaturedProjectCard({
   subtitle,
   client,
   clientLogo,
+  region,
   year,
   featuredStat,
   delay = 0,
@@ -24,6 +26,7 @@ function FeaturedProjectCard({
   subtitle?: string;
   client: string;
   clientLogo?: string;
+  region?: string;
   year: number;
   featuredStat?: { value: string; label: string };
   delay?: number;
@@ -42,6 +45,22 @@ function FeaturedProjectCard({
       >
         <div className="bg-gradient-brand p-6 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10" />
+          <div className="absolute top-4 right-4 z-10 flex items-center gap-2">
+            {clientLogo ? (
+              <Image
+                src={asset(clientLogo)}
+                alt={client}
+                width={72}
+                height={24}
+                className="h-6 w-auto object-contain brightness-0 invert"
+              />
+            ) : (
+              <span className="text-sm font-medium text-white/90">
+                {client}
+              </span>
+            )}
+            {region && <RegionFlag region={region} size={20} />}
+          </div>
           <div className="relative z-10">
             <FileText className="w-10 h-10 text-white/80 mb-4" />
             {featuredStat && (
@@ -55,22 +74,6 @@ function FeaturedProjectCard({
           </div>
         </div>
         <div className="p-6">
-          <div className="flex items-center justify-between mb-3">
-            {clientLogo ? (
-              <Image
-                src={asset(clientLogo)}
-                alt={client}
-                width={80}
-                height={28}
-                className="h-7 w-auto object-contain"
-              />
-            ) : (
-              <span className="text-sm font-medium text-cyan bg-cyan/10 px-3 py-1 rounded-full">
-                {client}
-              </span>
-            )}
-            <span className="text-sm text-slate-400">{year}</span>
-          </div>
           <h3 className="text-xl font-semibold text-navy mb-2 group-hover:text-cyan transition-colors">
             {title}
           </h3>
@@ -117,6 +120,7 @@ export function ProjectsShowcase() {
               subtitle={(project as any).subtitle?.[lang]}
               client={project.client}
               clientLogo={clientLogos[project.client]}
+              region={project.region}
               year={project.year}
               featuredStat={
                 project.featuredStat
