@@ -188,8 +188,8 @@ export const projects = [
     featured: true,
     featuredStat: { value: "8", label: { es: "Países evaluados", en: "Countries assessed" } },
     summaryHighlight: {
-      es: "Foresight es la consultora con más implementaciones de la metodología RAM de UNESCO en el mundo, habiendo evaluado la preparación en IA de 8 países en América Latina, el Caribe y Asia-Pacífico",
-      en: "Foresight is the consultancy with the most implementations of UNESCO's RAM methodology worldwide, having assessed AI readiness in 8 countries across Latin America, the Caribbean and Asia-Pacific",
+      es: "8 países evaluados",
+      en: "8 countries assessed",
     },
     executiveSummary: {
       es: "La Metodología de Evaluación de Preparación en IA (RAM) de UNESCO es un marco integral que evalúa las condiciones de un país para adoptar y beneficiarse de la inteligencia artificial. La metodología analiza cinco dimensiones: legal y regulatoria, social y cultural, científica y educativa, económica, y técnica e infraestructura. Foresight ha liderado la implementación de la RAM en 8 países, convirtiéndose en la consultora con más implementaciones a nivel mundial. Nuestros diagnósticos han contribuido directamente al diseño de hojas de ruta nacionales en inteligencia artificial en múltiples países. El proceso incluye investigación documental, consultas con actores clave del ecosistema, mesas redondas multisectoriales y la formulación de recomendaciones accionables de política pública.",
