@@ -5,7 +5,7 @@ export const siteConfig = {
   description: "Consultoría estratégica en inteligencia artificial para organizaciones públicas y privadas en América Latina",
   linkedIn: "https://www.linkedin.com/company/foresight-cl",
   // Formspree form ID for contact form - create at https://formspree.io and replace
-  formspreeId: "xpwzgkrj",
+  formspreeId: "xvzvwzen",
 };
 
 export const navigation = {
