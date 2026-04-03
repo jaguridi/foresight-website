@@ -378,32 +378,16 @@ export const projects = [
         title: { es: "Uso de IA en Participación Ciudadana", en: "AI Use in Citizen Participation" },
         icon: "Users",
         content: {
-          es: "Mide el puntaje asignado por el uso de IA en iniciativas participativas, evaluando los tipos de procesos, las etapas en que se aplica, la continuidad y transversalidad del uso de IA. Colombia lidera con 69 puntos, seguido por México (58), Perú (56), Chile (55) y Brasil (53). El promedio regional es bajo, con 8 de los 19 países reportando un puntaje de 0, lo que evidencia un amplio espacio de crecimiento para la implementación de procesos de participación ciudadana con IA.",
-          en: "Measures the score assigned for AI use in participatory initiatives, evaluating process types, application stages, continuity and cross-cutting nature of AI use. Colombia leads with 69 points, followed by Mexico (58), Peru (56), Chile (55) and Brazil (53). The regional average is low, with 8 of the 19 countries reporting a score of 0, highlighting significant room for growth in implementing AI-enhanced citizen participation processes.",
+          es: "Mide el puntaje asignado por el uso de IA en iniciativas participativas, evaluando los tipos de procesos (mini-públicos, presupuestos participativos, referendos, gobernanza colaborativa, participación digital), las etapas en que se aplica (planificación, implementación, análisis, traducción política), la continuidad y transversalidad del uso de IA en estas iniciativas. Asigna puntaje de acuerdo con la profundidad y diversidad de la aplicación de IA dentro de los procesos de interacción con la ciudadanía.",
+          en: "Measures the score assigned for AI use in participatory initiatives, evaluating process types (mini-publics, participatory budgets, referendums, collaborative governance, digital participation), application stages (planning, implementation, analysis, political translation), continuity and cross-cutting nature of AI use. Assigns scores based on the depth and diversity of AI application within citizen interaction processes.",
         },
       },
       {
         title: { es: "Desarrollo de IA para Participación Ciudadana", en: "AI Development for Citizen Participation" },
         icon: "Code",
         content: {
-          es: "Evalúa la robustez del ecosistema desarrollador y la diversidad de sistemas de IA empleados en procesos de participación ciudadana, incluyendo procesamiento de lenguaje natural, reconocimiento de voz, machine learning y modelos de lenguaje (LLMs). Brasil y Colombia lideran con 100 puntos, seguidos por Chile (59), Costa Rica (53), Honduras (52) y Perú (51). El promedio regional es de 29,16 puntos, reflejando que la mayoría de los países aún no cuenta con un ecosistema diverso de desarrollo de IA para participación.",
-          en: "Evaluates the robustness of the developer ecosystem and the diversity of AI systems used in citizen participation processes, including natural language processing, speech recognition, machine learning and language models (LLMs). Brazil and Colombia lead with 100 points, followed by Chile (59), Costa Rica (53), Honduras (52) and Peru (51). The regional average is 29.16 points, reflecting that most countries still lack a diverse AI development ecosystem for participation.",
-        },
-      },
-      {
-        title: { es: "Definición y Alcance", en: "Definition and Scope" },
-        icon: "BookOpen",
-        content: {
-          es: "Se considera IA para participación ciudadana a los sistemas que transforman de forma sustantiva aspectos centrales del proceso participativo, involucrando capacidades como: análisis de datos complejos no estructurados a gran escala, facilitación activa del diálogo, personalización adaptativa de información, modelos predictivos y automatización de tareas cognitivas complejas. Se excluyen tareas rutinarias como el envío de recordatorios o la tabulación simple de votos, priorizando sistemas que aborden la complejidad inherente a la participación democrática.",
-          en: "AI for citizen participation refers to systems that substantively transform central aspects of the participatory process, involving capabilities such as: large-scale complex unstructured data analysis, active dialogue facilitation, adaptive information personalization, predictive models and automation of complex cognitive tasks. Routine tasks such as sending reminders or simple vote tabulation are excluded, prioritizing systems that address the complexity inherent to democratic participation.",
-        },
-      },
-      {
-        title: { es: "Hallazgos y Oportunidades", en: "Findings and Opportunities" },
-        icon: "Lightbulb",
-        content: {
-          es: "El análisis revela un campo en construcción, con experiencias únicas que requieren avanzar hacia plataformas permanentes y transferibles. La mayoría de las iniciativas usó IA en análisis (55,6%) e implementación (36,1%), con poca presencia en planificación (0%) y traducción política (8,3%). Predomina el NLP y recientemente los LLMs. La IA puede cumplir cuatro funciones clave en participación: mejorar la calidad de los resultados, ampliar el alcance a más audiencias, optimizar la deliberación, y reducir la carga administrativa. Un reto central es la escasa documentación de los casos, lo que limita la transparencia y el aprendizaje colectivo.",
-          en: "The analysis reveals a field under construction, with unique experiences that need to evolve toward permanent and transferable platforms. Most initiatives used AI in analysis (55.6%) and implementation (36.1%), with little presence in planning (0%) and political translation (8.3%). NLP predominates and recently LLMs. AI can fulfill four key functions in participation: improve result quality, expand reach to more audiences, optimize deliberation, and reduce administrative burden. A central challenge is the scarce documentation of cases, limiting transparency and collective learning.",
+          es: "Evalúa la robustez del ecosistema desarrollador y la variabilidad de los sistemas de IA empleados en procesos de participación ciudadana. Asigna mayor puntaje si existe una mayor diversidad de desarrolladores de estos sistemas (empresa, universidad, gobierno, organismo internacional o sociedad civil) y una mayor diversidad de sistemas aplicados a procesos de participación ciudadana (procesamiento de lenguaje natural, reconocimiento de voz, machine learning, modelos de lenguaje, entre otros).",
+          en: "Evaluates the robustness of the developer ecosystem and the variability of AI systems used in citizen participation processes. Assigns higher scores when there is greater diversity of system developers (companies, universities, government, international organizations or civil society) and greater diversity of systems applied to citizen participation (natural language processing, speech recognition, machine learning, language models, among others).",
         },
       },
     ],
