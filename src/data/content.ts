@@ -434,12 +434,12 @@ export const projects = [
   {
     id: "ai-sprinters-el-salvador",
     title: {
-      es: "Impacto de la IA y casos de éxito en El Salvador",
-      en: "AI Impact and Success Cases in El Salvador",
+      es: "AI Sprinters: Impacto de la IA en El Salvador",
+      en: "AI Sprinters: AI Impact in El Salvador",
     },
     subtitle: {
-      es: "Evaluación del impacto económico de la IA y documentación de casos de éxito en El Salvador",
-      en: "Assessment of AI's economic impact and documentation of success cases in El Salvador",
+      es: "Evaluación del impacto económico de la IA y documentación de casos de éxito en El Salvador, parte de la serie AI Digital Sprinters de Google",
+      en: "Assessment of AI's economic impact and documentation of success cases in El Salvador, part of Google's AI Digital Sprinters series",
     },
     description: {
       es: "Evaluación del impacto económico de la IA y documentación de casos de éxito de uso de IA en El Salvador, parte de la serie AI Digital Sprinters de Google.",
@@ -455,12 +455,12 @@ export const projects = [
   {
     id: "ai-sprinters-chile",
     title: {
-      es: "Una oportunidad histórica: IA para Chile",
-      en: "A Historic Opportunity: AI for Chile",
+      es: "AI Sprinters: Una oportunidad histórica para Chile",
+      en: "AI Sprinters: A Historic Opportunity for Chile",
     },
     subtitle: {
-      es: "Inteligencia artificial para desatar el potencial económico de Chile",
-      en: "Artificial intelligence to unlock Chile's economic potential",
+      es: "Inteligencia artificial para desatar el potencial económico de Chile, parte de la serie AI Digital Sprinters de Google",
+      en: "Artificial intelligence to unlock Chile's economic potential, part of Google's AI Digital Sprinters series",
     },
     description: {
       es: "Estudio de impacto económico de la IA en Chile, parte de la serie AI Digital Sprinters de Google. Se estima que la IA podría generar entre USD 36.432 y USD 67.224 millones anuales, equivalentes al 10,9% y 20% del PIB.",
@@ -539,12 +539,12 @@ export const projects = [
   {
     id: "ai-sprinters-mexico",
     title: {
-      es: "Desbloqueando el potencial de la IA en México",
-      en: "Unlocking AI's Potential in Mexico",
+      es: "AI Sprinters: Desbloqueando el potencial de la IA en México",
+      en: "AI Sprinters: Unlocking AI's Potential in Mexico",
     },
     subtitle: {
-      es: "Velocistas de la IA: el impacto económico de la inteligencia artificial en México",
-      en: "AI Sprinters: the economic impact of artificial intelligence in Mexico",
+      es: "El impacto económico de la inteligencia artificial en México, parte de la serie AI Digital Sprinters de Google",
+      en: "The economic impact of artificial intelligence in Mexico, part of Google's AI Digital Sprinters series",
     },
     description: {
       es: "Estudio de impacto económico de la IA en México, parte de la serie AI Digital Sprinters de Google. Se estima un potencial de crecimiento de entre USD $54.770 y $102.525 millones anuales, equivalentes al 3% y 5,6% del PIB, concentrado en manufactura, comercio minorista y servicios financieros.",
@@ -1233,12 +1233,12 @@ export const reports = [
   {
     slug: "ai-sprinters-chile",
     title: {
-      es: "Una oportunidad histórica",
-      en: "A Historic Opportunity",
+      es: "AI Sprinters: Una oportunidad histórica para Chile",
+      en: "AI Sprinters: A Historic Opportunity for Chile",
     },
     subtitle: {
-      es: "Inteligencia artificial para desatar el potencial económico de Chile",
-      en: "Artificial intelligence to unlock Chile's economic potential",
+      es: "Inteligencia artificial para desatar el potencial económico de Chile, parte de la serie AI Digital Sprinters de Google",
+      en: "Artificial intelligence to unlock Chile's economic potential, part of Google's AI Digital Sprinters series",
     },
     client: "Google",
     year: 2025,
@@ -1303,12 +1303,12 @@ export const reports = [
   {
     slug: "ai-sprinters-mexico",
     title: {
-      es: "Desbloqueando el potencial de la IA en México",
-      en: "Unlocking AI's Potential in Mexico",
+      es: "AI Sprinters: Desbloqueando el potencial de la IA en México",
+      en: "AI Sprinters: Unlocking AI's Potential in Mexico",
     },
     subtitle: {
-      es: "Velocistas de la IA: el impacto económico de la inteligencia artificial en México",
-      en: "AI Sprinters: the economic impact of artificial intelligence in Mexico",
+      es: "El impacto económico de la inteligencia artificial en México, parte de la serie AI Digital Sprinters de Google",
+      en: "The economic impact of artificial intelligence in Mexico, part of Google's AI Digital Sprinters series",
     },
     client: "Google",
     year: 2025,
