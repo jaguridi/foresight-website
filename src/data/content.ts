@@ -430,6 +430,14 @@ export const projects = [
     type: "research",
     status: "in_progress" as const,
     featuredStat: { value: "10", label: { es: "Países analizados", en: "Countries analyzed" } },
+    childProjectsTitle: {
+      es: "Reportes por País",
+      en: "Country Reports",
+    },
+    childProjectsSubtitle: {
+      es: "Reportes individuales con análisis extendido. Los 10 países están cubiertos en el informe regional consolidado.",
+      en: "Individual reports with extended analysis. All 10 countries are covered in the consolidated regional report.",
+    },
     summaryHighlight: {
       es: "Reporte regional completo con los 10 países disponible en abril 2025",
       en: "Full regional report covering all 10 countries available April 2025",

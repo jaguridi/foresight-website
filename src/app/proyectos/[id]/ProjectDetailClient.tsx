@@ -317,11 +317,15 @@ export default function ProjectDetailClient({ id }: { id: string }) {
         <section className="section-padding">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeading
-              title={lang === "es" ? "Países Evaluados" : "Countries Assessed"}
+              title={
+                project.childProjectsTitle?.[lang] ??
+                (lang === "es" ? "Países Evaluados" : "Countries Assessed")
+              }
               subtitle={
-                lang === "es"
+                project.childProjectsSubtitle?.[lang] ??
+                (lang === "es"
                   ? "Implementaciones por país en orden cronológico"
-                  : "Country implementations in chronological order"
+                  : "Country implementations in chronological order")
               }
             />
             <div className="space-y-4">
