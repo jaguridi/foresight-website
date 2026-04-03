@@ -2,7 +2,7 @@
 
 import { SectionHeading, ProjectCard, GradientButton } from "@/components/ui";
 import { projects, clientLogos } from "@/data/content";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,26 +45,27 @@ function FeaturedProjectCard({
       >
         <div className="bg-gradient-brand p-6 relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10" />
-          <div className="absolute top-4 right-4 z-10 flex items-center gap-2">
-            {clientLogo ? (
-              <Image
-                src={asset(clientLogo)}
-                alt={client}
-                width={72}
-                height={24}
-                className="h-6 w-auto object-contain brightness-0 invert"
-              />
-            ) : (
-              <span className="text-sm font-medium text-white/90">
-                {client}
-              </span>
-            )}
-            {region && <RegionFlag region={region} size={20} />}
-          </div>
-          <div className="relative z-10">
-            <FileText className="w-10 h-10 text-white/80 mb-4" />
+          <div className="relative z-10 flex flex-col">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                {clientLogo ? (
+                  <Image
+                    src={asset(clientLogo)}
+                    alt={client}
+                    width={80}
+                    height={28}
+                    className="h-7 w-auto object-contain brightness-0 invert"
+                  />
+                ) : (
+                  <span className="text-sm font-medium text-white/90">
+                    {client}
+                  </span>
+                )}
+              </div>
+              {region && <RegionFlag region={region} size={24} />}
+            </div>
             {featuredStat && (
-              <div className="mt-4">
+              <div>
                 <div className="text-4xl font-bold text-white">
                   {featuredStat.value}
                 </div>
