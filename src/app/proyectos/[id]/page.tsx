@@ -17,7 +17,16 @@ export async function generateMetadata({
   return {
     title: `${project.title.es} | Foresight`,
     description: project.description.es,
+    alternates: {
+      canonical: `/proyectos/${id}`,
+    },
     openGraph: {
+      title: `${project.title.es} | Foresight`,
+      description: project.description.es,
+      url: `/proyectos/${id}`,
+    },
+    twitter: {
+      card: "summary",
       title: `${project.title.es} | Foresight`,
       description: project.description.es,
     },

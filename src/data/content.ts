@@ -4,6 +4,8 @@ export const siteConfig = {
   email: "consultoria@foresight.cl",
   description: "Consultoría estratégica en inteligencia artificial para organizaciones públicas y privadas en América Latina",
   linkedIn: "https://www.linkedin.com/company/foresight-cl",
+  // Formspree form ID for contact form - create at https://formspree.io and replace
+  formspreeId: "xpwzgkrj",
 };
 
 export const navigation = {
@@ -428,6 +430,14 @@ export const projects = [
     type: "research",
     status: "in_progress" as const,
     featuredStat: { value: "10", label: { es: "Países analizados", en: "Countries analyzed" } },
+    summaryHighlight: {
+      es: "Reporte regional completo con los 10 países disponible en abril 2025",
+      en: "Full regional report covering all 10 countries available April 2025",
+    },
+    executiveSummary: {
+      es: "Estudio regional encargado por Google que cuantifica el impacto potencial de la inteligencia artificial en 10 economías hispanoamericanas: Chile, México, El Salvador, Colombia, Perú, Ecuador, Costa Rica, Panamá, Paraguay y Uruguay. El proyecto entrega un conjunto de recomendaciones de política pública para maximizar los beneficios de la adopción tecnológica en la región. Actualmente se han publicado los reportes individuales de Chile, México y El Salvador, y el reporte consolidado con los 10 países se publicará en abril de 2025.",
+      en: "Regional study commissioned by Google quantifying AI's potential impact across 10 Hispanic American economies: Chile, Mexico, El Salvador, Colombia, Peru, Ecuador, Costa Rica, Panama, Paraguay and Uruguay. The project delivers a set of public policy recommendations to maximize the benefits of technology adoption in the region. Individual reports for Chile, Mexico and El Salvador have been published, and the consolidated report covering all 10 countries will be released in April 2025.",
+    },
   },
   {
     id: "ai-sprinters-el-salvador",

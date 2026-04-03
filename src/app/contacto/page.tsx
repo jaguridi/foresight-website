@@ -17,31 +17,54 @@ export default function ContactPage() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      lang === "es"
-        ? `Contacto de ${formData.name}${formData.organization ? ` (${formData.organization})` : ""}`
-        : `Contact from ${formData.name}${formData.organization ? ` (${formData.organization})` : ""}`
-    );
-    const body = encodeURIComponent(
-      `${formData.message}\n\n---\n${lang === "es" ? "De" : "From"}: ${formData.name}\nEmail: ${formData.email}${formData.organization ? `\n${lang === "es" ? "Organización" : "Organization"}: ${formData.organization}` : ""}`
-    );
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setSending(true);
+    setError(false);
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${siteConfig.formspreeId}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          organization: formData.organization,
+          message: formData.message,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch {
+      // Fallback to mailto
+      const subject = encodeURIComponent(
+        lang === "es"
+          ? `Contacto de ${formData.name}${formData.organization ? ` (${formData.organization})` : ""}`
+          : `Contact from ${formData.name}${formData.organization ? ` (${formData.organization})` : ""}`
+      );
+      const body = encodeURIComponent(
+        `${formData.message}\n\n---\n${lang === "es" ? "De" : "From"}: ${formData.name}\nEmail: ${formData.email}${formData.organization ? `\n${lang === "es" ? "Organización" : "Organization"}: ${formData.organization}` : ""}`
+      );
+      window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   const c = contactContent[lang];
 
-  const emailHint =
-    lang === "es"
-      ? "Al enviar se abrirá tu cliente de correo con el mensaje pre-completado"
-      : "Clicking submit will open your email client with the message pre-filled";
-
   const successMessage =
     lang === "es"
-      ? "Se abrió tu cliente de correo. Si no se abrió, escríbenos directamente a"
-      : "Your email client should have opened. If it didn't, email us directly at";
+      ? "Tu mensaje fue enviado correctamente. Te responderemos lo antes posible."
+      : "Your message was sent successfully. We'll get back to you as soon as possible.";
 
   return (
     <div className="pt-20">
@@ -82,12 +105,6 @@ export default function ContactPage() {
                     {lang === "es" ? "¡Gracias!" : "Thank you!"}
                   </h3>
                   <p className="text-slate-500 mb-4">{successMessage}</p>
-                  <a
-                    href={`mailto:${siteConfig.email}`}
-                    className="text-cyan font-medium hover:underline"
-                  >
-                    {siteConfig.email}
-                  </a>
                   <button
                     onClick={() => setSubmitted(false)}
                     className="mt-6 text-sm text-slate-400 hover:text-slate-600 transition-colors"
@@ -169,13 +186,13 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full"
                     size="lg"
+                    disabled={sending}
                   >
-                    {c.submit}
-                    <Send className="w-5 h-5 ml-2" />
+                    {sending
+                      ? (lang === "es" ? "Enviando..." : "Sending...")
+                      : c.submit}
+                    {!sending && <Send className="w-5 h-5 ml-2" />}
                   </GradientButton>
-                  <p className="text-xs text-slate-400 text-center">
-                    {emailHint}
-                  </p>
                 </form>
               )}
             </motion.div>

@@ -72,6 +72,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/images/logos/isotipo-color.png",
+    apple: "/images/logos/isotipo-color.png",
+  },
 };
 
 export default function RootLayout({
@@ -95,7 +99,7 @@ export default function RootLayout({
                 "Consultoría estratégica en inteligencia artificial para organizaciones públicas y privadas en América Latina",
               email: "consultoria@foresight.cl",
               sameAs: [
-                "https://www.linkedin.com/company/foresightcl",
+                "https://www.linkedin.com/company/foresight-cl",
               ],
               address: {
                 "@type": "PostalAddress",
