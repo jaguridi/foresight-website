@@ -188,6 +188,7 @@ export const projects = [
     type: "assessment" as const,
     status: "in_progress" as const,
     featured: true,
+    featuredOrder: 1,
     featuredStat: { value: "8", label: { es: "Países evaluados", en: "Countries assessed" } },
     summaryHighlight: {
       es: "8 países evaluados",
@@ -349,6 +350,7 @@ export const projects = [
     type: "research" as const,
     status: "completed" as const,
     featured: true,
+    featuredOrder: 3,
     featuredStat: { value: "28", label: { es: "Casos de uso de IA en participación ciudadana identificados en 11 países", en: "AI use cases in citizen participation identified across 11 countries" } },
     summaryHighlight: {
       es: "Primer subindicador que mide el uso y desarrollo de inteligencia artificial en procesos de participación ciudadana en América Latina y el Caribe, incorporado al ILIA 2025",
@@ -415,6 +417,7 @@ export const projects = [
     type: "research",
     status: "completed" as const,
     featured: true,
+    featuredOrder: 2,
     featuredStat: { value: "$130–242B", label: { es: "USD impacto económico anual potencial", en: "USD potential annual economic impact" } },
     childProjectsTitle: {
       es: "Reportes por País",

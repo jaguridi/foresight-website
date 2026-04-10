@@ -96,7 +96,9 @@ function FeaturedProjectCard({
 export function ProjectsShowcase() {
   const { lang } = useLang();
 
-  const featured = projects.filter((p) => (p as any).featured);
+  const featured = projects
+    .filter((p) => (p as any).featured)
+    .sort((a, b) => ((a as any).featuredOrder ?? 99) - ((b as any).featuredOrder ?? 99));
   const recent = projects
     .filter((p) => !(p as any).featured)
     .sort((a, b) => {
